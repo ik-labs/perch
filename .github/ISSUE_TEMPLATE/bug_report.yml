@@ -1,0 +1,55 @@
+name: 🐛 Bug report
+description: Something in Perch isn't working right.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve Perch! Please fill in the details below.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What went wrong, and what did you expect instead?
+      placeholder: When I…, Perch showed… but I expected…
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. …
+        2. …
+        3. …
+    validations:
+      required: false
+  - type: input
+    id: perch-version
+    attributes:
+      label: Perch version
+      description: See ⚙︎ menu, or the app's Info.
+      placeholder: e.g. 0.1.0
+    validations:
+      required: true
+  - type: input
+    id: macos-version
+    attributes:
+      label: macOS version
+      placeholder: e.g. 15.5 / 26.5
+    validations:
+      required: true
+  - type: input
+    id: terminal
+    attributes:
+      label: Terminal app
+      description: Where you run Claude Code.
+      placeholder: e.g. Warp, Ghostty, Terminal.app, iTerm2, VS Code
+    validations:
+      required: false
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else?
+      description: Logs, screenshots, or other context. (Console.app → filter "Perch")
+    validations:
+      required: false
