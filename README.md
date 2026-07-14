@@ -23,8 +23,8 @@ no real project names, commands, costs, or usage end up in a public image.
 |:--:|:--:|
 | ![The fleet](assets/panel.png) | ![Needs you](assets/menubar.png) |
 | **Every session, grouped by what needs you** | **The menu bar tells you without opening anything** |
-| ![Approve from a notification](assets/notification.png) | ![On your phone](assets/ios-approve.png) |
-| **Approve a tool call without leaving your editor** | **…or from the couch** |
+| ![Approve from a notification](assets/notification.png) | ![The companion](assets/ios-fleet.png) |
+| **Approve a tool call without leaving your editor** | **Your fleet, in your pocket** |
 -->
 
 > _Screenshots landing shortly._
