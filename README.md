@@ -39,7 +39,7 @@ no real project names, commands, costs, or usage end up in a public image.
 
 **Answers agents without switching windows.** When an agent asks to run something, Perch's notification carries **Allow / Deny** — approve it without leaving what you're doing. Ignore it and your terminal prompts as usual; Perch never acts on its own.
 
-**Follows you to your phone.** The [iOS companion](#iphone-companion) mirrors the fleet and alerts you when an agent needs you — on the same Wi-Fi, or across the world over Tailscale.
+**Follows you to your phone.** The [iOS companion](#iphone-companion) mirrors the fleet and alerts you when an agent needs you. On your own Wi-Fi it just works; add Tailscale and it follows you anywhere.
 
 **Shows your limits.** Your 5-hour and 7-day usage, with reset timers — the numbers Claude Code only reports to its status line.
 
@@ -53,7 +53,8 @@ Pair once by scanning a QR code. Then:
 
 - **The whole fleet in your pocket** — who's waiting, who's working, what each agent is doing.
 - **Push alerts when an agent needs you**, even with the app closed.
-- **Works away from home.** On your Wi-Fi it connects directly. Off it, Perch reaches your Mac over [Tailscale](https://tailscale.com) — your devices talk to each other, not through anyone's server.
+- **On your own Wi-Fi: nothing to set up.** Your phone finds your Mac and connects directly. No account, no server, no Tailscale.
+- **Away from home: add [Tailscale](https://tailscale.com).** Install it on both devices and your phone reaches your Mac from anywhere — still a direct link between your own two devices, not through anyone's server.
 
 The companion is in TestFlight. [Ask for an invite](https://github.com/ik-labs/perch/discussions).
 
@@ -79,7 +80,7 @@ Your sessions stay on your Mac. Specifically:
 | | |
 |---|---|
 | **Session data** (projects, commands, tasks, costs) | Stays local. Never sent anywhere, unless you turn on the iPhone companion. |
-| **iPhone companion** (optional) | Your Mac talks **directly to your phone** — encrypted, device to device, over your own network or your own Tailscale network. It does not pass through us. |
+| **iPhone companion** (optional) | Your Mac talks **directly to your phone**, encrypted, device to device. On your own network that's it — no account, no server, no Tailscale. To reach your Mac over the internet you add [Tailscale](https://tailscale.com), which is still a direct link between *your* devices. Either way it never passes through us. |
 | **Push alerts** (optional) | To reach your phone when the app is closed, Apple requires a server. The alert text (project name, what the agent is asking) passes through our relay to Apple's push service. Turn the toggle off and nothing is sent. |
 | **Licence check** | Your licence key is verified with our payments provider. |
 | **Update check** | Perch asks for a version file. Nothing about you is sent. |
