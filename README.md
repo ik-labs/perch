@@ -2,7 +2,7 @@
 
 # 🐦 Perch
 
-**Watch every Claude Code and Codex session from your menu bar — and approve them from your phone.**
+**Watch every Claude Code and Codex session from your menu bar.**
 
 Running several agents across terminals and projects? Perch shows which are working, which are waiting on you, and which are idle — so you stop shuffling between windows to find the one that's blocked.
 
@@ -37,9 +37,9 @@ no real project names, commands, costs, or usage end up in a public image.
 
 **Tells you what each agent is doing.** The live command, the in-progress task, the model (including 1M-context), reasoning effort, live context %, and cost.
 
-**Answers agents without switching windows.** When an agent asks to run something, Perch's notification carries **Allow / Deny** — approve it from wherever you are. Ignore it and your terminal prompts as usual; Perch never acts on its own.
+**Answers agents without switching windows.** When an agent asks to run something, Perch's notification carries **Allow / Deny** — approve it without leaving what you're doing. Ignore it and your terminal prompts as usual; Perch never acts on its own.
 
-**Follows you to your phone.** The [iOS companion](#iphone-companion) mirrors the fleet, alerts you when an agent needs you, and lets you **approve from anywhere** — on the same Wi-Fi, or across the world over Tailscale.
+**Follows you to your phone.** The [iOS companion](#iphone-companion) mirrors the fleet and alerts you when an agent needs you — on the same Wi-Fi, or across the world over Tailscale.
 
 **Shows your limits.** Your 5-hour and 7-day usage, with reset timers — the numbers Claude Code only reports to its status line.
 
@@ -51,8 +51,7 @@ no real project names, commands, costs, or usage end up in a public image.
 
 Pair once by scanning a QR code. Then:
 
-- **The whole fleet on your lock screen** — who's waiting, who's working.
-- **Approve a permission from your phone.** The agent is blocked on the Mac; you tap Allow on the sofa; it carries on.
+- **The whole fleet in your pocket** — who's waiting, who's working, what each agent is doing.
 - **Push alerts when an agent needs you**, even with the app closed.
 - **Works away from home.** On your Wi-Fi it connects directly. Off it, Perch reaches your Mac over [Tailscale](https://tailscale.com) — your devices talk to each other, not through anyone's server.
 
@@ -72,13 +71,6 @@ The companion is in TestFlight. [Ask for an invite](https://github.com/ik-labs/p
 Signed and notarized by Apple (Developer ID: Inkryptis Labs LLP), so it opens with no Gatekeeper warnings. Perch keeps itself up to date after that — updates are signed and verified before they install.
 
 Perch is a paid app; you'll be asked for a licence key on first launch.
-
-## How it works
-
-Perch reads Claude Code's own local state. On first launch it adds two things to `~/.claude/settings.json`, **non-destructively** — anything you already had is preserved:
-
-- **Hooks**, so Perch sees each session's state the moment it changes.
-- **A status line**, the only place Claude Code reports your 5h / 7d usage.
 
 ## Privacy
 
