@@ -4,24 +4,12 @@
         <title>Perch</title>
         <item>
             <title>0.1.1</title>
-            <pubDate>Tue, 14 Jul 2026 15:51:43 +0530</pubDate>
+            <pubDate>Tue, 14 Jul 2026 15:54:28 +0530</pubDate>
             <sparkle:version>2</sparkle:version>
             <sparkle:shortVersionString>0.1.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.1.1/Perch-0.1.1.zip" length="2837504" type="application/octet-stream" sparkle:edSignature="rxZGf47GT3kIsegPnZ+4cqC17IdV3pFQxIvJTdREVHjSHk/Bq29SSzISrTz6CQIDlrladFy5XMk86GPxmxsyCg=="/>
-            <sparkle:deltas>
-                <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.1.1/Perch2-1.delta" sparkle:deltaFrom="1" length="15906" type="application/octet-stream" sparkle:deltaFromSparkleExecutableSize="977808" sparkle:deltaFromSparkleLocales="de,he,ar,el,ja,fa,uk" sparkle:edSignature="HK8zTFRQur2FfFdmXb7dsTgm3EAkQKy+3menw0E6i0HEbXlf87n5amazIhqhXJeEOiWM+3okjF//YeVNf2a2Cw=="/>
-            </sparkle:deltas>
-        </item>
-        <item>
-            <title>0.1.0</title>
-            <pubDate>Tue, 14 Jul 2026 15:37:52 +0530</pubDate>
-            <sparkle:version>1</sparkle:version>
-            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.1.1/Perch-0.1.0.zip" length="2837815" type="application/octet-stream" sparkle:edSignature="QstTvFpOX3JK5ymXSACvP4RLz3gadXy4tQQOFNv0m9NSUxZyGH8kWMgKGrwC2Wk+/usWi3k8FCFyiprANlAqBQ=="/>
         </item>
     </channel>
 </rss>
