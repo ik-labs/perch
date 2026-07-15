@@ -3,13 +3,13 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.1.1</title>
-            <pubDate>Tue, 14 Jul 2026 15:54:28 +0530</pubDate>
-            <sparkle:version>2</sparkle:version>
-            <sparkle:shortVersionString>0.1.1</sparkle:shortVersionString>
+            <title>0.2.0</title>
+            <pubDate>Wed, 15 Jul 2026 12:28:46 +0530</pubDate>
+            <sparkle:version>3</sparkle:version>
+            <sparkle:shortVersionString>0.2.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.1.1/Perch-0.1.1.zip" length="2837504" type="application/octet-stream" sparkle:edSignature="rxZGf47GT3kIsegPnZ+4cqC17IdV3pFQxIvJTdREVHjSHk/Bq29SSzISrTz6CQIDlrladFy5XMk86GPxmxsyCg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.2.0/Perch-0.2.0.zip" length="2927835" type="application/octet-stream" sparkle:edSignature="1TJvLsnMRcZdEl0iepO46O7dEEte5c+Ytbu1BBqZY2xuDwEolK0Jrg17eJBVK70IeAxuadlYOzmzuiYlFydBAg=="/>
         </item>
     </channel>
 </rss>
