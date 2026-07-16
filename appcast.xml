@@ -3,20 +3,22 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.3.1</title>
-            <pubDate>Thu, 16 Jul 2026 15:14:05 +0530</pubDate>
-            <sparkle:version>6</sparkle:version>
-            <sparkle:shortVersionString>0.3.1</sparkle:shortVersionString>
+            <title>0.3.2</title>
+            <pubDate>Thu, 16 Jul 2026 20:42:48 +0530</pubDate>
+            <sparkle:version>7</sparkle:version>
+            <sparkle:shortVersionString>0.3.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Approve from your iPhone now works end to end.** When an agent asks for
-  permission, the request reaches your phone — even if the companion app was
-  closed: open it and the approve sheet is waiting. Tapping Allow or Deny unblocks
-  the agent right away. (Previously the prompt could be missed and you'd have to
-  fall back to the terminal.) Needs the latest companion app from TestFlight.
+- **The fleet Live Activity now starts on your iPhone by itself.** When an agent
+  needs you — phone in your pocket, app closed — the live fleet card appears on the
+  Lock Screen and in the Dynamic Island on its own. (The start request didn't meet
+  Apple's requirements, so iPhones quietly ignored it.) Pair with the latest
+  companion app from TestFlight for the full experience.
+- **Live Activity updates no longer count against Apple's push budget**, so a busy
+  fleet can't get your lock-screen updates throttled.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.3.1/Perch-0.3.1.zip" length="3079340" type="application/octet-stream" sparkle:edSignature="NdAxqZPoBYmQuSW4JaQgc/rzGioRUJW4/eGN2KyDwcvLlfyf08vwo9Q/yBUurFZTRS17/xisf397t+pPLEjMDQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.3.2/Perch-0.3.2.zip" length="3081889" type="application/octet-stream" sparkle:edSignature="xfxvevoMrkSmLUk29GY2KB89suyM0IlPw14aoScXS4IwwmThUB8R13m8Ky/JWQQz9aTL1hyfxFOeaNdhFEZoDg=="/>
         </item>
     </channel>
 </rss>
