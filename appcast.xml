@@ -3,22 +3,21 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.3.2</title>
-            <pubDate>Thu, 16 Jul 2026 20:42:48 +0530</pubDate>
-            <sparkle:version>7</sparkle:version>
-            <sparkle:shortVersionString>0.3.2</sparkle:shortVersionString>
+            <title>0.3.3</title>
+            <pubDate>Thu, 16 Jul 2026 21:24:19 +0530</pubDate>
+            <sparkle:version>8</sparkle:version>
+            <sparkle:shortVersionString>0.3.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **The fleet Live Activity now starts on your iPhone by itself.** When an agent
-  needs you — phone in your pocket, app closed — the live fleet card appears on the
-  Lock Screen and in the Dynamic Island on its own. (The start request didn't meet
-  Apple's requirements, so iPhones quietly ignored it.) Pair with the latest
-  companion app from TestFlight for the full experience.
-- **Live Activity updates no longer count against Apple's push budget**, so a busy
-  fleet can't get your lock-screen updates throttled.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- **A completely redesigned Live Activity.** The lock-screen card now changes with
+  your fleet: calm and green while agents work (one dot per session, a live elapsed
+  timer), flipping to an amber "needs you" the moment one is blocked — with a live
+  countdown showing how long you have to answer from your phone before the agent
+  falls back to the terminal. Timers tick on their own, and file paths no longer
+  appear on your lock screen. Pair with the latest companion app from TestFlight.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.3.2/Perch-0.3.2.zip" length="3081889" type="application/octet-stream" sparkle:edSignature="xfxvevoMrkSmLUk29GY2KB89suyM0IlPw14aoScXS4IwwmThUB8R13m8Ky/JWQQz9aTL1hyfxFOeaNdhFEZoDg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.3.3/Perch-0.3.3.zip" length="3099007" type="application/octet-stream" sparkle:edSignature="yalfcAQ+0oyy+GDh+AmV9yk8tgYrNoJXXB23Qqr4GCmr7TwwiGyBlkcTFLykyFoCNnLRUZKlxWDvgd5goBFAAQ=="/>
         </item>
     </channel>
 </rss>
