@@ -3,20 +3,27 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.2.1</title>
-            <pubDate>Wed, 15 Jul 2026 15:35:36 +0530</pubDate>
-            <sparkle:version>4</sparkle:version>
-            <sparkle:shortVersionString>0.2.1</sparkle:shortVersionString>
+            <title>0.3.0</title>
+            <pubDate>Thu, 16 Jul 2026 10:30:41 +0530</pubDate>
+            <sparkle:version>5</sparkle:version>
+            <sparkle:shortVersionString>0.3.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Release notes in the update dialog.** When a new version is available, the
-  updater now shows what changed — starting with this one.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- **A more reliable connection to your iPhone.** Perch now keeps the companion
+  link healthy — reclaiming stalled connections and holding steady ones open — so
+  the fleet on your phone stays live and in sync.
+- **Version-aware pairing.** The Mac and the iPhone app now check they're on
+  compatible versions and tell you to update if they've drifted apart, instead of
+  quietly showing stale data.
 
-### Changed
-- Internal reliability improvements to how Perch talks to your agent sessions.
+### Security
+- **Your session data is more private.** Perch now keeps its own runtime data in a
+  private, app-owned location (out of the shared `~/.claude` folder), tightens file
+  permissions, and validates every session identifier before it touches disk — so
+  session details stay yours on a shared Mac.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.2.1/Perch-0.2.1.zip" length="2942349" type="application/octet-stream" sparkle:edSignature="N7R03ICLH/hwGHXn/jxScqqsNXjwx2KVwP4fSQAOWq4EbhGLT/FwgVZ3+Biwf2DLAkBdmFCyLQQUMt56qe6DBQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.3.0/Perch-0.3.0.zip" length="3047353" type="application/octet-stream" sparkle:edSignature="bjEnrwUkGUgeqoTgJn/qFewSXbh04Kk1/GomQzok49ChWtAIcORLSAIZLuJToJlKvuRHM4JFNQgnpO0kE2sCBw=="/>
         </item>
     </channel>
 </rss>
