@@ -3,23 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.3.5</title>
-            <pubDate>Fri, 17 Jul 2026 15:30:43 +0530</pubDate>
-            <sparkle:version>10</sparkle:version>
-            <sparkle:shortVersionString>0.3.5</sparkle:shortVersionString>
+            <title>0.3.6</title>
+            <pubDate>Fri, 17 Jul 2026 17:25:12 +0530</pubDate>
+            <sparkle:version>11</sparkle:version>
+            <sparkle:shortVersionString>0.3.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Changed
-- **Much better Codex support.** Perch now tracks every Codex session you have
-  open — whether it's running in the ChatGPT desktop app or as `codex` in a
-  terminal — instead of missing some or showing the wrong details. Each row is
-  tagged **CLI** or **DESKTOP** so you can tell them apart at a glance, and
-  clicking one takes you to the right place: your terminal pane for a CLI session,
-  or straight to the conversation in the Codex desktop app. Long-running and
-  multi-session setups (several Codex windows, even in the same project) all show
-  up correctly now.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **More in your Codex usage line.** Alongside the 5-hour and weekly limits, Perch
+  now shows your extra-usage **credit balance** and **today's spend** — computed
+  locally, no extra login. Claude shows today's exact spend too.
+
+### Fixed
+- **Correct Codex weekly limit.** When Codex reports only your weekly window, Perch
+  was labelling it as the 5-hour one. It now identifies each window by its real
+  duration, so the numbers line up with what Codex tells you.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.3.5/Perch-0.3.5.zip" length="3152421" type="application/octet-stream" sparkle:edSignature="oAmNdZ+T+OJZVlvFx/gzp3tTVqYaXk5a5bFBMXjP3kmbvTGhBk8hw+0TrPtPhYqMh9qZDAqzOxzNwtysi3GlDQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.3.6/Perch-0.3.6.zip" length="3271192" type="application/octet-stream" sparkle:edSignature="jubsXiw8okTNR9f546tY7UKSBAPrGzBlz/Lo3otMQk3QpFZubRJFuNFX9ukdUrDQFjNIe6aAJXEYHsgBtULbBg=="/>
         </item>
     </channel>
 </rss>
