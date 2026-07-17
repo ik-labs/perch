@@ -3,21 +3,20 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.3.3</title>
-            <pubDate>Thu, 16 Jul 2026 21:24:19 +0530</pubDate>
-            <sparkle:version>8</sparkle:version>
-            <sparkle:shortVersionString>0.3.3</sparkle:shortVersionString>
+            <title>0.3.4</title>
+            <pubDate>Fri, 17 Jul 2026 12:29:03 +0530</pubDate>
+            <sparkle:version>9</sparkle:version>
+            <sparkle:shortVersionString>0.3.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Changed
-- **A completely redesigned Live Activity.** The lock-screen card now changes with
-  your fleet: calm and green while agents work (one dot per session, a live elapsed
-  timer), flipping to an amber "needs you" the moment one is blocked — with a live
-  countdown showing how long you have to answer from your phone before the agent
-  falls back to the terminal. Timers tick on their own, and file paths no longer
-  appear on your lock screen. Pair with the latest companion app from TestFlight.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **All your Codex sessions now show up, not just one.** Perch used to miss Codex
+  sessions running in the ChatGPT desktop app — often showing only one of several,
+  or the wrong details for it. It now tracks each Codex session directly, so every
+  one you have open appears with the right project and status, and the helper agents
+  a session spawns no longer show up as extra rows.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.3.3/Perch-0.3.3.zip" length="3099007" type="application/octet-stream" sparkle:edSignature="yalfcAQ+0oyy+GDh+AmV9yk8tgYrNoJXXB23Qqr4GCmr7TwwiGyBlkcTFLykyFoCNnLRUZKlxWDvgd5goBFAAQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.3.4/Perch-0.3.4.zip" length="3120794" type="application/octet-stream" sparkle:edSignature="8FdHjPfT2p4DnwHMUI2fxaE9F36f4UG8DqPEefX3UdSEeIcWKO5AiKizgdMrkV3lwvZjOda+S2jKNaiJhhoiBQ=="/>
         </item>
     </channel>
 </rss>
