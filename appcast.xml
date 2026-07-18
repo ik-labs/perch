@@ -3,22 +3,21 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.3.8</title>
-            <pubDate>Fri, 17 Jul 2026 22:46:43 +0530</pubDate>
-            <sparkle:version>13</sparkle:version>
-            <sparkle:shortVersionString>0.3.8</sparkle:shortVersionString>
+            <title>0.3.9</title>
+            <pubDate>Sat, 18 Jul 2026 09:46:36 +0530</pubDate>
+            <sparkle:version>14</sparkle:version>
+            <sparkle:shortVersionString>0.3.9</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Reset times on every usage window.** Each limit — 5-hour, weekly, and per-model —
-  now shows when it resets. Click any reset to switch the whole app between a
-  countdown ("·4h") and the exact clock time ("·2:40 PM" / "·Jul 24"); hover to see
-  the other form.
-- **Lines changed per session (Claude).** Each Claude session row now shows how many
-  lines it has added and removed (e.g. "+28,411 −5,354"), right from Claude Code's own
-  count.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- **A clearer usage view.** Each limit is now a labelled progress bar instead of a
+  cramped line of numbers — 5-hour, weekly, and each per-model window, filling
+  green → amber → red as you approach the cap. A limit you've hit is tinted red so
+  it's obvious at a glance, spend and credits move to their own spot on the right,
+  and the bars use the full width. Reset times still tap to switch between a
+  countdown and the exact time.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.3.8/Perch-0.3.8.zip" length="3388426" type="application/octet-stream" sparkle:edSignature="hWindNjLbRwQ5Cz8hsH1VSnqlG3eiC+rrs0eEyWqKwLFXB8wg0k52wUWzmtqPERwjypAVAcqKOG4+DUpfDabCQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.3.9/Perch-0.3.9.zip" length="3427609" type="application/octet-stream" sparkle:edSignature="7rGwKKQZp5R6ufvWCPW0Tnk9UzpDNakw5fI6W1k1TztZqNX8AOnKjxuYkDj6ykxpCg9Ud3J5iOzFc2pI5H+NCQ=="/>
         </item>
     </channel>
 </rss>
