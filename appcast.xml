@@ -3,21 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.3.9</title>
-            <pubDate>Sat, 18 Jul 2026 09:46:36 +0530</pubDate>
-            <sparkle:version>14</sparkle:version>
-            <sparkle:shortVersionString>0.3.9</sparkle:shortVersionString>
+            <title>0.4.0</title>
+            <pubDate>Sat, 18 Jul 2026 15:23:53 +0530</pubDate>
+            <sparkle:version>15</sparkle:version>
+            <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Changed
-- **A clearer usage view.** Each limit is now a labelled progress bar instead of a
-  cramped line of numbers — 5-hour, weekly, and each per-model window, filling
-  green → amber → red as you approach the cap. A limit you've hit is tinted red so
-  it's obvious at a glance, spend and credits move to their own spot on the right,
-  and the bars use the full width. Reset times still tap to switch between a
-  countdown and the exact time.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Stats.** A new dashboard (menu-bar gearshape → Stats…, plus a one-line glance in the
+  popover) showing your activity across **both Claude and Codex**: a GitHub-style
+  contribution heatmap, current/longest streaks, active days, total tokens, favorite
+  model, longest session, most-active day, and a per-model breakdown — all with
+  All-time / 30-day / 7-day and Claude / Codex / Both filters. It's computed entirely on
+  your Mac from the sessions you already have; nothing leaves your machine, no sign-in.
+  The first open reads your history once (then it's instant), and your stats also appear
+  on the iPhone and Apple Watch companions.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.3.9/Perch-0.3.9.zip" length="3427609" type="application/octet-stream" sparkle:edSignature="7rGwKKQZp5R6ufvWCPW0Tnk9UzpDNakw5fI6W1k1TztZqNX8AOnKjxuYkDj6ykxpCg9Ud3J5iOzFc2pI5H+NCQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.0/Perch-0.4.0.zip" length="4008139" type="application/octet-stream" sparkle:edSignature="1nmK4RuRoK75SRbb18Nri/IAZOpmlos70ToAtoqaJlJiBRZiQGopVjt0XoOfzuenpYnr3RHwb+XTLKRtakM2BQ=="/>
         </item>
     </channel>
 </rss>
