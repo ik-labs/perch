@@ -3,23 +3,28 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.4.0</title>
-            <pubDate>Sat, 18 Jul 2026 15:23:53 +0530</pubDate>
-            <sparkle:version>15</sparkle:version>
-            <sparkle:shortVersionString>0.4.0</sparkle:shortVersionString>
+            <title>0.4.1</title>
+            <pubDate>Sun, 19 Jul 2026 19:35:59 +0530</pubDate>
+            <sparkle:version>16</sparkle:version>
+            <sparkle:shortVersionString>0.4.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Stats.** A new dashboard (menu-bar gearshape → Stats…, plus a one-line glance in the
-  popover) showing your activity across **both Claude and Codex**: a GitHub-style
-  contribution heatmap, current/longest streaks, active days, total tokens, favorite
-  model, longest session, most-active day, and a per-model breakdown — all with
-  All-time / 30-day / 7-day and Claude / Codex / Both filters. It's computed entirely on
-  your Mac from the sessions you already have; nothing leaves your machine, no sign-in.
-  The first open reads your history once (then it's instant), and your stats also appear
-  on the iPhone and Apple Watch companions.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **Codex sessions no longer show "Idle" mid-task.** During a long Codex turn with a
+  lot of output, the menu bar could flip to Idle while Codex was still visibly
+  working. Perch now looks further back in the session log to find the turn's true
+  state, so the working indicator stays accurate through even the longest tasks.
+
+### Changed
+- **The first Stats scan is more than twice as fast.** The one-time read of your
+  history when you first open Stats now finishes in less than half the time it did in
+  0.4.0, with the same low memory use. (Already-scanned Macs won't notice — later
+  opens were always instant.)
+- **Lighter on your Mac.** The background check that keeps the session list fresh no
+  longer launches helper processes every few seconds and reads session activity far
+  more efficiently — less CPU and battery for the same up-to-date menu bar.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.0/Perch-0.4.0.zip" length="4008139" type="application/octet-stream" sparkle:edSignature="1nmK4RuRoK75SRbb18Nri/IAZOpmlos70ToAtoqaJlJiBRZiQGopVjt0XoOfzuenpYnr3RHwb+XTLKRtakM2BQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.1/Perch-0.4.1.zip" length="4048976" type="application/octet-stream" sparkle:edSignature="CaD9HhILBXlzRRndlLcBLeM7gtMGBywc6VtQIbUi+4kFRTxcSm6n6l72/tRxNlMd68KfqpqhFSNj0QgfouzGBA=="/>
         </item>
     </channel>
 </rss>
