@@ -3,28 +3,21 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.4.1</title>
-            <pubDate>Sun, 19 Jul 2026 19:35:59 +0530</pubDate>
-            <sparkle:version>16</sparkle:version>
-            <sparkle:shortVersionString>0.4.1</sparkle:shortVersionString>
+            <title>0.4.2</title>
+            <pubDate>Sun, 19 Jul 2026 19:55:05 +0530</pubDate>
+            <sparkle:version>17</sparkle:version>
+            <sparkle:shortVersionString>0.4.2</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Codex sessions no longer show "Idle" mid-task.** During a long Codex turn with a
-  lot of output, the menu bar could flip to Idle while Codex was still visibly
-  working. Perch now looks further back in the session log to find the turn's true
-  state, so the working indicator stays accurate through even the longest tasks.
-
-### Changed
-- **The first Stats scan is more than twice as fast.** The one-time read of your
-  history when you first open Stats now finishes in less than half the time it did in
-  0.4.0, with the same low memory use. (Already-scanned Macs won't notice — later
-  opens were always instant.)
-- **Lighter on your Mac.** The background check that keeps the session list fresh no
-  longer launches helper processes every few seconds and reads session activity far
-  more efficiently — less CPU and battery for the same up-to-date menu bar.
+- **Codex "finished" notifications now show what the session actually said.** With
+  Codex's "Approve for me" mode on, the notification could show a raw blob of
+  internal approval data (`{"outcome":"allow"…}`) instead of the assistant's closing
+  message. Perch now reads the message from the session itself — never from the
+  approval machinery — and finds it reliably even for sessions that have been
+  running for days.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.1/Perch-0.4.1.zip" length="4048976" type="application/octet-stream" sparkle:edSignature="CaD9HhILBXlzRRndlLcBLeM7gtMGBywc6VtQIbUi+4kFRTxcSm6n6l72/tRxNlMd68KfqpqhFSNj0QgfouzGBA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.2/Perch-0.4.2.zip" length="4050134" type="application/octet-stream" sparkle:edSignature="lLttH4ge8NWpz2HuyTJkICpwNNVk5iPkSFfZCSvXcxzH3Q46gABnUKBxGkq12QrTeVSMtg92/W/EuMzG+J8yBg=="/>
         </item>
     </channel>
 </rss>
