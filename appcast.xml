@@ -3,22 +3,29 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.4.4</title>
-            <pubDate>Mon, 20 Jul 2026 14:04:37 +0530</pubDate>
-            <sparkle:version>19</sparkle:version>
-            <sparkle:shortVersionString>0.4.4</sparkle:shortVersionString>
+            <title>0.4.5</title>
+            <pubDate>Mon, 20 Jul 2026 22:45:38 +0530</pubDate>
+            <sparkle:version>20</sparkle:version>
+            <sparkle:shortVersionString>0.4.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **No more phantom "NEEDS YOU" during agent fan-outs.** When a Claude session runs
-  background agents (planning, parallel exploration), an agent's own permission
-  prompt could leave the session stuck showing "NEEDS YOU / Approve: …" for many
-  minutes after the prompt was already resolved — with nothing to approve at the
-  terminal. Perch now checks whether the session is *actually* waiting on a prompt
-  and clears the false alarm within seconds. Real prompts still show for exactly as
-  long as they're on screen.
+- **Plan approvals: honest and instant.** It turns out current Claude Code ignores
+  any plan approval sent from outside the terminal once its plan screen is up — so
+  0.4.3's "approve plans from your phone" could never actually work, and tapping
+  Allow just meant approving again at the terminal. Perch no longer pretends:
+  when a plan is ready you get a simple heads-up — "Plan ready — review and
+  approve in the terminal" — with no Allow/Deny buttons that can't do anything
+  and no lock-screen countdown that lies. The plan and its approval prompt appear
+  in your terminal immediately, as they always did. (Remote plan approval returns
+  the moment Claude Code honors it.)
+- **Approving ordinary tools from your phone keeps working on new Claude Code.**
+  Recent Claude Code versions quietly drop an approval unless it carries the
+  tool's input back — Perch now includes it, so remote Allow keeps landing.
+- **Fixed a crash in Perch's hook helper** when an approval decision arrived just
+  after you'd already answered the same prompt at the terminal.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.4/Perch-0.4.4.zip" length="4071031" type="application/octet-stream" sparkle:edSignature="Mw4F2CchH5PA+a64TnrIwzMQ3G2WqEPXdFPRH64oWNN0zBBqmYi/YRgzaqBXsrXYg4MQHyD15KxotuC6aQgqAA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.5/Perch-0.4.5.zip" length="4075562" type="application/octet-stream" sparkle:edSignature="Y3Aa2qi6gEYFLQUnc8sXqQvXe9S8qQJjUnjwBmUfcjzRfnV/W3rWhM4+MVQ1K5iEGhp584i2nlbJBAF0uSOXDQ=="/>
         </item>
     </channel>
 </rss>
