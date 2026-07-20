@@ -3,21 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.4.2</title>
-            <pubDate>Sun, 19 Jul 2026 19:55:05 +0530</pubDate>
-            <sparkle:version>17</sparkle:version>
-            <sparkle:shortVersionString>0.4.2</sparkle:shortVersionString>
+            <title>0.4.3</title>
+            <pubDate>Mon, 20 Jul 2026 13:13:44 +0530</pubDate>
+            <sparkle:version>18</sparkle:version>
+            <sparkle:shortVersionString>0.4.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Codex "finished" notifications now show what the session actually said.** With
-  Codex's "Approve for me" mode on, the notification could show a raw blob of
-  internal approval data (`{"outcome":"allow"…}`) instead of the assistant's closing
-  message. Perch now reads the message from the session itself — never from the
-  approval machinery — and finds it reliably even for sessions that have been
-  running for days.
+- **Approving a plan from your iPhone now actually works.** When Claude Code finishes
+  planning and asks "ready to execute?", tapping Allow on your phone used to do
+  nothing unless you answered within 45 seconds — nearly impossible when you're away
+  from your desk (which is exactly when you get the push). Plan approvals now stay
+  answerable from your phone for **4½ minutes**, and the lock-screen countdown
+  matches the real deadline instead of dimming "too late" early. Ordinary tool
+  approvals are unchanged. If nobody answers remotely, the terminal prompt appears
+  as before.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.2/Perch-0.4.2.zip" length="4050134" type="application/octet-stream" sparkle:edSignature="lLttH4ge8NWpz2HuyTJkICpwNNVk5iPkSFfZCSvXcxzH3Q46gABnUKBxGkq12QrTeVSMtg92/W/EuMzG+J8yBg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.3/Perch-0.4.3.zip" length="4056838" type="application/octet-stream" sparkle:edSignature="KxyhDqxJzh4C+24P8aHrrJOYAnFoW7+tLPJJ9tIfg/Sd/61mGuV7Q7IW2A57SSfMfVGHeJsV2NmpqNndJMpTDQ=="/>
         </item>
     </channel>
 </rss>
