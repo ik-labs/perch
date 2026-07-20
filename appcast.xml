@@ -3,23 +3,22 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.4.3</title>
-            <pubDate>Mon, 20 Jul 2026 13:13:44 +0530</pubDate>
-            <sparkle:version>18</sparkle:version>
-            <sparkle:shortVersionString>0.4.3</sparkle:shortVersionString>
+            <title>0.4.4</title>
+            <pubDate>Mon, 20 Jul 2026 14:04:37 +0530</pubDate>
+            <sparkle:version>19</sparkle:version>
+            <sparkle:shortVersionString>0.4.4</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Approving a plan from your iPhone now actually works.** When Claude Code finishes
-  planning and asks "ready to execute?", tapping Allow on your phone used to do
-  nothing unless you answered within 45 seconds — nearly impossible when you're away
-  from your desk (which is exactly when you get the push). Plan approvals now stay
-  answerable from your phone for **4½ minutes**, and the lock-screen countdown
-  matches the real deadline instead of dimming "too late" early. Ordinary tool
-  approvals are unchanged. If nobody answers remotely, the terminal prompt appears
-  as before.
+- **No more phantom "NEEDS YOU" during agent fan-outs.** When a Claude session runs
+  background agents (planning, parallel exploration), an agent's own permission
+  prompt could leave the session stuck showing "NEEDS YOU / Approve: …" for many
+  minutes after the prompt was already resolved — with nothing to approve at the
+  terminal. Perch now checks whether the session is *actually* waiting on a prompt
+  and clears the false alarm within seconds. Real prompts still show for exactly as
+  long as they're on screen.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.3/Perch-0.4.3.zip" length="4056838" type="application/octet-stream" sparkle:edSignature="KxyhDqxJzh4C+24P8aHrrJOYAnFoW7+tLPJJ9tIfg/Sd/61mGuV7Q7IW2A57SSfMfVGHeJsV2NmpqNndJMpTDQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.4/Perch-0.4.4.zip" length="4071031" type="application/octet-stream" sparkle:edSignature="Mw4F2CchH5PA+a64TnrIwzMQ3G2WqEPXdFPRH64oWNN0zBBqmYi/YRgzaqBXsrXYg4MQHyD15KxotuC6aQgqAA=="/>
         </item>
     </channel>
 </rss>
