@@ -3,25 +3,17 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.4.9</title>
-            <pubDate>Tue, 21 Jul 2026 16:05:01 +0530</pubDate>
-            <sparkle:version>24</sparkle:version>
-            <sparkle:shortVersionString>0.4.9</sparkle:shortVersionString>
+            <title>0.4.10</title>
+            <pubDate>Tue, 21 Jul 2026 17:37:34 +0530</pubDate>
+            <sparkle:version>25</sparkle:version>
+            <sparkle:shortVersionString>0.4.10</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **The Live Activity now appears while agents are working — not only when one
-  needs you.** Previously the lock-screen fleet card could only start from a
-  "needs you" moment, so after anything removed it (iOS removes Live Activities
-  every time the app updates, including TestFlight updates) your lock screen
-  stayed dark until the next approval prompt — even with agents visibly working.
-  Now, whenever agents are active and your phone has no card, Perch brings it
-  back on its own. Swiping the card away is still respected: it stays gone for
-  an hour (a real "needs you" can still bring it back sooner). Works with your
-  current phone build; pair with TestFlight build 27 for the fastest
-  after-update recovery.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- Housekeeping: the in-app purchase link now points at Perch's standard price.
+  Existing licences are unaffected.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.9/Perch-0.4.9.zip" length="4107757" type="application/octet-stream" sparkle:edSignature="8MRFy/V5NVOyXwak14rAd+IO+f3PszvKxEJ12EUjP3bzCmW/+0BsgP8WLh+EyQMtSIVwHN46hg0jSXYNuHy3Aw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.10/Perch-0.4.10.zip" length="4107852" type="application/octet-stream" sparkle:edSignature="ev9EELtNGk5IgPMYu2WdvvN/mlpGHs8BoolGLewHa2zT9LacrZ+A1jWg14mEUaEdTb59WNlRajhj+yBQta6jCw=="/>
         </item>
     </channel>
 </rss>
