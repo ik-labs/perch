@@ -3,34 +3,21 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.4.7</title>
-            <pubDate>Tue, 21 Jul 2026 13:53:48 +0530</pubDate>
-            <sparkle:version>22</sparkle:version>
-            <sparkle:shortVersionString>0.4.7</sparkle:shortVersionString>
+            <title>0.4.8</title>
+            <pubDate>Tue, 21 Jul 2026 14:09:28 +0530</pubDate>
+            <sparkle:version>23</sparkle:version>
+            <sparkle:shortVersionString>0.4.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Sessions with background agents no longer show "Idle".** When Claude hands work
-  to background agents and its main thread pauses, the session now keeps showing as
-  working — in the menu bar, the session list, the Live Activity, and on your
-  phone — for as long as an agent is actually active. The "finished" notification
-  now arrives when the work is truly done (agents included), not when the main
-  thread pauses.
-- **Dynamic Island text no longer gets clipped by the corners.** The expanded
-  island's curved corners could slice the first and last characters of the bottom
-  row ("perch" became "erch"). Everything now sits safely inside the curve.
-
-### Changed
-- **Which agent, at a glance.** Session rows on the Mac, iPhone, and Apple Watch
-  now show the agent's mark — Claude's spark or OpenAI's knot — instead of a text
-  pill (or, for Claude, nothing). The CLI / DESKTOP pills stay: they say *where*
-  a session runs; the mark says *whose* it is.
-- **A calmer "needs you" card on the lock screen.** The alert Live Activity now
-  matches the calm card's look: what needs approving, one countdown line with a
-  draining bar, and the fleet dots up top — instead of a wall of numbers, bars,
-  and mini-rows. Pair with TestFlight build 25 for the phone-side changes.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- **The agent's mark now leads each session row.** Claude's spark or OpenAI's knot
+  sits at the start of the row, with the status indicator tucked underneath it. The
+  marks line up in a column now, so you can scan straight down the list to see whose
+  session is whose — previously the mark sat after the project name, where it shifted
+  around depending on how long the name was. Same on the Mac and the iPhone; the
+  Apple Watch row is unchanged. Pair with TestFlight build 26 for the phone side.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.7/Perch-0.4.7.zip" length="4103593" type="application/octet-stream" sparkle:edSignature="I0gVnL+GwuwZBmCJer5PHLa0hUjMRpP2ci1Ke9dQqC0eAlJkujXpo506IxcmQa6zW5yacmSdNnhS1o02xKAWDw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.8/Perch-0.4.8.zip" length="4104269" type="application/octet-stream" sparkle:edSignature="EuegbD4H5bIu9KZMV3K5Sbp8fyfWt6PJ08yIYf06EccjnzWDEFZx4kNy2OaAfDVuY1x2liuBxFaQYaBj3S/ZCg=="/>
         </item>
     </channel>
 </rss>
