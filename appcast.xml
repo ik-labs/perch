@@ -3,29 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.4.5</title>
-            <pubDate>Mon, 20 Jul 2026 22:45:38 +0530</pubDate>
-            <sparkle:version>20</sparkle:version>
-            <sparkle:shortVersionString>0.4.5</sparkle:shortVersionString>
+            <title>0.4.6</title>
+            <pubDate>Tue, 21 Jul 2026 12:40:05 +0530</pubDate>
+            <sparkle:version>21</sparkle:version>
+            <sparkle:shortVersionString>0.4.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Plan approvals: honest and instant.** It turns out current Claude Code ignores
-  any plan approval sent from outside the terminal once its plan screen is up — so
-  0.4.3's "approve plans from your phone" could never actually work, and tapping
-  Allow just meant approving again at the terminal. Perch no longer pretends:
-  when a plan is ready you get a simple heads-up — "Plan ready — review and
-  approve in the terminal" — with no Allow/Deny buttons that can't do anything
-  and no lock-screen countdown that lies. The plan and its approval prompt appear
-  in your terminal immediately, as they always did. (Remote plan approval returns
-  the moment Claude Code honors it.)
-- **Approving ordinary tools from your phone keeps working on new Claude Code.**
-  Recent Claude Code versions quietly drop an approval unless it carries the
-  tool's input back — Perch now includes it, so remote Allow keeps landing.
-- **Fixed a crash in Perch's hook helper** when an approval decision arrived just
-  after you'd already answered the same prompt at the terminal.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- **A much richer Live Activity on your iPhone and Apple Watch.** The lock-screen
+  card now uses its full canvas: a clear headline ("2 agents working"), a row for
+  each active session with its own live timer, and — when Claude is working
+  through a task list — a progress bar showing exactly how far along it is
+  ("Task 4/5 · Hardening provisioning fallback"). When an agent needs you, the
+  card flips to a bigger, clearer alert: what to approve, a full-width countdown,
+  and what the rest of your fleet is doing. The Dynamic Island and the watch
+  Smart Stack card pick up the task progress too. Pair with TestFlight build 24
+  of the companion app — older phone builds keep working with the old card.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.5/Perch-0.4.5.zip" length="4075562" type="application/octet-stream" sparkle:edSignature="Y3Aa2qi6gEYFLQUnc8sXqQvXe9S8qQJjUnjwBmUfcjzRfnV/W3rWhM4+MVQ1K5iEGhp584i2nlbJBAF0uSOXDQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.6/Perch-0.4.6.zip" length="4077776" type="application/octet-stream" sparkle:edSignature="DkXypqXHX/lATpWLT28Rql64TFyr2bdXDu/cIgMczlTQ5wliocD4QK/PyrdDNPkbO6Zro6UsYwcekqhy9ETbDA=="/>
         </item>
     </channel>
 </rss>
