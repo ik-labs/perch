@@ -3,20 +3,21 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.4.11</title>
-            <pubDate>Tue, 21 Jul 2026 22:40:12 +0530</pubDate>
-            <sparkle:version>26</sparkle:version>
-            <sparkle:shortVersionString>0.4.11</sparkle:shortVersionString>
+            <title>0.4.12</title>
+            <pubDate>Wed, 22 Jul 2026 15:11:06 +0530</pubDate>
+            <sparkle:version>27</sparkle:version>
+            <sparkle:shortVersionString>0.4.12</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- Bug fixes and improvements: when an agent asks you a question, the
-  notification now shows the question instead of Allow/Deny buttons that
-  couldn't answer it; session state tracking is more reliable when several
-  agents report at once; and a brief push-service hiccup no longer drops a
-  "needs you" alert.
+- Codex integration: Perch now checks whether Codex is actually *running* the
+  hooks it installed. Codex asks you to approve a hook before it will run it, so
+  the integration could show as on while doing nothing — no live session state,
+  no "needs you" alerts, and no Allow/Deny. Settings now says when that's the
+  case and which entries to approve with `/hooks` in Codex, including after a
+  Perch update changes them.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.11/Perch-0.4.11.zip" length="4197337" type="application/octet-stream" sparkle:edSignature="7pZFUzzPrkoib0DzaZUFx0tD9BqQ2/wvfM4kQcQZIAWLH0uGQ8YuWAdDNo3+qP1cETBTW9qZZHFBwc7mWtKSDA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.12/Perch-0.4.12.zip" length="4288804" type="application/octet-stream" sparkle:edSignature="xSGO/jHZu2WcM3SW5+8YHVvgZ6NQs3z/1Dl9AKSq9u0g1uv3CbBQpC7b2DCYv6ecLd6sQ3oDOwWob+FdlQLBDw=="/>
         </item>
     </channel>
 </rss>
