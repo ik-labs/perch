@@ -3,25 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.4.13</title>
-            <pubDate>Wed, 22 Jul 2026 16:15:25 +0530</pubDate>
-            <sparkle:version>28</sparkle:version>
-            <sparkle:shortVersionString>0.4.13</sparkle:shortVersionString>
+            <title>0.4.14</title>
+            <pubDate>Wed, 22 Jul 2026 16:40:00 +0530</pubDate>
+            <sparkle:version>29</sparkle:version>
+            <sparkle:shortVersionString>0.4.14</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- Codex sessions now end cleanly instead of lingering until they age out, so
-  "hide idle after…" and history pruning treat them the same as Claude's.
-  Needs Codex 0.145 or newer; older versions are unaffected.
-- Codex: after you answer a question, the session no longer keeps showing as
-  waiting on you.
+- Perch now finds Codex the way your terminal does. If you install Codex through
+  a version manager (nvm, fnm, asdf) or only have the Codex desktop app, Perch
+  could miss it entirely when launched normally — which quietly switched off the
+  Codex improvements in 0.4.13 and the hook check added in 0.4.12. Both work now.
 
 ### Note
-- This update adds one more Codex hook, and Codex asks you to approve a hook
-  before it will run it. Perch will tell you in Settings if there's anything
-  to approve — run `/hooks` in Codex and trust Perch's entries.
+- If you're on Codex 0.145 or newer, this adds one more Codex hook. Codex asks
+  you to approve a hook before it will run it — Perch will say so in Settings.
+  Run `/hooks` in Codex and trust Perch's entries.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.13/Perch-0.4.13.zip" length="4319147" type="application/octet-stream" sparkle:edSignature="H53xTJEvzDIsROi/vgc7drTgYPkz6K6KtlRkXFJ6VOVMleZK5o8fCNr6kyXHKqmyl6OOdTsXIJ8FmIdPsy/MDw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.14/Perch-0.4.14.zip" length="4351837" type="application/octet-stream" sparkle:edSignature="mTUSDNRk1hLxdeOWR/hfFEukB8SCB32hmiQUoH48f67eiRSlM4Dd0iu98WuCZMpk3Ys5Q/N92v/KxhIkuY0mCg=="/>
         </item>
     </channel>
 </rss>
