@@ -3,32 +3,28 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.4.16</title>
-            <pubDate>Wed, 22 Jul 2026 21:56:58 +0530</pubDate>
-            <sparkle:version>31</sparkle:version>
-            <sparkle:shortVersionString>0.4.16</sparkle:shortVersionString>
+            <title>0.4.17</title>
+            <pubDate>Thu, 23 Jul 2026 15:38:43 +0530</pubDate>
+            <sparkle:version>32</sparkle:version>
+            <sparkle:shortVersionString>0.4.17</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Changed
-- If Codex isn't running Perch's hooks, the menu-bar dropdown now says so.
-  Previously this only appeared in Settings, so you had to go looking for a
-  problem you had no reason to suspect — the integration would read as on while
-  doing nothing. Click the banner for the details and the fix.
-- Perch re-checks with Codex directly after an update. Approving a hook in Codex
-  ties the approval to that exact hook, so a Perch update can quietly invalidate
-  it; this is the case Perch couldn't previously detect on its own.
-- First-run welcome now mentions Codex when you have it, and walks Codex users
-  through the one step Perch can't do for them: running `/hooks` to approve the
-  hooks it just installed.
+- Codex approvals are clearer about what's happening. When Codex asks to run a
+  tool and Perch is waiting on your Allow/Deny, Codex now shows "Waiting for
+  approval in Perch — Codex will prompt automatically if unanswered," so a pause
+  reads as intentional rather than a freeze. If you don't answer in Perch, Codex
+  falls back to its own approval prompt as before.
+- Tapping a Codex permission notification now jumps to the right place — the
+  Codex desktop app or the exact terminal pane — and hands the decision back to
+  Codex's own prompt, instead of sometimes only revealing the project folder.
 
-### Fixed
-- Claude Code sessions running inside the Claude desktop app were labelled `CLI`.
-  The desktop app runs its own copy of Claude Code, and Perch couldn't tell it
-  apart from one you started in a terminal. They now read `APP`, and clicking one
-  brings the desktop app to the front instead of opening the project folder in
-  Finder.
+### Note
+- This release updates Perch's Codex hook, so Codex will ask you to approve it
+  again. Run `/hooks` in Codex and trust Perch's entry — the menu bar will remind
+  you if anything isn't trusted.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.16/Perch-0.4.16.zip" length="4382266" type="application/octet-stream" sparkle:edSignature="sLEo3d3DBO4rz4Z0BXbMo8hTeOEwJXAvjNWhsV/9GVqwAdXxFnjpsAXI47ZTA6P7pXe1Gkm5jsZcJiYZdpa0Dg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.17/Perch-0.4.17.zip" length="4430243" type="application/octet-stream" sparkle:edSignature="jkz7mc5WRudiQtvUzVnCyCy5VTNIosQAx8/NgsUuf0gorb8Ep+0SBxFFP7zQa9cubMxfCIIqHY4LCAiqBegwAA=="/>
         </item>
     </channel>
 </rss>
