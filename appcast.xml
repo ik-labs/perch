@@ -3,25 +3,54 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.4.18</title>
-            <pubDate>Thu, 23 Jul 2026 18:04:47 +0530</pubDate>
-            <sparkle:version>33</sparkle:version>
-            <sparkle:shortVersionString>0.4.18</sparkle:shortVersionString>
+            <title>0.5.0</title>
+            <pubDate>Mon, 27 Jul 2026 00:13:56 +0530</pubDate>
+            <sparkle:version>34</sparkle:version>
+            <sparkle:shortVersionString>0.5.0</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Changed
-- The permission approval on iPhone now shows a countdown, so you can see how long
-  you have to answer before it hands back to your Mac or the agent's own prompt —
-  matching the Apple Watch. It also counts down to the real deadline now, so a phone
-  that reconnects partway through the window shows the time that's actually left.
-- If your iPhone has notifications turned off (or can't show them), Perch no longer
-  holds a permission for the full phone window waiting on an alert you'd never see —
-  it hands back to your Mac or the agent's own prompt sooner.
-- Simplified Perch's Codex hook (removed a field that did nothing). Codex will ask
-  you to approve the hook again — run `/hooks` in Codex and trust Perch's entry; the
-  menu bar reminds you if anything isn't trusted.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Cursor is now a supported agent, alongside Claude Code and Codex.** Your
+  Cursor sessions show up in the menu bar, on your iPhone and on your watch, the
+  same as the other two: which project, what it's doing right now, and whether
+  it's working or finished. Both the `cursor-agent` CLI and the Cursor app are
+  covered by the same one-time setup.
+- Cursor sessions appear even if you started them before Perch was running, and
+  clicking one jumps to the terminal it's in.
+- "Finished" notifications for Cursor turns, on the Mac and pushed to your phone.
+- Per-session token and context figures for Cursor.
+- Cursor in Stats — sessions, active days, streaks and the contribution heatmap,
+  with its own filter next to Claude and Codex.
+- A "Cursor real-time integration" switch in Settings, on by default and a no-op
+  if you don't have Cursor. It adds one entry to `~/.cursor/hooks.json`, leaves
+  any hooks other tools put there untouched, and removes cleanly when switched
+  off.
+
+### Fixed
+- **Cursor sessions used to show up as Claude Code sessions that never did
+  anything.** If you had Perch and Cursor both installed, Cursor was already
+  quietly triggering Perch and creating a session that was labelled Claude Code,
+  showed "default" as its model, and sat in its starting state forever no matter
+  how much work Cursor did. Those rows are gone — Cursor sessions are now
+  reported as Cursor sessions, correctly.
+- `scripts/uninstall.sh` now removes Perch's Codex and Cursor hooks as well as
+  its Claude Code ones. It previously left them behind, so uninstalling with
+  `--app` deleted the programs those hooks pointed at and left the agents running
+  a command that no longer existed.
+
+### Note
+- **Cursor has no Allow/Deny in Perch, deliberately.** Cursor's approval hook
+  fires before *every* shell command, not only the ones it was going to ask you
+  about — so wiring it up would turn routine, already-approved commands into
+  lock-screen prompts on your phone. Cursor sessions therefore never show "Needs
+  you"; approvals stay in Cursor itself. Claude Code and Codex are unchanged.
+- Perch shows no cost estimate for Cursor sessions yet, and Cursor contributes no
+  token totals to Stats — those numbers aren't written anywhere Perch can read
+  them after the fact. Its sessions, days and streaks all count normally, and
+  Stats now says which agents a token total actually covers rather than quietly
+  leaving one out.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.4.18/Perch-0.4.18.zip" length="4436376" type="application/octet-stream" sparkle:edSignature="KESVMOfB1JVWqrcBg9fKsb+kRtMn96q86PjycvPwjJfl16qSp/Dcm3ik8Zqe6GdHrlOhWuRzX2fafJSG0k6IBg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.0/Perch-0.5.0.zip" length="5264025" type="application/octet-stream" sparkle:edSignature="zYX6C4rljLn3i9Pq/uSZeaGURjDhTT7DL/hCnzuUcFQ2bkoUas6Af8x0ddDOeZ/fE7B8bjVeHB85WOfp4WyDDA=="/>
         </item>
     </channel>
 </rss>
