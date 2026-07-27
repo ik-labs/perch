@@ -3,27 +3,31 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.14</title>
-            <pubDate>Mon, 27 Jul 2026 18:59:21 +0530</pubDate>
-            <sparkle:version>48</sparkle:version>
-            <sparkle:shortVersionString>0.5.14</sparkle:shortVersionString>
+            <title>0.5.15</title>
+            <pubDate>Mon, 27 Jul 2026 20:42:04 +0530</pubDate>
+            <sparkle:version>49</sparkle:version>
+            <sparkle:shortVersionString>0.5.15</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **A Claude session in a terminal is no longer badged APP.** If Perch hadn't yet
-  matched the session to a running process, it assumed the session belonged to
-  the Claude desktop app — even when the session itself recorded which terminal
-  had started it. Two sessions of one project could sit side by side badged
-  differently for no reason you could act on.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- **The usage section shows each agent's logo.** Claude's spark, OpenAI's knot and
+  Cursor's cube replace the plain coloured dots, matching how session rows already
+  identify a provider — on the Mac, iPhone and watch.
+- **iPhone: the usage bars now match the Mac.** They use the full width of the
+  row, line up with the provider line above them, and the reset time sits next to
+  its percentage instead of drifting off to the right.
 
-### Added
-- **Session rows now show which git branch they're on.** Two sessions in the same
-  project used to look identical — a main checkout and a worktree both just read
-  `perch`. The branch appears next to the project name, on the Mac and on your
-  iPhone. Sessions outside a git repository are unchanged. A detached checkout
-  shows the short commit instead.
+### Fixed
+- **iPhone: a usage row with no reset time no longer has a longer bar than the
+  others.** Same defect the Mac had — a window that reports no reset, such as
+  Claude's per-model bar, stretched further right and pushed its percentage out
+  of line.
+
+### Note
+- The iPhone and watch app also pick up everything the Mac gained since the last
+  companion build: Cursor sessions, Cursor usage, and the git branch on each row.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.14/Perch-0.5.14.zip" length="5372446" type="application/octet-stream" sparkle:edSignature="CTSfndu6IcWjasLhmlpJDCt/gaJw1kG7d5+8brBB42OlKThJvPSWTHd5yMWcvEF0VhDl1xVIB3jyalNpEzGEDQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.15/Perch-0.5.15.zip" length="5374198" type="application/octet-stream" sparkle:edSignature="uwGp+BLAoVN/uGaOGfj6W4/5QFKtCKTtJGKbWM0dX6lvohh6YesG1D0JE3idrjcascXb7m/bUDWSypVxxF0SDg=="/>
         </item>
     </channel>
 </rss>
