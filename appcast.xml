@@ -3,31 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.6</title>
-            <pubDate>Mon, 27 Jul 2026 11:37:20 +0530</pubDate>
-            <sparkle:version>40</sparkle:version>
-            <sparkle:shortVersionString>0.5.6</sparkle:shortVersionString>
+            <title>0.5.7</title>
+            <pubDate>Mon, 27 Jul 2026 11:53:49 +0530</pubDate>
+            <sparkle:version>41</sparkle:version>
+            <sparkle:shortVersionString>0.5.7</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Changed
-- **The Codex and Cursor integration switches are gone.** Both were on by default
-  and both did nothing at all if you didn't have that agent installed, so for
-  almost everyone they were two controls that never needed touching. Perch still
-  sets up and tears down those integrations exactly as before —
-  `./scripts/uninstall.sh` remains the way to detach it completely.
-- **The "Codex needs you to trust these hooks again" warning stays**, along with
-  its Re-check button, and now appears only when there's actually something to
-  do. It's the one part of that section that asks something of you rather than
-  offering a preference: Codex won't run a hook it hasn't approved, and it tells
-  you nothing when it skips one.
-- **The Usage section in Settings is gone.** It had no switches left in it, only
-  a paragraph. What it explained — that the usage bars are fetched from Claude,
-  Codex and Cursor using the logins those agents already saved on this Mac, and
-  that an agent you don't use is never contacted — now lives in `SECURITY.md`,
-  under "What Perch sends off this Mac", along with everything else that leaves
-  your machine.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **No more "trust these hooks" warning for a Codex you don't have.** Perch
+  decided Codex was installed by looking for its `~/.codex` folder — but removing
+  Codex doesn't necessarily remove that folder, so anyone who had tried Codex and
+  moved on could be told forever to re-approve hooks for an agent that wasn't
+  there. It now also checks that a `codex` you can actually run exists. If you do
+  have Codex, nothing changes; the warning still appears whenever it genuinely
+  needs your attention.
+- **Re-check now looks for Codex again from scratch.** If you install Codex while
+  Perch is already running, pressing Re-check picks it up instead of you having to
+  restart Perch.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.6/Perch-0.5.6.zip" length="5309036" type="application/octet-stream" sparkle:edSignature="EjjZ0FEDz3mL7tXIvmWsQVokftd4xf6u/TTFptYiqIu6yWPIQCIVWDHqWwM9jIOI60sAXeXfkRHrhiuqKguJCQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.7/Perch-0.5.7.zip" length="5312214" type="application/octet-stream" sparkle:edSignature="bIRfYNl8OrlRP6iBWGa3b0BViDdeiPjP24NOwMQbWIb8uvVZvnv7LXU/HLGgH528DsmF5NRdx+bhBgp+TIHuDg=="/>
         </item>
     </channel>
 </rss>
