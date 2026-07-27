@@ -3,24 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.9</title>
-            <pubDate>Mon, 27 Jul 2026 13:42:08 +0530</pubDate>
-            <sparkle:version>43</sparkle:version>
-            <sparkle:shortVersionString>0.5.9</sparkle:shortVersionString>
+            <title>0.5.10</title>
+            <pubDate>Mon, 27 Jul 2026 16:11:01 +0530</pubDate>
+            <sparkle:version>44</sparkle:version>
+            <sparkle:shortVersionString>0.5.10</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Cursor's parallel subagents no longer leave phantom sessions behind.** When
-  Cursor splits work across several agents at once, each one runs as a session in
-  its own right and simply stops when it's done — it never reports finishing. So
-  a single delegation left four or five rows spinning in your list long after the
-  work was over. Those now settle within about a minute and a half.
-- **No more late "finished" notifications for work that already ended.** When
-  Perch gives up waiting on a Cursor session that went quiet, that's Perch losing
-  track — not the agent finishing — and it no longer announces it as a
-  completion. One parallel delegation would previously have sent you four.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Cursor usage now reaches your iPhone and Apple Watch.** The Included and API
+  bars that the Mac has been showing since 0.5.4 now appear in the usage section
+  on the phone, and on the watch alongside Claude and Codex. Needs the matching
+  companion update; an older phone simply won't show the row.
+
+### Fixed
+- **A model bar sitting at 0% is now shown on the phone too.** The Mac started
+  showing those in 0.5.5; the phone and watch were still hiding them, so they
+  listed fewer bars than the Mac beside them.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.9/Perch-0.5.9.zip" length="5327292" type="application/octet-stream" sparkle:edSignature="FMHgJuFD72ukCWiM/8IFpLEVwmbPOgZwTE1knDb0nzCllR5RCcMu3z4FB/dj6qrDGVkDcnjrVTTT3aJIeLe3Ag=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.10/Perch-0.5.10.zip" length="5342978" type="application/octet-stream" sparkle:edSignature="7RyP5GftofBdZtsWxyBUQ7gmHNExwV6rD450+q1WoEeULmo8RPSr4SHebFSRZvWcVIgwXBoA9XWycQrwzLENBA=="/>
         </item>
     </channel>
 </rss>
