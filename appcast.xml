@@ -3,33 +3,31 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.5</title>
-            <pubDate>Mon, 27 Jul 2026 11:12:16 +0530</pubDate>
-            <sparkle:version>39</sparkle:version>
-            <sparkle:shortVersionString>0.5.5</sparkle:shortVersionString>
+            <title>0.5.6</title>
+            <pubDate>Mon, 27 Jul 2026 11:37:20 +0530</pubDate>
+            <sparkle:version>40</sparkle:version>
+            <sparkle:shortVersionString>0.5.6</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Changed
-- **Per-model usage bars are on for everyone, and the switch is gone.** They used
-  to be behind a "Show per-model limits" setting that was off unless you found
-  it. It also did more than its name suggested: it's what keeps the 5-hour and
-  weekly numbers coming from Claude and Codex themselves, rather than from
-  whatever was last written on this Mac — which goes stale as soon as your
-  sessions go quiet.
-- **Model bars now show even at 0%.** Previously a model you hadn't used yet was
-  hidden, which meant most people saw no bars at all and had no way to tell the
-  feature was working. A model with its own weekly cap now always gets a row.
-- **Cursor gets a second usage bar too.** Cursor meters your billing period twice
-  — once against your plan's total allowance and once against its API allowance —
-  and those two really do differ. The headline bar is unchanged; the API figure
-  now appears beneath it, the same way Claude's per-model bars sit under its
-  weekly one.
-- The Usage section of Settings has no switches left. It now just explains where
-  the numbers come from: Perch asks each service directly, using the login that
-  agent already saved on this Mac, read-only, and only while you have a session
-  open with that agent.
+- **The Codex and Cursor integration switches are gone.** Both were on by default
+  and both did nothing at all if you didn't have that agent installed, so for
+  almost everyone they were two controls that never needed touching. Perch still
+  sets up and tears down those integrations exactly as before —
+  `./scripts/uninstall.sh` remains the way to detach it completely.
+- **The "Codex needs you to trust these hooks again" warning stays**, along with
+  its Re-check button, and now appears only when there's actually something to
+  do. It's the one part of that section that asks something of you rather than
+  offering a preference: Codex won't run a hook it hasn't approved, and it tells
+  you nothing when it skips one.
+- **The Usage section in Settings is gone.** It had no switches left in it, only
+  a paragraph. What it explained — that the usage bars are fetched from Claude,
+  Codex and Cursor using the logins those agents already saved on this Mac, and
+  that an agent you don't use is never contacted — now lives in `SECURITY.md`,
+  under "What Perch sends off this Mac", along with everything else that leaves
+  your machine.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.5/Perch-0.5.5.zip" length="5313452" type="application/octet-stream" sparkle:edSignature="KiGHwL8EXKDk0k+b6Kxy3Kix88/O5wcD1WaHo0EiRVr83Gb7+s2xWqlD7H1B+HEJ91fdUaBKelYnrpsBtcdoDg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.6/Perch-0.5.6.zip" length="5309036" type="application/octet-stream" sparkle:edSignature="EjjZ0FEDz3mL7tXIvmWsQVokftd4xf6u/TTFptYiqIu6yWPIQCIVWDHqWwM9jIOI60sAXeXfkRHrhiuqKguJCQ=="/>
         </item>
     </channel>
 </rss>
