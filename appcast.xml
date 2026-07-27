@@ -3,25 +3,29 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.7</title>
-            <pubDate>Mon, 27 Jul 2026 11:53:49 +0530</pubDate>
-            <sparkle:version>41</sparkle:version>
-            <sparkle:shortVersionString>0.5.7</sparkle:shortVersionString>
+            <title>0.5.8</title>
+            <pubDate>Mon, 27 Jul 2026 12:29:34 +0530</pubDate>
+            <sparkle:version>42</sparkle:version>
+            <sparkle:shortVersionString>0.5.8</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **No more "trust these hooks" warning for a Codex you don't have.** Perch
-  decided Codex was installed by looking for its `~/.codex` folder — but removing
-  Codex doesn't necessarily remove that folder, so anyone who had tried Codex and
-  moved on could be told forever to re-approve hooks for an agent that wasn't
-  there. It now also checks that a `codex` you can actually run exists. If you do
-  have Codex, nothing changes; the warning still appears whenever it genuinely
-  needs your attention.
-- **Re-check now looks for Codex again from scratch.** If you install Codex while
-  Perch is already running, pressing Re-check picks it up instead of you having to
-  restart Perch.
+- **Installing Codex while Perch is running is now noticed.** 0.5.7 said pressing
+  Re-check would pick it up, but Re-check sits inside the very warning that gets
+  hidden when Perch thinks Codex isn't there — so it wasn't available exactly when
+  you'd want it. Simply opening Settings now looks again.
+- **Perch no longer stays quiet just because it couldn't find Codex once.** If the
+  check fails for some passing reason rather than because Codex is genuinely
+  missing, the hook-trust warning is shown rather than swallowed. Only a real
+  absence hides it.
+- A lookup already under way can no longer overwrite a newer, correct one and put
+  Perch back to believing Codex is missing.
+- **Settings now re-checks Codex every time you open it, not just the first time.**
+  The window is kept around and reused between openings, so the checks that were
+  meant to run on each visit were quietly only running once per launch — including
+  the "are these hooks still trusted?" check.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.7/Perch-0.5.7.zip" length="5312214" type="application/octet-stream" sparkle:edSignature="bIRfYNl8OrlRP6iBWGa3b0BViDdeiPjP24NOwMQbWIb8uvVZvnv7LXU/HLGgH528DsmF5NRdx+bhBgp+TIHuDg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.8/Perch-0.5.8.zip" length="5322718" type="application/octet-stream" sparkle:edSignature="nh+NgCGiH62jXxtbbhj9/U2tUp2Ty+SdxLqDWtyi0wEPkRqI0KGd2ij8UHc/K//Ta/E7izHFbyLIzWT5P8bCAA=="/>
         </item>
     </channel>
 </rss>
