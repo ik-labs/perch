@@ -3,28 +3,33 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.3</title>
-            <pubDate>Mon, 27 Jul 2026 10:43:20 +0530</pubDate>
-            <sparkle:version>37</sparkle:version>
-            <sparkle:shortVersionString>0.5.3</sparkle:shortVersionString>
+            <title>0.5.5</title>
+            <pubDate>Mon, 27 Jul 2026 11:12:16 +0530</pubDate>
+            <sparkle:version>39</sparkle:version>
+            <sparkle:shortVersionString>0.5.5</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[Two problems that only showed up once Cursor's own app — rather than just the
-`cursor-agent` command line — was actually being used.
-
-### Fixed
-- **A phantom "unknown" Cursor session.** Cursor's app sends Perch a signal for
-  an empty, unsent chat box, and Perch was turning that into a session row
-  labelled "unknown" that sat there idle forever. It's not a session you started
-  and there was no way to get rid of it. Perch now ignores those, and any one
-  already sitting in your list disappears.
-- **Closing Cursor left its sessions on screen.** A session running inside the
-  Cursor app kept showing as busy — "Thinking…", spinner and all — for fifteen
-  minutes after you closed the app, and then lingered as idle indefinitely. Those
-  now end as soon as Cursor quits. Sessions you started with `cursor-agent` in a
-  terminal are untouched: those quite legitimately outlive the app.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- **Per-model usage bars are on for everyone, and the switch is gone.** They used
+  to be behind a "Show per-model limits" setting that was off unless you found
+  it. It also did more than its name suggested: it's what keeps the 5-hour and
+  weekly numbers coming from Claude and Codex themselves, rather than from
+  whatever was last written on this Mac — which goes stale as soon as your
+  sessions go quiet.
+- **Model bars now show even at 0%.** Previously a model you hadn't used yet was
+  hidden, which meant most people saw no bars at all and had no way to tell the
+  feature was working. A model with its own weekly cap now always gets a row.
+- **Cursor gets a second usage bar too.** Cursor meters your billing period twice
+  — once against your plan's total allowance and once against its API allowance —
+  and those two really do differ. The headline bar is unchanged; the API figure
+  now appears beneath it, the same way Claude's per-model bars sit under its
+  weekly one.
+- The Usage section of Settings has no switches left. It now just explains where
+  the numbers come from: Perch asks each service directly, using the login that
+  agent already saved on this Mac, read-only, and only while you have a session
+  open with that agent.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.3/Perch-0.5.3.zip" length="5301832" type="application/octet-stream" sparkle:edSignature="6x5WgXA0Tpi5wDoZywhIaWW52YWv2zRTlXoF8ojNIUdJxIqOREBku3+kDAH2aAJTJi2IgU6xV893jquooQC/Cw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.5/Perch-0.5.5.zip" length="5313452" type="application/octet-stream" sparkle:edSignature="KiGHwL8EXKDk0k+b6Kxy3Kix88/O5wcD1WaHo0EiRVr83Gb7+s2xWqlD7H1B+HEJ91fdUaBKelYnrpsBtcdoDg=="/>
         </item>
     </channel>
 </rss>
