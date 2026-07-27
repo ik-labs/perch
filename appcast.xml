@@ -3,54 +3,46 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.0</title>
-            <pubDate>Mon, 27 Jul 2026 00:13:56 +0530</pubDate>
-            <sparkle:version>34</sparkle:version>
-            <sparkle:shortVersionString>0.5.0</sparkle:shortVersionString>
+            <title>0.5.1</title>
+            <pubDate>Mon, 27 Jul 2026 10:09:14 +0530</pubDate>
+            <sparkle:version>35</sparkle:version>
+            <sparkle:shortVersionString>0.5.1</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Cursor is now a supported agent, alongside Claude Code and Codex.** Your
-  Cursor sessions show up in the menu bar, on your iPhone and on your watch, the
-  same as the other two: which project, what it's doing right now, and whether
-  it's working or finished. Both the `cursor-agent` CLI and the Cursor app are
-  covered by the same one-time setup.
-- Cursor sessions appear even if you started them before Perch was running, and
-  clicking one jumps to the terminal it's in.
-- "Finished" notifications for Cursor turns, on the Mac and pushed to your phone.
-- Per-session token and context figures for Cursor.
-- Cursor in Stats — sessions, active days, streaks and the contribution heatmap,
-  with its own filter next to Claude and Codex.
-- A "Cursor real-time integration" switch in Settings, on by default and a no-op
-  if you don't have Cursor. It adds one entry to `~/.cursor/hooks.json`, leaves
-  any hooks other tools put there untouched, and removes cleanly when switched
-  off.
+            <description sparkle:format="markdown"><![CDATA[Follow-ups from using 0.5.0's Cursor support in anger. Cursor rows were missing
+three things the Claude and Codex rows have had all along.
+
+### Added
+- **Cursor account usage.** A new switch in Settings → Usage shows how much of
+  your Cursor plan's included usage this billing period has spent, as a bar
+  alongside the Claude and Codex ones, with your plan name and when the period
+  resets. You'll also get the same "usage running low" warning the other two
+  give you.
+
+  It's **off by default**, and unlike the other two it has to ask Cursor over the
+  internet — Claude and Codex leave their usage figures on your Mac, Cursor
+  doesn't. When you turn it on, Perch reads the login `cursor-agent` already
+  saved and asks Cursor for the number; macOS may ask your permission the first
+  time. Perch only ever reads that login and never changes it. Leave the switch
+  off and nothing is sent anywhere.
 
 ### Fixed
-- **Cursor sessions used to show up as Claude Code sessions that never did
-  anything.** If you had Perch and Cursor both installed, Cursor was already
-  quietly triggering Perch and creating a session that was labelled Claude Code,
-  showed "default" as its model, and sat in its starting state forever no matter
-  how much work Cursor did. Those rows are gone — Cursor sessions are now
-  reported as Cursor sessions, correctly.
-- `scripts/uninstall.sh` now removes Perch's Codex and Cursor hooks as well as
-  its Claude Code ones. It previously left them behind, so uninstalling with
-  `--app` deleted the programs those hooks pointed at and left the agents running
-  a command that no longer existed.
+- **Cursor sessions now show whether they're running in a terminal or in the
+  Cursor app**, with the same CLI badge Claude Code and Codex rows have. Perch
+  had been working this out correctly since 0.5.0 and simply wasn't drawing it.
+- **Cursor sessions now show which model they're using.** If you're on Auto —
+  the default — the row says "Auto" instead of leaving the space blank, which
+  looked like Perch had failed to detect anything. Pick a model yourself and it
+  shows that name.
+- **Cursor's logo is now Cursor's actual logo.** The mark shipped in 0.5.0 was
+  drawn from scratch, before the real artwork was to hand, and was the wrong
+  shape — a plain cube, missing the notch that makes it Cursor's.
 
 ### Note
-- **Cursor has no Allow/Deny in Perch, deliberately.** Cursor's approval hook
-  fires before *every* shell command, not only the ones it was going to ask you
-  about — so wiring it up would turn routine, already-approved commands into
-  lock-screen prompts on your phone. Cursor sessions therefore never show "Needs
-  you"; approvals stay in Cursor itself. Claude Code and Codex are unchanged.
-- Perch shows no cost estimate for Cursor sessions yet, and Cursor contributes no
-  token totals to Stats — those numbers aren't written anywhere Perch can read
-  them after the fact. Its sessions, days and streaks all count normally, and
-  Stats now says which agents a token total actually covers rather than quietly
-  leaving one out.
+- Cursor usage is Mac-only for now. The iPhone and watch apps still show Claude
+  and Codex usage only.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.0/Perch-0.5.0.zip" length="5264025" type="application/octet-stream" sparkle:edSignature="zYX6C4rljLn3i9Pq/uSZeaGURjDhTT7DL/hCnzuUcFQ2bkoUas6Af8x0ddDOeZ/fE7B8bjVeHB85WOfp4WyDDA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.1/Perch-0.5.1.zip" length="5293282" type="application/octet-stream" sparkle:edSignature="Ow1bjCQy+vAoGw3NHJO7PtL8CMoX2++0Zd8MM5AGgua1cgDI2i1W+AzNOASkgl5dT5JGeqrCHPwCYMaNbD6yAQ=="/>
         </item>
     </channel>
 </rss>
