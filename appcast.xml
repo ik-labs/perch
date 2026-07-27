@@ -3,24 +3,19 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.10</title>
-            <pubDate>Mon, 27 Jul 2026 16:11:01 +0530</pubDate>
-            <sparkle:version>44</sparkle:version>
-            <sparkle:shortVersionString>0.5.10</sparkle:shortVersionString>
+            <title>0.5.11</title>
+            <pubDate>Mon, 27 Jul 2026 16:49:43 +0530</pubDate>
+            <sparkle:version>45</sparkle:version>
+            <sparkle:shortVersionString>0.5.11</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Cursor usage now reaches your iPhone and Apple Watch.** The Included and API
-  bars that the Mac has been showing since 0.5.4 now appear in the usage section
-  on the phone, and on the watch alongside Claude and Codex. Needs the matching
-  companion update; an older phone simply won't show the row.
-
-### Fixed
-- **A model bar sitting at 0% is now shown on the phone too.** The Mac started
-  showing those in 0.5.5; the phone and watch were still hiding them, so they
-  listed fewer bars than the Mac beside them.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- **The usage bars now use the full width of the panel.** They were a fixed width
+  with empty space to their right; each bar is about 30% longer now, so small
+  differences between them are easier to see. Everything still lines up column to
+  column, and a reset time that would have been clipped shrinks to fit instead.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.10/Perch-0.5.10.zip" length="5342978" type="application/octet-stream" sparkle:edSignature="7RyP5GftofBdZtsWxyBUQ7gmHNExwV6rD450+q1WoEeULmo8RPSr4SHebFSRZvWcVIgwXBoA9XWycQrwzLENBA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.11/Perch-0.5.11.zip" length="5345266" type="application/octet-stream" sparkle:edSignature="5GhoBEOf0bmCCE9zb8J8LdrtlQEGpdvHK0HI+E8PhRDZmK6tA3rQ/HFkFEpXIF7IMLmbNftmwlwlWOOFon+4DA=="/>
         </item>
     </channel>
 </rss>
