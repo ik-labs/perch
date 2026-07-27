@@ -3,22 +3,28 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.2</title>
-            <pubDate>Mon, 27 Jul 2026 10:25:38 +0530</pubDate>
-            <sparkle:version>36</sparkle:version>
-            <sparkle:shortVersionString>0.5.2</sparkle:shortVersionString>
+            <title>0.5.3</title>
+            <pubDate>Mon, 27 Jul 2026 10:43:20 +0530</pubDate>
+            <sparkle:version>37</sparkle:version>
+            <sparkle:shortVersionString>0.5.3</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Changed
-- **Cursor usage now shows by default.** In 0.5.1 you had to find a switch in
-  Settings and turn it on, which meant most people upgraded and saw no Cursor
-  usage at all — while the Claude and Codex bars have always appeared without
-  being asked for. It's still a switch, so you can turn it off; it just starts
-  on now. Nothing happens on a Mac without Cursor: Perch only asks Cursor for
-  your usage while a Cursor session is actually open, so if you don't use Cursor
-  it never makes the call.
+            <description sparkle:format="markdown"><![CDATA[Two problems that only showed up once Cursor's own app — rather than just the
+`cursor-agent` command line — was actually being used.
+
+### Fixed
+- **A phantom "unknown" Cursor session.** Cursor's app sends Perch a signal for
+  an empty, unsent chat box, and Perch was turning that into a session row
+  labelled "unknown" that sat there idle forever. It's not a session you started
+  and there was no way to get rid of it. Perch now ignores those, and any one
+  already sitting in your list disappears.
+- **Closing Cursor left its sessions on screen.** A session running inside the
+  Cursor app kept showing as busy — "Thinking…", spinner and all — for fifteen
+  minutes after you closed the app, and then lingered as idle indefinitely. Those
+  now end as soon as Cursor quits. Sessions you started with `cursor-agent` in a
+  terminal are untouched: those quite legitimately outlive the app.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.2/Perch-0.5.2.zip" length="5293333" type="application/octet-stream" sparkle:edSignature="aCfoA8TXscxW/FNOBLn6nslmYd0ODhxu/0X+Q2TNW+COt5Ji6LI4f1ozO/07/dL+IoE6H9V6gnK9TtWc+/e4Dg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.3/Perch-0.5.3.zip" length="5301832" type="application/octet-stream" sparkle:edSignature="6x5WgXA0Tpi5wDoZywhIaWW52YWv2zRTlXoF8ojNIUdJxIqOREBku3+kDAH2aAJTJi2IgU6xV893jquooQC/Cw=="/>
         </item>
     </channel>
 </rss>
