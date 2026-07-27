@@ -3,29 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.8</title>
-            <pubDate>Mon, 27 Jul 2026 12:29:34 +0530</pubDate>
-            <sparkle:version>42</sparkle:version>
-            <sparkle:shortVersionString>0.5.8</sparkle:shortVersionString>
+            <title>0.5.9</title>
+            <pubDate>Mon, 27 Jul 2026 13:42:08 +0530</pubDate>
+            <sparkle:version>43</sparkle:version>
+            <sparkle:shortVersionString>0.5.9</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Installing Codex while Perch is running is now noticed.** 0.5.7 said pressing
-  Re-check would pick it up, but Re-check sits inside the very warning that gets
-  hidden when Perch thinks Codex isn't there — so it wasn't available exactly when
-  you'd want it. Simply opening Settings now looks again.
-- **Perch no longer stays quiet just because it couldn't find Codex once.** If the
-  check fails for some passing reason rather than because Codex is genuinely
-  missing, the hook-trust warning is shown rather than swallowed. Only a real
-  absence hides it.
-- A lookup already under way can no longer overwrite a newer, correct one and put
-  Perch back to believing Codex is missing.
-- **Settings now re-checks Codex every time you open it, not just the first time.**
-  The window is kept around and reused between openings, so the checks that were
-  meant to run on each visit were quietly only running once per launch — including
-  the "are these hooks still trusted?" check.
+- **Cursor's parallel subagents no longer leave phantom sessions behind.** When
+  Cursor splits work across several agents at once, each one runs as a session in
+  its own right and simply stops when it's done — it never reports finishing. So
+  a single delegation left four or five rows spinning in your list long after the
+  work was over. Those now settle within about a minute and a half.
+- **No more late "finished" notifications for work that already ended.** When
+  Perch gives up waiting on a Cursor session that went quiet, that's Perch losing
+  track — not the agent finishing — and it no longer announces it as a
+  completion. One parallel delegation would previously have sent you four.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.8/Perch-0.5.8.zip" length="5322718" type="application/octet-stream" sparkle:edSignature="nh+NgCGiH62jXxtbbhj9/U2tUp2Ty+SdxLqDWtyi0wEPkRqI0KGd2ij8UHc/K//Ta/E7izHFbyLIzWT5P8bCAA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.9/Perch-0.5.9.zip" length="5327292" type="application/octet-stream" sparkle:edSignature="FMHgJuFD72ukCWiM/8IFpLEVwmbPOgZwTE1knDb0nzCllR5RCcMu3z4FB/dj6qrDGVkDcnjrVTTT3aJIeLe3Ag=="/>
         </item>
     </channel>
 </rss>
