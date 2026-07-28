@@ -3,31 +3,22 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.15</title>
-            <pubDate>Mon, 27 Jul 2026 20:42:04 +0530</pubDate>
-            <sparkle:version>49</sparkle:version>
-            <sparkle:shortVersionString>0.5.15</sparkle:shortVersionString>
+            <title>0.5.16</title>
+            <pubDate>Tue, 28 Jul 2026 09:49:00 +0530</pubDate>
+            <sparkle:version>50</sparkle:version>
+            <sparkle:shortVersionString>0.5.16</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Changed
-- **The usage section shows each agent's logo.** Claude's spark, OpenAI's knot and
-  Cursor's cube replace the plain coloured dots, matching how session rows already
-  identify a provider — on the Mac, iPhone and watch.
-- **iPhone: the usage bars now match the Mac.** They use the full width of the
-  row, line up with the provider line above them, and the reset time sits next to
-  its percentage instead of drifting off to the right.
-
-### Fixed
-- **iPhone: a usage row with no reset time no longer has a longer bar than the
-  others.** Same defect the Mac had — a window that reports no reset, such as
-  Claude's per-model bar, stretched further right and pushed its percentage out
-  of line.
-
-### Note
-- The iPhone and watch app also pick up everything the Mac gained since the last
-  companion build: Cursor sessions, Cursor usage, and the git branch on each row.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **The Cursor usage bar no longer disappears when you stop using Cursor.** It was
+  the only usage bar that vanished after a quiet spell, and it was never there at
+  all when Perch had just started — Claude's and Codex's stay put because their
+  numbers are saved on this Mac, and now Cursor's are too. It still only refreshes
+  while you're working, and the time on the right still turns orange to tell you
+  when a reading is getting old. The bar clears when your billing period ends,
+  since by then the percentage is about a month that's over.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.15/Perch-0.5.15.zip" length="5374198" type="application/octet-stream" sparkle:edSignature="uwGp+BLAoVN/uGaOGfj6W4/5QFKtCKTtJGKbWM0dX6lvohh6YesG1D0JE3idrjcascXb7m/bUDWSypVxxF0SDg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.16/Perch-0.5.16.zip" length="5380864" type="application/octet-stream" sparkle:edSignature="2S+smIknEUb5kEwNb3fxrqD9UdUGKvUnVyMF5/lMm6w+6Jyzvqu4UUh1iLb9pdp1gN7aRmvTiP6RCYrsiHxpCA=="/>
         </item>
     </channel>
 </rss>
