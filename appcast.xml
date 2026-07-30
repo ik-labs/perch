@@ -3,22 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.16</title>
-            <pubDate>Tue, 28 Jul 2026 09:49:00 +0530</pubDate>
-            <sparkle:version>50</sparkle:version>
-            <sparkle:shortVersionString>0.5.16</sparkle:shortVersionString>
+            <title>0.5.17</title>
+            <pubDate>Thu, 30 Jul 2026 16:55:04 +0530</pubDate>
+            <sparkle:version>51</sparkle:version>
+            <sparkle:shortVersionString>0.5.17</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **The Cursor usage bar no longer disappears when you stop using Cursor.** It was
-  the only usage bar that vanished after a quiet spell, and it was never there at
-  all when Perch had just started — Claude's and Codex's stay put because their
-  numbers are saved on this Mac, and now Cursor's are too. It still only refreshes
-  while you're working, and the time on the right still turns orange to tell you
-  when a reading is getting old. The bar clears when your billing period ends,
-  since by then the percentage is about a month that's over.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Clicking a session now opens the exact tab it's running in, in iTerm2 and
+  Terminal.** Until now Perch could only bring those apps to the front and leave
+  you to find the right tab yourself; Warp was the only terminal it could open
+  precisely. Tapping a notification lands in the same place, and replying to a
+  question straight from a notification works in those terminals too.
+
+### Note
+- The first time you jump to a session in Terminal, macOS asks whether Perch may
+  control it. That's what lets Perch open the right tab. If you decline, clicking
+  simply brings Terminal to the front as before.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.16/Perch-0.5.16.zip" length="5380864" type="application/octet-stream" sparkle:edSignature="2S+smIknEUb5kEwNb3fxrqD9UdUGKvUnVyMF5/lMm6w+6Jyzvqu4UUh1iLb9pdp1gN7aRmvTiP6RCYrsiHxpCA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.17/Perch-0.5.17.zip" length="5522943" type="application/octet-stream" sparkle:edSignature="JAsakqitMJ/DGXCAuoeo9X2dceLqb4PVPSmpYWeVGzTyA4QrpZKuIHeHC20CIl4Jnt8nBP3kxqgQ6bK0Q0w/Dg=="/>
         </item>
     </channel>
 </rss>
