@@ -3,19 +3,44 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.20</title>
-            <pubDate>Fri, 31 Jul 2026 10:30:41 +0530</pubDate>
-            <sparkle:version>54</sparkle:version>
-            <sparkle:shortVersionString>0.5.20</sparkle:shortVersionString>
+            <title>0.5.21</title>
+            <pubDate>Fri, 31 Jul 2026 13:15:01 +0530</pubDate>
+            <sparkle:version>55</sparkle:version>
+            <sparkle:shortVersionString>0.5.21</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Devin sessions were still stuck on "Idle" in 0.5.19.** Everything 0.5.19
-  described was built, but the part that switches it on never ran, so Perch
-  never actually started listening to Devin. Update and it works — no setup, no
-  setting to find. Stats and the usage bars were unaffected and worked in 0.5.19.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **OpenCode is now fully integrated with Perch.** Local OpenCode sessions appear
+  live on the Mac, iPhone, Apple Watch, widgets and Live Activities, with model,
+  exact cost, five-part token usage, todos, subagents, notifications and Stats.
+  Perch installs a small owned OpenCode plugin and keeps all state handling,
+  validation and persistence in its signed Swift helper.
+- **OpenCode permissions and simple questions can be answered from the Mac.**
+  Allow maps to OpenCode's one-time approval and Deny rejects it. Exactly one
+  free-text question can be answered directly from the notification without
+  Accessibility access; structured questions stay in OpenCode.
+- **OpenCode Go usage estimates.** When local sessions use `opencode-go`, Perch
+  shows clearly labelled rolling five-hour, ISO-week and anchored-month estimates.
+  The calculation is entirely local: no cookies, credentials or usage API calls.
+
+### Security
+- OpenCode message bodies, text deltas, reasoning and attachments never cross
+  the plugin boundary. Plugin files are owner-only and hash-verified, SQLite is
+  opened read-only, PID reuse is checked with process start time, and older
+  companions receive compatibility-stripped records.
+
+### Note
+- **Restart any OpenCode session that's already open.** OpenCode loads plugins
+  when it starts, so a session running while Perch updates won't report until you
+  start a new one — it'll sit at "Idle" until then. New sessions work straight
+  away, with nothing to set up. The same applies to Devin sessions open when you
+  updated to 0.5.20.
+- Update the iPhone and watch apps alongside this version. An older companion
+  doesn't know about OpenCode yet and will label OpenCode sessions as another
+  agent; everything else keeps working and the label corrects itself once the
+  phone app updates.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.20/Perch-0.5.20.zip" length="6726477" type="application/octet-stream" sparkle:edSignature="EsITqGJ72F3q9ciA3SXecMDoWzUUh8in5fua7G0Dvzq73DsR/H0nD50XOUOqkGrONIW4T2UEbdPjZQeCWlD3AQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.21/Perch-0.5.21.zip" length="8627556" type="application/octet-stream" sparkle:edSignature="OXRT8lFCOXfdgi7QkN3l/BnPUtbSg1l/Yx585FVq+/eWgxlql8xStIM6unpQzv8PkXbkGyJkf0+sdWNEVu2wCg=="/>
         </item>
     </channel>
 </rss>
