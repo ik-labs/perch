@@ -3,43 +3,37 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.18</title>
-            <pubDate>Thu, 30 Jul 2026 23:17:12 +0530</pubDate>
-            <sparkle:version>52</sparkle:version>
-            <sparkle:shortVersionString>0.5.18</sparkle:shortVersionString>
+            <title>0.5.19</title>
+            <pubDate>Fri, 31 Jul 2026 10:06:02 +0530</pubDate>
+            <sparkle:version>53</sparkle:version>
+            <sparkle:shortVersionString>0.5.19</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Devin sessions now show up in Perch.** If you use the `devin` command-line
-  agent, its sessions appear in the list alongside Claude Code, Codex and Cursor
-  — with the project, the model, the session title and Devin's own logo. There's
-  nothing to set up and nothing to turn on: Perch reads what Devin already keeps
-  on your Mac, and changes none of it.
-
-  Devin sessions are shown as idle rather than working. Devin doesn't record
-  anywhere Perch can read whether it's mid-task or waiting for your next prompt,
-  so rather than guess and get it wrong, Perch shows the session without claiming
-  it's busy. That also means no "finished" alert for Devin yet. Clicking a Devin
-  session opens its folder rather than its terminal window, which is the next
-  thing to fix.
-
-  Devin can't ask Perch for permission the way Claude Code and Codex do — it has
-  no way to hand a prompt to another app — so Approve/Deny from your phone or
-  watch doesn't apply to Devin sessions.
-
-### Fixed
-- **Notifications on your phone now name the right agent.** A finished or
-  needs-you alert from a Cursor session said "Claude Code" underneath it. Alerts
-  on the Mac itself were always correct; this only affected the ones pushed to
-  your phone and watch.
+- **Devin sessions now show what they're doing.** Until now a Devin session
+  appeared in the list but always sat at "Idle", because nothing Perch could read
+  said whether it was mid-task. It now goes to work and back to idle as it
+  happens, tells you what it's running, shows its to-do list, and sends the
+  "finished" alert when it's done — the same as Claude Code, Codex and Cursor.
+  Nothing to switch on.
+- **Clicking a Devin session opens its terminal.** It used to open the folder in
+  Finder instead.
+- **Devin appears in Stats.** The heatmap, streaks, active days, token totals and
+  favourite model all include it now, and the first scan after updating fills in
+  your past Devin sessions — so all-time totals will jump and older days in the
+  heatmap will darken. One quirk worth knowing: a Devin session joins Stats when
+  it ends, not while it's running, because that's when Devin writes its record.
+- **Devin usage bars.** Your weekly and daily quota, and your plan name, next to
+  the Claude, Codex and Cursor bars — on the Mac, iPhone and watch. Perch uses
+  the login Devin already stored on this Mac and never changes it.
 
 ### Note
-- Update the iPhone and watch apps before, or together with, this version. An
-  older iPhone app doesn't know about Devin yet and will label Devin sessions
-  "Claude Code" — everything else keeps working, and the label corrects itself
-  once the phone app updates.
+- Perch can't ask Devin for permission the way it does for Claude Code and
+  Codex, so Approve/Deny from your phone or watch still doesn't apply to Devin —
+  Devin has no way to hand a prompt to another app. The low-usage warning tracks
+  your *weekly* quota; the daily one is shown but doesn't trigger an alert.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.18/Perch-0.5.18.zip" length="5707092" type="application/octet-stream" sparkle:edSignature="cHQ2xdgoAZh05lgpm/N4MGp5oDhd7QFgfcsVNxmuhruxj68LGoRmsUGFB8UITUlcRcY9kuSPZd2nUBgkMKdAAQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.19/Perch-0.5.19.zip" length="6726564" type="application/octet-stream" sparkle:edSignature="IOK3A4T2ye8c3yoPq2ycuAiF+8WImMd91eQaVLRZN5+/n5KNxN5jXI6NXUZnx3SM7adNunF9GoW7m+SJdc93CA=="/>
         </item>
     </channel>
 </rss>
