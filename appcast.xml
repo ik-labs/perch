@@ -3,26 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.22</title>
-            <pubDate>Fri, 31 Jul 2026 15:22:31 +0530</pubDate>
-            <sparkle:version>56</sparkle:version>
-            <sparkle:shortVersionString>0.5.22</sparkle:shortVersionString>
+            <title>0.5.23</title>
+            <pubDate>Sat, 01 Aug 2026 09:28:12 +0530</pubDate>
+            <sparkle:version>57</sparkle:version>
+            <sparkle:shortVersionString>0.5.23</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **The lock-screen Live Activity now goes away when your agents finish.** It
-  used to sit there for up to an hour afterwards, still showing the last thing
-  it saw — so a glance at your phone could tell you an agent was working when it
-  had finished minutes ago. It now shows the finished fleet briefly and then
-  dismisses itself. Starting another agent brings it straight back.
-- **iPhone: the lock-screen Live Activity could freeze on a stale state.** When
-  several agents changed state in quick succession, iOS would quietly stop
-  delivering updates for a while — leaving the lock screen showing something
-  that had finished minutes earlier. Perch now tells iOS it needs frequent
-  updates. (iPhone app only; you can turn frequent updates off for Perch in
-  iOS Settings if you'd rather save battery.) *Already on TestFlight as build 39.*
+- **Clicking a Codex session that's running in the Codex desktop app now opens
+  that conversation.** It was always meant to — but it only worked once Perch
+  had found and read the session's transcript on disk, which takes a moment
+  after a session starts. Click before that and you got the project folder in
+  Finder instead, with no hint why. Perch now works out where a Codex session is
+  running the moment it first reports in, so the conversation opens from the
+  first click. Sessions in a terminal are unaffected: they still jump to the
+  terminal, as before.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.22/Perch-0.5.22.zip" length="8630143" type="application/octet-stream" sparkle:edSignature="R0Gz/z7HWL47oa8Jdp2UCOvd7zIZlb43QDCJ8v774Ch+lPfSXpByBKta/T7OWRfFKbHMAj1hvHDirOroTAUqBg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.23/Perch-0.5.23.zip" length="8636770" type="application/octet-stream" sparkle:edSignature="TwSVe+LGCb5gM5oHhaJssr/JJawYGGSwbcSX4TeKIwS5wqLQndqMmocP0PB/sx8kUzYE6iQ2VS51A6dBWcaADg=="/>
         </item>
     </channel>
 </rss>
