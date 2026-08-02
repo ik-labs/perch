@@ -3,19 +3,20 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.24</title>
-            <pubDate>Sun, 02 Aug 2026 20:56:39 +0530</pubDate>
-            <sparkle:version>58</sparkle:version>
-            <sparkle:shortVersionString>0.5.24</sparkle:shortVersionString>
+            <title>0.5.25</title>
+            <pubDate>Sun, 02 Aug 2026 22:01:35 +0530</pubDate>
+            <sparkle:version>59</sparkle:version>
+            <sparkle:shortVersionString>0.5.25</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Two sessions from different tools could be treated as one.** When their ids
-  happened to match, one could disappear from the fleet or show the other's
-  project, model or folder — and clicking its approval could open the wrong one.
-  Perch now tells sessions apart by tool as well as id.
+- **The rest of 0.5.24's fix, for sessions Perch had already saved.** That
+  release stopped two same-id sessions from different tools being confused
+  while running, but their saved files still shared one name, so one could go
+  missing after a restart. Each session now gets its own file, and Perch
+  renames what's already on your Mac when it starts. Nothing is lost.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.24/Perch-0.5.24.zip" length="9356177" type="application/octet-stream" sparkle:edSignature="Rf8XLmv9pItLHYU7vfXl+phdFujzUgmjrtmOa15dxyMsc3EIOsYu0rUpBefHmMDt8U1wrd1IC4zyGVHkXh6RCA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.25/Perch-0.5.25.zip" length="9413547" type="application/octet-stream" sparkle:edSignature="5cs3P+5tvwwt8mp2Gzvk/K60H25iF0Qe5akSDVd1GLUlIp5yHPUop/0sRg5RU76rcJZ62WsOgChraDXj6c7LCg=="/>
         </item>
     </channel>
 </rss>
