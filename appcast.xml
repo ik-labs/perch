@@ -3,23 +3,19 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.23</title>
-            <pubDate>Sat, 01 Aug 2026 09:28:12 +0530</pubDate>
-            <sparkle:version>57</sparkle:version>
-            <sparkle:shortVersionString>0.5.23</sparkle:shortVersionString>
+            <title>0.5.24</title>
+            <pubDate>Sun, 02 Aug 2026 20:56:39 +0530</pubDate>
+            <sparkle:version>58</sparkle:version>
+            <sparkle:shortVersionString>0.5.24</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Clicking a Codex session that's running in the Codex desktop app now opens
-  that conversation.** It was always meant to — but it only worked once Perch
-  had found and read the session's transcript on disk, which takes a moment
-  after a session starts. Click before that and you got the project folder in
-  Finder instead, with no hint why. Perch now works out where a Codex session is
-  running the moment it first reports in, so the conversation opens from the
-  first click. Sessions in a terminal are unaffected: they still jump to the
-  terminal, as before.
+- **Two sessions from different tools could be treated as one.** When their ids
+  happened to match, one could disappear from the fleet or show the other's
+  project, model or folder — and clicking its approval could open the wrong one.
+  Perch now tells sessions apart by tool as well as id.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.23/Perch-0.5.23.zip" length="8636770" type="application/octet-stream" sparkle:edSignature="TwSVe+LGCb5gM5oHhaJssr/JJawYGGSwbcSX4TeKIwS5wqLQndqMmocP0PB/sx8kUzYE6iQ2VS51A6dBWcaADg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.24/Perch-0.5.24.zip" length="9356177" type="application/octet-stream" sparkle:edSignature="Rf8XLmv9pItLHYU7vfXl+phdFujzUgmjrtmOa15dxyMsc3EIOsYu0rUpBefHmMDt8U1wrd1IC4zyGVHkXh6RCA=="/>
         </item>
     </channel>
 </rss>
