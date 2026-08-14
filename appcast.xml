@@ -3,20 +3,54 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.25</title>
-            <pubDate>Sun, 02 Aug 2026 22:01:35 +0530</pubDate>
-            <sparkle:version>59</sparkle:version>
-            <sparkle:shortVersionString>0.5.25</sparkle:shortVersionString>
+            <title>0.5.26</title>
+            <pubDate>Fri, 14 Aug 2026 09:05:10 +0530</pubDate>
+            <sparkle:version>60</sparkle:version>
+            <sparkle:shortVersionString>0.5.26</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **The rest of 0.5.24's fix, for sessions Perch had already saved.** That
-  release stopped two same-id sessions from different tools being confused
-  while running, but their saved files still shared one name, so one could go
-  missing after a restart. Each session now gets its own file, and Perch
-  renames what's already on your Mac when it starts. Nothing is lost.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Amp support.** Perch now shows your [Amp](https://ampcode.com) CLI sessions
+  in the fleet — which project each thread is in, whether it's running or idle,
+  the tool it's using right now, its title, and an elapsed-turn timer — with a
+  "finished" notification when a turn completes, and click-to-focus for the
+  terminal it's running in. Zero setup: Perch reads Amp's own logs and writes
+  nothing. Works on the Mac, iPhone and Apple Watch.
+- **Amp usage bars.** While an Amp session is open, Perch shows your Amp plan's
+  usage meters and renewal countdown in the dropdown — and on your iPhone,
+  Apple Watch and widgets — with a warning when a meter runs low. Uses the
+  login the Amp CLI already has; nothing to set up. Turn it off with
+  `defaults write com.inkryptislabs.perch perch.ampUsage -bool false`.
+  Free-tier accounts get their meter and credits balance too, and the plan
+  name now shows correctly next to the AMP label.
+- **Amp in Stats.** The Stats dashboard — heatmap, streaks, sessions, active
+  days, longest session — now counts your Amp threads, with its own filter
+  segment on the Mac, iPhone and Apple Watch. Token totals honestly exclude
+  Amp (it records none), the same way Cursor's are handled.
+- **Amp sessions update instantly — and can now ask for you.** Perch installs
+  a small plugin into Amp (removable, and it never touches your other Amp
+  settings) that reports state the moment it changes instead of every few
+  seconds — including when Amp is **waiting for your approval**, which now
+  shows as "Waiting for you" with a needs-you notification on your Mac and
+  phone, just like Claude Code. What your agents say and do stays private:
+  the plugin sends session status only, never conversation content.
+- **Perch Pro.** Subscribe in the Perch app on your iPhone and paste the
+  subscription ID into Perch on your Mac — either on the unlock screen or in
+  Settings — and it unlocks Perch and lets you read your agents' conversations
+  from your phone. A subscription unlocks the whole Mac app, so you don't need a
+  licence key as well. Unlinking only forgets the ID on this Mac; it never
+  cancels a subscription, which is managed in the App Store.
+
+### Changed
+- **Reading conversations on your phone is now part of Perch Pro.** Everything
+  the $29 licence has always done is unchanged and still yours forever — the menu
+  bar, the fleet, notifications, approvals and push. Reading transcripts on your
+  phone has never been available outside TestFlight, so nobody loses anything
+  they had.
+- Background push to your iPhone still needs a Perch licence. A subscription on
+  its own doesn't carry one yet, and Settings says so where the switch is.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.25/Perch-0.5.25.zip" length="9413547" type="application/octet-stream" sparkle:edSignature="5cs3P+5tvwwt8mp2Gzvk/K60H25iF0Qe5akSDVd1GLUlIp5yHPUop/0sRg5RU76rcJZ62WsOgChraDXj6c7LCg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.26/Perch-0.5.26.zip" length="12565735" type="application/octet-stream" sparkle:edSignature="9i9gyYEGSRpsy8i4goWkhQBgC01+Gr5N8W141QO/yfV6bSQm9hkY7CbbiOxjpc2fevG6Fb6lsMzy6QX/X91IBw=="/>
         </item>
     </channel>
 </rss>
