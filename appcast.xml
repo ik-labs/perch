@@ -3,54 +3,65 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.26</title>
-            <pubDate>Fri, 14 Aug 2026 09:05:10 +0530</pubDate>
-            <sparkle:version>60</sparkle:version>
-            <sparkle:shortVersionString>0.5.26</sparkle:shortVersionString>
+            <title>0.5.27</title>
+            <pubDate>Mon, 17 Aug 2026 17:24:36 +0530</pubDate>
+            <sparkle:version>61</sparkle:version>
+            <sparkle:shortVersionString>0.5.27</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Amp support.** Perch now shows your [Amp](https://ampcode.com) CLI sessions
-  in the fleet — which project each thread is in, whether it's running or idle,
-  the tool it's using right now, its title, and an elapsed-turn timer — with a
-  "finished" notification when a turn completes, and click-to-focus for the
-  terminal it's running in. Zero setup: Perch reads Amp's own logs and writes
-  nothing. Works on the Mac, iPhone and Apple Watch.
-- **Amp usage bars.** While an Amp session is open, Perch shows your Amp plan's
-  usage meters and renewal countdown in the dropdown — and on your iPhone,
-  Apple Watch and widgets — with a warning when a meter runs low. Uses the
-  login the Amp CLI already has; nothing to set up. Turn it off with
-  `defaults write com.inkryptislabs.perch perch.ampUsage -bool false`.
-  Free-tier accounts get their meter and credits balance too, and the plan
-  name now shows correctly next to the AMP label.
-- **Amp in Stats.** The Stats dashboard — heatmap, streaks, sessions, active
-  days, longest session — now counts your Amp threads, with its own filter
-  segment on the Mac, iPhone and Apple Watch. Token totals honestly exclude
-  Amp (it records none), the same way Cursor's are handled.
-- **Amp sessions update instantly — and can now ask for you.** Perch installs
-  a small plugin into Amp (removable, and it never touches your other Amp
-  settings) that reports state the moment it changes instead of every few
-  seconds — including when Amp is **waiting for your approval**, which now
-  shows as "Waiting for you" with a needs-you notification on your Mac and
-  phone, just like Claude Code. What your agents say and do stays private:
-  the plugin sends session status only, never conversation content.
-- **Perch Pro.** Subscribe in the Perch app on your iPhone and paste the
-  subscription ID into Perch on your Mac — either on the unlock screen or in
-  Settings — and it unlocks Perch and lets you read your agents' conversations
-  from your phone. A subscription unlocks the whole Mac app, so you don't need a
-  licence key as well. Unlinking only forgets the ID on this Mac; it never
-  cancels a subscription, which is managed in the App Store.
+- **Reply to herdr sessions from your phone.** Sessions running in herdr can now
+  be answered and interrupted from the iPhone app, the same as tmux ones.
+- **Perch tells you when it can't reach your phone.** If notifications stop
+  being delivered, Settings → Companion says so and shows the reason, instead of
+  going quiet and looking like nothing was happening.
+- **A fleet window, and a keyboard shortcut that always works.** macOS hides
+  menu bar icons when the bar gets full — and because Perch has no Dock icon,
+  that could leave it running with nothing on screen to open it. Press
+  **⌃⌥⌘P** to open your fleet in a real window you can resize, move and leave
+  open beside your work. It's the same fleet you get from the menu bar, and
+  it's also in ⚙︎ → Open Fleet Window. Turn the shortcut off in Settings →
+  General if you'd rather have the key back.
+
+### Fixed
+- **Usage bars could freeze at the wrong number.** A provider's usage percentage
+  could stop updating and stay stale indefinitely — showing plenty of headroom
+  on an account that had already hit its limit. Affected every provider's bars.
+- **Two agents in one folder can both be replied to.** Running two Claude
+  sessions in the same project used to leave *both* of them without a reply box
+  on the phone.
+- **A finished session stays finished.** A session that had ended could come
+  back as idle and sit in the fleet indefinitely.
+- **Quiet days are visible in the Stats heatmap.** A day with a little activity
+  was drawn so faintly it was almost identical to a day with none — measurably
+  so, at a contrast ratio of 1.02 in the worst case, where 1.0 means "no
+  difference at all". Active days now start darker, so you can see *that* you
+  worked on a day, not only that you worked a lot. The Mac and iPhone grids had
+  also drifted slightly apart; they now shade identically.
+- **The Stats filter says "All", not "Both".** It dated from when Perch tracked
+  exactly two agents. There are six.
 
 ### Changed
-- **Reading conversations on your phone is now part of Perch Pro.** Everything
-  the $29 licence has always done is unchanged and still yours forever — the menu
-  bar, the fleet, notifications, approvals and push. Reading transcripts on your
-  phone has never been available outside TestFlight, so nobody loses anything
-  they had.
-- Background push to your iPhone still needs a Perch licence. A subscription on
-  its own doesn't carry one yet, and Settings says so where the switch is.
+- **Settings is now four tabs** — General, Menu Bar, Notifications and
+  Companion — instead of one long scrolling list. Pairing your iPhone, adding a
+  licence key and picking a menu bar icon each have their own place, and Perch
+  reopens on the tab you used last.
+- **Notifications stop piling up.** A session that finishes, then asks for
+  approval, then finishes again used to leave a separate banner for each. Now
+  the newest news about a session replaces the old, and everything about one
+  project stacks together in Notification Center. Approval requests are still
+  kept separate from each other, so a prompt can never be quietly buried by
+  another one.
+- **Perch keeps still when you ask it to.** With Reduce Motion turned on in
+  System Settings → Accessibility → Display, the menu bar icon stops animating,
+  the thinking word stops rotating and the "needs you" dot stops pulsing. All
+  three still show exactly what they showed before — they just hold still.
+- **Better with VoiceOver and larger text.** The menu bar now says what it
+  means out loud ("Perch, 3 working, 1 waiting for you"), each session reads as
+  one sentence instead of a dozen loose fragments, and the small text
+  throughout the panel scales instead of staying fixed.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.26/Perch-0.5.26.zip" length="12565735" type="application/octet-stream" sparkle:edSignature="9i9gyYEGSRpsy8i4goWkhQBgC01+Gr5N8W141QO/yfV6bSQm9hkY7CbbiOxjpc2fevG6Fb6lsMzy6QX/X91IBw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.27/Perch-0.5.27.zip" length="13235730" type="application/octet-stream" sparkle:edSignature="DbpciY7FSpuTmga4caFQCvhwAyLYNdLu/bPcAK6XFU4eo4UX/zGC2+VCcmCRcMlmXDsYAg637S9tvJwd0UL0CA=="/>
         </item>
     </channel>
 </rss>
