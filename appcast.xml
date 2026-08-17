@@ -3,65 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.27</title>
-            <pubDate>Mon, 17 Aug 2026 17:24:36 +0530</pubDate>
-            <sparkle:version>61</sparkle:version>
-            <sparkle:shortVersionString>0.5.27</sparkle:shortVersionString>
+            <title>0.5.28</title>
+            <pubDate>Mon, 17 Aug 2026 18:43:58 +0530</pubDate>
+            <sparkle:version>62</sparkle:version>
+            <sparkle:shortVersionString>0.5.28</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Reply to herdr sessions from your phone.** Sessions running in herdr can now
-  be answered and interrupted from the iPhone app, the same as tmux ones.
-- **Perch tells you when it can't reach your phone.** If notifications stop
-  being delivered, Settings → Companion says so and shows the reason, instead of
-  going quiet and looking like nothing was happening.
-- **A fleet window, and a keyboard shortcut that always works.** macOS hides
-  menu bar icons when the bar gets full — and because Perch has no Dock icon,
-  that could leave it running with nothing on screen to open it. Press
-  **⌃⌥⌘P** to open your fleet in a real window you can resize, move and leave
-  open beside your work. It's the same fleet you get from the menu bar, and
-  it's also in ⚙︎ → Open Fleet Window. Turn the shortcut off in Settings →
-  General if you'd rather have the key back.
-
-### Fixed
-- **Usage bars could freeze at the wrong number.** A provider's usage percentage
-  could stop updating and stay stale indefinitely — showing plenty of headroom
-  on an account that had already hit its limit. Affected every provider's bars.
-- **Two agents in one folder can both be replied to.** Running two Claude
-  sessions in the same project used to leave *both* of them without a reply box
-  on the phone.
-- **A finished session stays finished.** A session that had ended could come
-  back as idle and sit in the fleet indefinitely.
-- **Quiet days are visible in the Stats heatmap.** A day with a little activity
-  was drawn so faintly it was almost identical to a day with none — measurably
-  so, at a contrast ratio of 1.02 in the worst case, where 1.0 means "no
-  difference at all". Active days now start darker, so you can see *that* you
-  worked on a day, not only that you worked a lot. The Mac and iPhone grids had
-  also drifted slightly apart; they now shade identically.
-- **The Stats filter says "All", not "Both".** It dated from when Perch tracked
-  exactly two agents. There are six.
-
-### Changed
-- **Settings is now four tabs** — General, Menu Bar, Notifications and
-  Companion — instead of one long scrolling list. Pairing your iPhone, adding a
-  licence key and picking a menu bar icon each have their own place, and Perch
-  reopens on the tab you used last.
-- **Notifications stop piling up.** A session that finishes, then asks for
-  approval, then finishes again used to leave a separate banner for each. Now
-  the newest news about a session replaces the old, and everything about one
-  project stacks together in Notification Center. Approval requests are still
-  kept separate from each other, so a prompt can never be quietly buried by
-  another one.
-- **Perch keeps still when you ask it to.** With Reduce Motion turned on in
-  System Settings → Accessibility → Display, the menu bar icon stops animating,
-  the thinking word stops rotating and the "needs you" dot stops pulsing. All
-  three still show exactly what they showed before — they just hold still.
-- **Better with VoiceOver and larger text.** The menu bar now says what it
-  means out loud ("Perch, 3 working, 1 waiting for you"), each session reads as
-  one sentence instead of a dozen loose fragments, and the small text
-  throughout the panel scales instead of staying fixed.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **Sessions stop claiming to work after they've gone.** An agent that was
+  killed, crashed, or whose terminal was closed could sit in the fleet as
+  "working" indefinitely — keeping the menu bar icon animating and the lock
+  screen asking about a session nobody could answer. A session that has said
+  nothing for ten minutes now shows as idle. Nothing is deleted; it reappears
+  as soon as it says anything.
+- **Fewer late notifications.** A push could hang on a dead connection for a
+  full minute before giving up. Perch now gives up after ten seconds and tries
+  once more, so an alert either arrives promptly or not at all.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.27/Perch-0.5.27.zip" length="13235730" type="application/octet-stream" sparkle:edSignature="DbpciY7FSpuTmga4caFQCvhwAyLYNdLu/bPcAK6XFU4eo4UX/zGC2+VCcmCRcMlmXDsYAg637S9tvJwd0UL0CA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.28/Perch-0.5.28.zip" length="13250777" type="application/octet-stream" sparkle:edSignature="7ZB99Yvy5vahQH/ftjODOFxi16eo7c+R9XvfwsRyIYrUWdlgHtBBAQHxdCbBAO+EULi9nlgYxHqCpsYbA+W9Dg=="/>
         </item>
     </channel>
 </rss>
