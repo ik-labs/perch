@@ -3,32 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.29</title>
-            <pubDate>Wed, 19 Aug 2026 16:13:00 +0530</pubDate>
-            <sparkle:version>63</sparkle:version>
-            <sparkle:shortVersionString>0.5.29</sparkle:shortVersionString>
+            <title>0.5.30</title>
+            <pubDate>Wed, 19 Aug 2026 18:01:11 +0530</pubDate>
+            <sparkle:version>64</sparkle:version>
+            <sparkle:shortVersionString>0.5.30</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Perch is about three times lighter on your Mac.** With agents working it
-  used to sit at roughly 11% of a CPU core; it now sits at 3–4%. The menu bar
-  icon, the four-second sweep of your sessions, and a question Perch asked macOS
-  twelve times a second were each doing far more work than they needed to.
-- **Usage warnings stop repeating.** A "10% left" or "0% left" alert used to
-  arrive again every 15–20 minutes for the same window, and starting Perch on an
-  already-spent window announced it as news. You now get one warning per window,
-  and a fresh one only when that window resets.
-- **The completion sound no longer stutters the interface.** Playing it briefly
-  froze everything Perch was drawing.
-
-### Added
-- **A switch to stop the icon animating**, in Settings → Menu Bar. The icon
-  stays still while agents work.
-- **Warnings for per-model limits too.** Quotas that sit beside the headline
-  meters — Devin's daily allowance, Amp's per-model numbers — could run to zero
-  without a word.
+- **Perch no longer switches off your other Codex hooks.** Codex remembers which
+  hooks you approved by their position in the list. Perch used to reinstall
+  itself at the bottom, which renumbered everything below it — so a hook you'd
+  approved from another tool quietly stopped running, with nothing to tell you.
+  Perch now keeps its place.
+- **No more warning in every Codex session.** Perch asked Codex for a
+  five-second window when it finishes a session; Codex allows three, and said so
+  in your terminal every time. It now asks for three.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.29/Perch-0.5.29.zip" length="13556112" type="application/octet-stream" sparkle:edSignature="R+LKaEDMaChhAzVvaMCyGxFNXEc5bN4ioiWRg49MYywX/BBwW9sRmj/cyAh4ddMCrkrgQcEpZ0gsPPzTl2HECw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.30/Perch-0.5.30.zip" length="13568886" type="application/octet-stream" sparkle:edSignature="pTRMo9F6DRSBJmO07q5MxJKFx6xtH1Y0yW3UWraiI/rFqIiqCqDlEEOgQyhJAhKUECkrtTWUmfDOr6Kfyc5hAg=="/>
         </item>
     </channel>
 </rss>
