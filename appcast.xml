@@ -3,23 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.30</title>
-            <pubDate>Wed, 19 Aug 2026 18:01:11 +0530</pubDate>
-            <sparkle:version>64</sparkle:version>
-            <sparkle:shortVersionString>0.5.30</sparkle:shortVersionString>
+            <title>0.5.31</title>
+            <pubDate>Wed, 19 Aug 2026 19:26:48 +0530</pubDate>
+            <sparkle:version>65</sparkle:version>
+            <sparkle:shortVersionString>0.5.31</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Perch no longer switches off your other Codex hooks.** Codex remembers which
-  hooks you approved by their position in the list. Perch used to reinstall
-  itself at the bottom, which renumbered everything below it — so a hook you'd
-  approved from another tool quietly stopped running, with nothing to tell you.
-  Perch now keeps its place.
-- **No more warning in every Codex session.** Perch asked Codex for a
-  five-second window when it finishes a session; Codex allows three, and said so
-  in your terminal every time. It now asks for three.
+- **Perch says when your Cursor sign-in has expired.** It used to just drop the
+  Cursor usage row, which looked exactly like having no Cursor account — so the
+  bars quietly stopped updating with nothing to explain why, and no way back
+  except guessing. The row now tells you to sign in again. A slow or throttled
+  Cursor still says nothing, because that fixes itself.
+- **A question from Claude no longer shows Allow/Deny.** When Claude asks you
+  something, neither button could answer it — Allow only approved the asking,
+  and Deny stopped Claude asking at all. It now shows as a question.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.30/Perch-0.5.30.zip" length="13568886" type="application/octet-stream" sparkle:edSignature="pTRMo9F6DRSBJmO07q5MxJKFx6xtH1Y0yW3UWraiI/rFqIiqCqDlEEOgQyhJAhKUECkrtTWUmfDOr6Kfyc5hAg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.31/Perch-0.5.31.zip" length="13576086" type="application/octet-stream" sparkle:edSignature="9ZiJfIJcHrUyyi6QvYPNJfMVU8/Tp2/6JOPBsZV5ZrmD8eTPOh9jUqb5NoSjh2qJZwetosGttLO3hXds8cqaCA=="/>
         </item>
     </channel>
 </rss>
