@@ -3,24 +3,32 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.28</title>
-            <pubDate>Mon, 17 Aug 2026 18:43:58 +0530</pubDate>
-            <sparkle:version>62</sparkle:version>
-            <sparkle:shortVersionString>0.5.28</sparkle:shortVersionString>
+            <title>0.5.29</title>
+            <pubDate>Wed, 19 Aug 2026 16:13:00 +0530</pubDate>
+            <sparkle:version>63</sparkle:version>
+            <sparkle:shortVersionString>0.5.29</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Sessions stop claiming to work after they've gone.** An agent that was
-  killed, crashed, or whose terminal was closed could sit in the fleet as
-  "working" indefinitely — keeping the menu bar icon animating and the lock
-  screen asking about a session nobody could answer. A session that has said
-  nothing for ten minutes now shows as idle. Nothing is deleted; it reappears
-  as soon as it says anything.
-- **Fewer late notifications.** A push could hang on a dead connection for a
-  full minute before giving up. Perch now gives up after ten seconds and tries
-  once more, so an alert either arrives promptly or not at all.
+- **Perch is about three times lighter on your Mac.** With agents working it
+  used to sit at roughly 11% of a CPU core; it now sits at 3–4%. The menu bar
+  icon, the four-second sweep of your sessions, and a question Perch asked macOS
+  twelve times a second were each doing far more work than they needed to.
+- **Usage warnings stop repeating.** A "10% left" or "0% left" alert used to
+  arrive again every 15–20 minutes for the same window, and starting Perch on an
+  already-spent window announced it as news. You now get one warning per window,
+  and a fresh one only when that window resets.
+- **The completion sound no longer stutters the interface.** Playing it briefly
+  froze everything Perch was drawing.
+
+### Added
+- **A switch to stop the icon animating**, in Settings → Menu Bar. The icon
+  stays still while agents work.
+- **Warnings for per-model limits too.** Quotas that sit beside the headline
+  meters — Devin's daily allowance, Amp's per-model numbers — could run to zero
+  without a word.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.28/Perch-0.5.28.zip" length="13250777" type="application/octet-stream" sparkle:edSignature="7ZB99Yvy5vahQH/ftjODOFxi16eo7c+R9XvfwsRyIYrUWdlgHtBBAQHxdCbBAO+EULi9nlgYxHqCpsYbA+W9Dg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.29/Perch-0.5.29.zip" length="13556112" type="application/octet-stream" sparkle:edSignature="R+LKaEDMaChhAzVvaMCyGxFNXEc5bN4ioiWRg49MYywX/BBwW9sRmj/cyAh4ddMCrkrgQcEpZ0gsPPzTl2HECw=="/>
         </item>
     </channel>
 </rss>
