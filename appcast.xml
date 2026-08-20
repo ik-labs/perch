@@ -3,20 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.33</title>
-            <pubDate>Thu, 20 Aug 2026 12:21:57 +0530</pubDate>
-            <sparkle:version>67</sparkle:version>
-            <sparkle:shortVersionString>0.5.33</sparkle:shortVersionString>
+            <title>0.5.34</title>
+            <pubDate>Thu, 20 Aug 2026 16:48:57 +0530</pubDate>
+            <sparkle:version>68</sparkle:version>
+            <sparkle:shortVersionString>0.5.34</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Perch does less work while your agents run.** The menu bar was being redrawn
-  five times more often than its text actually changed, and every update reread
-  every session file on disk — including hundreds from sessions that ended weeks
-  ago. Both are gone. Nothing looks different; there is simply less happening
-  behind it.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Sessions show their own name.** A Claude Desktop conversation now appears
+  under the title you gave it — or the one Claude wrote for it — instead of just
+  the folder it runs in. Two sessions in the same project are finally told
+  apart. Cursor, OpenCode, Amp and Devin sessions gained the same thing: they were
+  already carrying a title that Perch never showed.
+- **Cursor credit balance.** If your Cursor account has credit on it, the amount
+  left now sits beside your usage bars, the same way it does for the other
+  providers.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.33/Perch-0.5.33.zip" length="13674537" type="application/octet-stream" sparkle:edSignature="cCpLXKyWf4nsYExjDCywc1uLKfxrTi9QynBM6HKdmDvM8LpGE80webDGijPHs4WkRfzAjf81qLbXyud+NiOyAA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.34/Perch-0.5.34.zip" length="13808701" type="application/octet-stream" sparkle:edSignature="kQWn923c6kw4iPQ/D7iJ325e0Mv79nXIP+Pf4GdVluUeDBSOgb3ZJ2Si/tLcj8svNqoyACwkYfEZcFuVCrTzBg=="/>
         </item>
     </channel>
 </rss>
