@@ -3,23 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.31</title>
-            <pubDate>Wed, 19 Aug 2026 19:26:48 +0530</pubDate>
-            <sparkle:version>65</sparkle:version>
-            <sparkle:shortVersionString>0.5.31</sparkle:shortVersionString>
+            <title>0.5.32</title>
+            <pubDate>Thu, 20 Aug 2026 09:26:56 +0530</pubDate>
+            <sparkle:version>66</sparkle:version>
+            <sparkle:shortVersionString>0.5.32</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Perch says when your Cursor sign-in has expired.** It used to just drop the
-  Cursor usage row, which looked exactly like having no Cursor account — so the
-  bars quietly stopped updating with nothing to explain why, and no way back
-  except guessing. The row now tells you to sign in again. A slow or throttled
-  Cursor still says nothing, because that fixes itself.
-- **A question from Claude no longer shows Allow/Deny.** When Claude asks you
-  something, neither button could answer it — Allow only approved the asking,
-  and Deny stopped Claude asking at all. It now shows as a question.
+- **Two copies of Perch no longer fight over your agents.** Starting a second one
+  used to take the connection to your sessions away from the first, which kept
+  running but stopped hearing anything — no error, no warning. A second copy now
+  says so and quits.
+- **The menu bar list scrolls.** It had a limit of eight sessions before
+  scrolling, which most people never reached, so the panel just kept growing.
+  It's five now, and the scrollbar is visible so you can tell there's more.
+- **The lock screen says what just finished.** When your last agent stopped, the
+  card spent its final seconds showing "no active sessions" instead of the work
+  it had been following.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.31/Perch-0.5.31.zip" length="13576086" type="application/octet-stream" sparkle:edSignature="9ZiJfIJcHrUyyi6QvYPNJfMVU8/Tp2/6JOPBsZV5ZrmD8eTPOh9jUqb5NoSjh2qJZwetosGttLO3hXds8cqaCA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.32/Perch-0.5.32.zip" length="13594221" type="application/octet-stream" sparkle:edSignature="0EhhCspNvGdEN/aYwA2cArf7p9KTL7hyZF0fVZXr5WWb80Edrm+mkGe8EzPx/+oyPxznb7X37XtK21UdasOfDw=="/>
         </item>
     </channel>
 </rss>
