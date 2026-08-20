@@ -3,23 +3,21 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.34</title>
-            <pubDate>Thu, 20 Aug 2026 16:48:57 +0530</pubDate>
-            <sparkle:version>68</sparkle:version>
-            <sparkle:shortVersionString>0.5.34</sparkle:shortVersionString>
+            <title>0.5.35</title>
+            <pubDate>Thu, 20 Aug 2026 18:03:03 +0530</pubDate>
+            <sparkle:version>69</sparkle:version>
+            <sparkle:shortVersionString>0.5.35</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Sessions show their own name.** A Claude Desktop conversation now appears
-  under the title you gave it — or the one Claude wrote for it — instead of just
-  the folder it runs in. Two sessions in the same project are finally told
-  apart. Cursor, OpenCode, Amp and Devin sessions gained the same thing: they were
-  already carrying a title that Perch never showed.
-- **Cursor credit balance.** If your Cursor account has credit on it, the amount
-  left now sits beside your usage bars, the same way it does for the other
-  providers.
+- **Answer Claude's questions from your iPhone.** When Claude Code asks a
+  multiple-choice question, you can now tap the answer on a connected iPhone
+  instead of walking back to the Mac. Off by default — turn it on in Settings →
+  Notifications. While Perch waits for your answer the question does not appear
+  in the terminal, so it only ever engages with an iPhone actually connected, and
+  hands the question straight back the moment it disconnects.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.34/Perch-0.5.34.zip" length="13808701" type="application/octet-stream" sparkle:edSignature="kQWn923c6kw4iPQ/D7iJ325e0Mv79nXIP+Pf4GdVluUeDBSOgb3ZJ2Si/tLcj8svNqoyACwkYfEZcFuVCrTzBg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.35/Perch-0.5.35.zip" length="13919815" type="application/octet-stream" sparkle:edSignature="6+YG6t56Y80Yepqd2D2aIqmgZpqZdCMEqdK70F0METV78QdQFV2APhwocmhVeEPra37/UG2J/PHXAB6tCQ1ODA=="/>
         </item>
     </channel>
 </rss>
