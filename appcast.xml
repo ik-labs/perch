@@ -3,25 +3,20 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.32</title>
-            <pubDate>Thu, 20 Aug 2026 09:26:56 +0530</pubDate>
-            <sparkle:version>66</sparkle:version>
-            <sparkle:shortVersionString>0.5.32</sparkle:shortVersionString>
+            <title>0.5.33</title>
+            <pubDate>Thu, 20 Aug 2026 12:21:57 +0530</pubDate>
+            <sparkle:version>67</sparkle:version>
+            <sparkle:shortVersionString>0.5.33</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Two copies of Perch no longer fight over your agents.** Starting a second one
-  used to take the connection to your sessions away from the first, which kept
-  running but stopped hearing anything — no error, no warning. A second copy now
-  says so and quits.
-- **The menu bar list scrolls.** It had a limit of eight sessions before
-  scrolling, which most people never reached, so the panel just kept growing.
-  It's five now, and the scrollbar is visible so you can tell there's more.
-- **The lock screen says what just finished.** When your last agent stopped, the
-  card spent its final seconds showing "no active sessions" instead of the work
-  it had been following.
+- **Perch does less work while your agents run.** The menu bar was being redrawn
+  five times more often than its text actually changed, and every update reread
+  every session file on disk — including hundreds from sessions that ended weeks
+  ago. Both are gone. Nothing looks different; there is simply less happening
+  behind it.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.32/Perch-0.5.32.zip" length="13594221" type="application/octet-stream" sparkle:edSignature="0EhhCspNvGdEN/aYwA2cArf7p9KTL7hyZF0fVZXr5WWb80Edrm+mkGe8EzPx/+oyPxznb7X37XtK21UdasOfDw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.33/Perch-0.5.33.zip" length="13674537" type="application/octet-stream" sparkle:edSignature="cCpLXKyWf4nsYExjDCywc1uLKfxrTi9QynBM6HKdmDvM8LpGE80webDGijPHs4WkRfzAjf81qLbXyud+NiOyAA=="/>
         </item>
     </channel>
 </rss>
