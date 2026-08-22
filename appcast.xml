@@ -3,19 +3,22 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.37</title>
-            <pubDate>Fri, 21 Aug 2026 10:59:42 +0530</pubDate>
-            <sparkle:version>71</sparkle:version>
-            <sparkle:shortVersionString>0.5.37</sparkle:shortVersionString>
+            <title>0.5.38</title>
+            <pubDate>Sat, 22 Aug 2026 10:48:52 +0530</pubDate>
+            <sparkle:version>72</sparkle:version>
+            <sparkle:shortVersionString>0.5.38</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **The Live Activity card stops flickering between projects.** When several
-  agents were working it renamed its headline and reshuffled its dots every few
-  seconds, too fast to read. It now stays on one session while that session is
-  working, and only updates when something actually changed.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Reply to a Codex session from your iPhone.** Codex joins Claude Code as an
+  agent you can type into remotely. Stop isn't offered for Codex yet.
+
+### Fixed
+- **Notifications stop arriving after the moment has passed.** An approval
+  request that reaches your phone too late to answer is now dropped instead of
+  buzzing about a decision that already went back to the terminal.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.37/Perch-0.5.37.zip" length="14106493" type="application/octet-stream" sparkle:edSignature="8sTny4TmacaRXGiX0fNNHMs9MirnRO9j1ikDxXoprI1WXXrNFI7AlblLLC7egP6yMx1GAOjxREp0v3kUpn6zCg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.38/Perch-0.5.38.zip" length="14126277" type="application/octet-stream" sparkle:edSignature="Wjns/UM7po1ICJFvgNjXGWMfZw4ZnkuZq+PirVAiA+IzVHlIFXalwix/Mh1YXgu1nqnrv+hIuExghkG14AvZCQ=="/>
         </item>
     </channel>
 </rss>
