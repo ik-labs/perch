@@ -3,22 +3,21 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.41</title>
-            <pubDate>Mon, 24 Aug 2026 10:15:49 +0530</pubDate>
-            <sparkle:version>75</sparkle:version>
-            <sparkle:shortVersionString>0.5.41</sparkle:shortVersionString>
+            <title>0.5.42</title>
+            <pubDate>Tue, 25 Aug 2026 10:31:00 +0530</pubDate>
+            <sparkle:version>76</sparkle:version>
+            <sparkle:shortVersionString>0.5.42</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Reply to a Devin session from your iPhone.** Devin joins Claude Code and
-  Codex as an agent you can type into remotely, in tmux or herdr. Stop isn't
-  offered for Devin — its interrupt needs two presses of Escape, and a stray one
-  at an idle prompt opens a menu that can undo work.
+- **Reply to Cursor and Amp sessions from your iPhone.** They join Claude Code,
+  Codex and Devin as agents you can type into remotely, in tmux or herdr. Stop is
+  still Claude Code only.
 
 ### Fixed
 - Security and reliability improvements.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.41/Perch-0.5.41.zip" length="14249032" type="application/octet-stream" sparkle:edSignature="+zBMpO1/C4+abAmuyQNFT46aKxn3MMfHsL4a8BoO2Keyt8j2TuC4+ZegjGEwhHJHs0a7tktyDA+okHK4cXExCA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.42/Perch-0.5.42.zip" length="14284339" type="application/octet-stream" sparkle:edSignature="0/8VHzwOzvkshh1Axdh77+i6UAK3bZFziMzAKGxpdD7LOzZF7PgysmRuAdJpTjTBNIZATKisJ9kST9lcNesWDw=="/>
         </item>
     </channel>
 </rss>
