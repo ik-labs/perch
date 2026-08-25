@@ -3,21 +3,21 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.42</title>
-            <pubDate>Tue, 25 Aug 2026 10:31:00 +0530</pubDate>
-            <sparkle:version>76</sparkle:version>
-            <sparkle:shortVersionString>0.5.42</sparkle:shortVersionString>
+            <title>0.5.43</title>
+            <pubDate>Tue, 25 Aug 2026 12:28:39 +0530</pubDate>
+            <sparkle:version>77</sparkle:version>
+            <sparkle:shortVersionString>0.5.43</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Reply to Cursor and Amp sessions from your iPhone.** They join Claude Code,
-  Codex and Devin as agents you can type into remotely, in tmux or herdr. Stop is
-  still Claude Code only.
+- **Reply to an OpenCode session from your iPhone.** OpenCode joins Claude Code,
+  Codex, Devin, Cursor and Amp — every agent Perch supports can now be typed into
+  remotely. Stop is still Claude Code only.
 
 ### Fixed
 - Security and reliability improvements.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.42/Perch-0.5.42.zip" length="14284339" type="application/octet-stream" sparkle:edSignature="0/8VHzwOzvkshh1Axdh77+i6UAK3bZFziMzAKGxpdD7LOzZF7PgysmRuAdJpTjTBNIZATKisJ9kST9lcNesWDw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.43/Perch-0.5.43.zip" length="14350860" type="application/octet-stream" sparkle:edSignature="HZ6UlDlrl39tnkgzZdEch0bsb20j+c1cZJYkf6h2E0viVPQEGKsKrF4kZdomI91gzvJKTh3ikNoiQPq3n/+cCA=="/>
         </item>
     </channel>
 </rss>
