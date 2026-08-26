@@ -3,35 +3,32 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.44</title>
-            <pubDate>Wed, 26 Aug 2026 12:03:32 +0530</pubDate>
-            <sparkle:version>78</sparkle:version>
-            <sparkle:shortVersionString>0.5.44</sparkle:shortVersionString>
+            <title>0.5.45</title>
+            <pubDate>Wed, 26 Aug 2026 18:13:48 +0530</pubDate>
+            <sparkle:version>79</sparkle:version>
+            <sparkle:shortVersionString>0.5.45</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Stop a Codex or OpenCode turn from your iPhone.** Stop was Claude Code only;
-  it now covers three of the six agents Perch supports. Each one was measured
-  first — Devin's and Amp's interrupt keys turned out to do something else, so
-  they stay out until there is a key worth sending.
-- **Codex has one limit worth knowing.** Stopping works while Codex is thinking
-  or running a tool, which is most of a turn. It does nothing during the few
-  seconds Codex is writing out its final answer, and Perch cannot tell those
-  apart — so a Stop tapped right at the end may not land.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- **Messages you send from your phone stay private on the Mac.** Until now the
+  text was typed into the terminal in a way that briefly showed it to any other
+  user account on the same Mac while it was being sent. It is now handed to the
+  terminal directly, and never appears there.
 
-### Changed
-- **Stop no longer appears when a session is waiting on a permission prompt.**
-  Pressing Escape there does not stop the agent — it answers the prompt *No*. The
-  button was quietly denying whatever was being asked, so it is gone for that
-  case. Use Approve or Deny, which say what they do. Typing is unaffected.
+### Added
+- **Multi-line messages from your phone.** Pasting or dictating text with line
+  breaks used to be refused. It now arrives in the agent as one message with its
+  line breaks intact, for Claude Code, Codex, Cursor, Devin and Amp — each one
+  was checked by hand first. (The Return key on the phone keyboard still sends;
+  line breaks arrive by paste or dictation.)
 
 ### Fixed
-- **A denied permission no longer leaves a session stuck on "needs you".**
-  Answering a prompt at the Mac used to leave the phone showing a request that
-  had already been dealt with, sometimes for ten minutes.
-- Security and reliability improvements.
+- **Sending from the phone is a little quicker.** Long messages, and every
+  message to Codex, used to pause briefly before submitting to make sure the
+  agent had caught up. The new way of handing over text made that unnecessary,
+  which was confirmed with 40 test sends before the pause was removed.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.44/Perch-0.5.44.zip" length="14411153" type="application/octet-stream" sparkle:edSignature="poRKHwJRv7uBn38gvJRnmDVPAgupIM9vdeLkw42zSi/82CZadYAPCrfHSAASiffkWvYYRXsIgZSe1kCLTit4Dg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.45/Perch-0.5.45.zip" length="14455495" type="application/octet-stream" sparkle:edSignature="B91KbAA0ND1Y8qCvqMilbGAB1cdnvRpkD/MPQ0Kf2JKeTOdtmAGomUyan3deezCtfrwjVW5719oAsgRrDRGBBA=="/>
         </item>
     </channel>
 </rss>
