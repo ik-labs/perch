@@ -3,21 +3,35 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.43</title>
-            <pubDate>Tue, 25 Aug 2026 12:28:39 +0530</pubDate>
-            <sparkle:version>77</sparkle:version>
-            <sparkle:shortVersionString>0.5.43</sparkle:shortVersionString>
+            <title>0.5.44</title>
+            <pubDate>Wed, 26 Aug 2026 12:03:32 +0530</pubDate>
+            <sparkle:version>78</sparkle:version>
+            <sparkle:shortVersionString>0.5.44</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Reply to an OpenCode session from your iPhone.** OpenCode joins Claude Code,
-  Codex, Devin, Cursor and Amp — every agent Perch supports can now be typed into
-  remotely. Stop is still Claude Code only.
+- **Stop a Codex or OpenCode turn from your iPhone.** Stop was Claude Code only;
+  it now covers three of the six agents Perch supports. Each one was measured
+  first — Devin's and Amp's interrupt keys turned out to do something else, so
+  they stay out until there is a key worth sending.
+- **Codex has one limit worth knowing.** Stopping works while Codex is thinking
+  or running a tool, which is most of a turn. It does nothing during the few
+  seconds Codex is writing out its final answer, and Perch cannot tell those
+  apart — so a Stop tapped right at the end may not land.
+
+### Changed
+- **Stop no longer appears when a session is waiting on a permission prompt.**
+  Pressing Escape there does not stop the agent — it answers the prompt *No*. The
+  button was quietly denying whatever was being asked, so it is gone for that
+  case. Use Approve or Deny, which say what they do. Typing is unaffected.
 
 ### Fixed
+- **A denied permission no longer leaves a session stuck on "needs you".**
+  Answering a prompt at the Mac used to leave the phone showing a request that
+  had already been dealt with, sometimes for ten minutes.
 - Security and reliability improvements.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.43/Perch-0.5.43.zip" length="14350860" type="application/octet-stream" sparkle:edSignature="HZ6UlDlrl39tnkgzZdEch0bsb20j+c1cZJYkf6h2E0viVPQEGKsKrF4kZdomI91gzvJKTh3ikNoiQPq3n/+cCA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.44/Perch-0.5.44.zip" length="14411153" type="application/octet-stream" sparkle:edSignature="poRKHwJRv7uBn38gvJRnmDVPAgupIM9vdeLkw42zSi/82CZadYAPCrfHSAASiffkWvYYRXsIgZSe1kCLTit4Dg=="/>
         </item>
     </channel>
 </rss>
