@@ -3,32 +3,29 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.45</title>
-            <pubDate>Wed, 26 Aug 2026 18:13:48 +0530</pubDate>
-            <sparkle:version>79</sparkle:version>
-            <sparkle:shortVersionString>0.5.45</sparkle:shortVersionString>
+            <title>0.5.46</title>
+            <pubDate>Thu, 27 Aug 2026 09:59:32 +0530</pubDate>
+            <sparkle:version>80</sparkle:version>
+            <sparkle:shortVersionString>0.5.46</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Changed
-- **Messages you send from your phone stay private on the Mac.** Until now the
-  text was typed into the terminal in a way that briefly showed it to any other
-  user account on the same Mac while it was being sent. It is now handed to the
-  terminal directly, and never appears there.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **Your phone can find your Mac again after the network hiccups.** If macOS's
+  discovery service restarted — which it does on its own, and on some VPN and
+  network changes — Perch stopped advertising itself on Wi-Fi and never started
+  again. Nothing looked wrong: the Mac stayed connected over Tailscale and the
+  menu bar was normal, but a phone on the same Wi-Fi searched forever. The
+  longest this went unnoticed was eighteen hours. Perch now spots it and
+  re-advertises on its own, which took under four seconds in testing.
 
-### Added
-- **Multi-line messages from your phone.** Pasting or dictating text with line
-  breaks used to be refused. It now arrives in the agent as one message with its
-  line breaks intact, for Claude Code, Codex, Cursor, Devin and Amp — each one
-  was checked by hand first. (The Return key on the phone keyboard still sends;
-  line breaks arrive by paste or dictation.)
-
-### Fixed
-- **Sending from the phone is a little quicker.** Long messages, and every
-  message to Codex, used to pause briefly before submitting to make sure the
-  agent had caught up. The new way of handing over text made that unnecessary,
-  which was confirmed with 40 test sends before the pause was removed.
+### Changed
+- **Settings now tells you which network problem you have.** "Wi-Fi discovery
+  dropped — re-advertising" means Perch lost its spot and is getting it back
+  by itself, with nothing for you to do. The Local Network permission prompt
+  now appears only when permission really is the problem — the one case where
+  you do need to open System Settings.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.45/Perch-0.5.45.zip" length="14455495" type="application/octet-stream" sparkle:edSignature="B91KbAA0ND1Y8qCvqMilbGAB1cdnvRpkD/MPQ0Kf2JKeTOdtmAGomUyan3deezCtfrwjVW5719oAsgRrDRGBBA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.46/Perch-0.5.46.zip" length="14529703" type="application/octet-stream" sparkle:edSignature="Pu3nxXM1m0qG1lMuTbwvWq6ZJQz6pqWm554uY9yen/RIBWs/e5niAvToGQvmwwOJ6m5iET408Fzf7vuSevkSAA=="/>
         </item>
     </channel>
 </rss>
