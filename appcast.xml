@@ -3,24 +3,37 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.50</title>
-            <pubDate>Tue, 01 Sep 2026 17:48:58 +0530</pubDate>
-            <sparkle:version>84</sparkle:version>
-            <sparkle:shortVersionString>0.5.50</sparkle:shortVersionString>
+            <title>0.5.51</title>
+            <pubDate>Tue, 01 Sep 2026 19:32:46 +0530</pubDate>
+            <sparkle:version>85</sparkle:version>
+            <sparkle:shortVersionString>0.5.51</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Antigravity CLI sessions now count in Stats.** The heatmap, streaks,
-  session counts and active time include `agy` conversations, read from the
-  CLI's own transcripts, with an Antigravity segment in the provider picker on
-  the Mac and iPhone; the watch's all-provider totals include it. Token totals
-  and the model breakdown stay "unavailable" for it — the CLI keeps no token
-  counts or model names on disk, so Perch says so rather than showing zero.
-  The iPhone now says so too: a provider with no token history reads "—"
-  instead of "0". Conversations the CLI opened but you never typed into are
-  not counted.
+- **Reply to and stop Antigravity CLI sessions from your phone.** An `agy`
+  session running in tmux or herdr now gets the composer and the Stop button
+  on the iPhone and watch, like every other provider. Stop is hidden while the
+  session is waiting on a permission prompt, because there the same key would
+  answer "No" for you. Both were measured before being switched on.
+
+### Fixed
+- **Devin's background subagents now show up.** Newer Devin runs `explore`
+  subagents in the background, and Perch showed nothing for them — the session
+  looked stuck "running" with no activity while six of them worked. Each now
+  gets its row for as long as Devin waits on it, and the mid-turn "finished"
+  that Devin sends while waiting is ignored as it is for foreground subagents.
+- **A phone you reinstalled the companion on no longer costs the Mac a write
+  every few seconds.** The old install's push registration was being reserved
+  and released on every fleet change, forever. Perch now skips a registration
+  it already knows will be refused, and forgets one that has been refused for a
+  week.
+- **Old session records are cleaned up.** Sessions that ended without saying
+  so — a killed agent, or Devin, which never sends a session-end — left their
+  record on disk forever (over a hundred on one Mac). Records untouched for a
+  week are now removed whatever state they were left in; they were already
+  hidden from the fleet.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.50/Perch-0.5.50.zip" length="16976152" type="application/octet-stream" sparkle:edSignature="Fhvgt1jzb9NzRxcpwGpRumMSwQB4rMcIyqIGM/eNIw5U9W/Taa6N4XBC0avAIvvakwO/7Lafh9sFOYCSaeGOAg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.51/Perch-0.5.51.zip" length="17039714" type="application/octet-stream" sparkle:edSignature="sjKqBmDQZ1vggQhcFghVJZIsWVCId7jvFh9hPEHSBNWqBzttQCh1Xb/UyZtOExoXnrLsTVMRQhUY3gGdTKlBDA=="/>
         </item>
     </channel>
 </rss>
