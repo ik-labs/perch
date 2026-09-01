@@ -3,57 +3,20 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.47</title>
-            <pubDate>Mon, 31 Aug 2026 22:29:59 +0530</pubDate>
-            <sparkle:version>81</sparkle:version>
-            <sparkle:shortVersionString>0.5.47</sparkle:shortVersionString>
+            <title>0.5.48</title>
+            <pubDate>Tue, 01 Sep 2026 08:44:05 +0530</pubDate>
+            <sparkle:version>82</sparkle:version>
+            <sparkle:shortVersionString>0.5.48</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Performance
-- **Perch uses about a quarter of the CPU it did while agents work.** A working
-  fleet idled Perch at 12–16% of a core; the same workload now sits around 3%.
-  Four things changed: a burst of agent activity now redraws the fleet once
-  instead of once per event; reading whether a Claude turn was interrupted no
-  longer re-reads a quarter-megabyte of transcript on every redraw; the menu
-  bar label only re-renders when something it actually shows changes; and a
-  long Codex turn no longer rescans megabytes of its own history every four
-  seconds. Nothing you see changes — the Mac just does less to show it.
-
-### Changed
-- **Perch does much less work while Claude's status line refreshes.** Claude
-  Code redraws its status line every few seconds per session, and Perch's
-  helper rewrites four small files each time. Those files lived next to the
-  session records, so every refresh made Perch re-read the whole records
-  directory and redraw the menu bar. They now live in their own folder
-  (`…/Perch/aggregate/`, moved automatically on first launch) with their own
-  watcher, and unchanged numbers no longer trigger a redraw. Nothing you see
-  changes.
-
-### Fixed
-- **Perch tells you when its icon is hidden.** On a MacBook with a notch and a
-  full menu bar, macOS puts a new icon straight behind the notch, so a fresh
-  install could be running with nothing on screen and no hint that it was. Perch
-  now notices and sends one notification saying so, with the shortcut that opens
-  the fleet window (⌃⌥⌘P). Clicking the notification opens it too. At most one
-  notice a week, so if you tucked the icon away on purpose it will not keep
-  telling you.
-- **The fleet says when it is not current.** When your Mac sleeps, every agent
-  pauses with it, but the panel kept showing the last thing it saw as if it were
-  live. Perch now shows one line as the Mac goes to sleep, one while it
-  re-checks after waking ("Back from 25 min asleep — refreshing"), and one if
-  checks stop landing for any other reason ("Last checked 3 min ago — this may
-  be out of date"). Nothing is shown while everything is normal. On waking,
-  Perch re-scans immediately and sends the result to your phone, rather than
-  waiting for the next timer.
-- **Your phone and watch know when the Mac is asleep.** They used to show
-  "Reconnecting…" with a spinner for the whole nap. Now the Mac tells them as it
-  goes to sleep, and they say "Mac went to sleep 22 min ago — the fleet is
-  paused" instead, and "Mac just woke — refreshing" when it comes back. While
-  reconnecting for any other reason, they say how old what you are looking at
-  is. The lock-screen card also dims within two minutes of the Mac sleeping
-  rather than looking current for up to an hour. Needs the iPhone app 1.0.2.
+- **Perch finishes tidying itself after the CPU work in 0.5.47.** Overlapping
+  fleet scans now collapse into one; leftover lock files from old sessions are
+  cleaned up on launch (150 of them on the machine this was found on); and two
+  settings that were being re-saved unchanged every few seconds no longer are.
+  Nothing you see changes.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.47/Perch-0.5.47.zip" length="14896033" type="application/octet-stream" sparkle:edSignature="SK2vu7P5pGvro8Ft3haWbaNTvKSdv2af5CILKPhNuplcTxAhhiuNpeiNTBtYl5NRAS2TaD/paTckNccl5a0YBA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.48/Perch-0.5.48.zip" length="14913012" type="application/octet-stream" sparkle:edSignature="8jNrDVJBDTpUohDnXOKKmn/UUrNP3euI99WJmfK6QkJ0qps2fSIciTBknpQ9ROdRb7Qzf8Yl7t+KS4oxv+lDAQ=="/>
         </item>
     </channel>
 </rss>
