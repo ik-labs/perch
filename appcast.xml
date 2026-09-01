@@ -3,34 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.49</title>
-            <pubDate>Tue, 01 Sep 2026 14:50:42 +0530</pubDate>
-            <sparkle:version>83</sparkle:version>
-            <sparkle:shortVersionString>0.5.49</sparkle:shortVersionString>
+            <title>0.5.50</title>
+            <pubDate>Tue, 01 Sep 2026 17:48:58 +0530</pubDate>
+            <sparkle:version>84</sparkle:version>
+            <sparkle:shortVersionString>0.5.50</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Perch now sees Antigravity CLI sessions — live.** Google's `agy` shows up
-  in the fleet like every other agent: running, waiting on a permission prompt
-  or a question, finished, or idle, with the folder, model and context usage.
-  Perch registers itself as the CLI's status line (stacked under the CLI's
-  own, or chained ahead of one you already had) and adds one `Stop` hook, both
-  pointing at the bundled `agy-report`; both are removed by Remove Integration
-  and the uninstall script. Finishing a turn plays the completion sound and
-  sends the "finished" notification; pressing Escape does not. Sessions
-  started before Perch installed the integration are found by scanning the
-  CLI's own records (newest conversation per folder).
-- **Antigravity's weekly quota, as usage bars.** The CLI reports how much of
-  each weekly limit is left — one for Gemini models, one for Claude and GPT —
-  on every status-line refresh. Perch shows the tighter one as the headline
-  bar with the other beneath it, with the plan tier, the reset time, and the
-  usual running-low warning — on the Mac now, and on phone, watch and widget
-  once the companion app is updated. No account login is stored: only a
-  fingerprint, so a switched login is noticed.
-- Not yet for Antigravity: Stats, and typing into the session from the phone.
-  Phone and watch need the matching companion update to show the new rows.
+- **Antigravity CLI sessions now count in Stats.** The heatmap, streaks,
+  session counts and active time include `agy` conversations, read from the
+  CLI's own transcripts, with an Antigravity segment in the provider picker on
+  the Mac and iPhone; the watch's all-provider totals include it. Token totals
+  and the model breakdown stay "unavailable" for it — the CLI keeps no token
+  counts or model names on disk, so Perch says so rather than showing zero.
+  The iPhone now says so too: a provider with no token history reads "—"
+  instead of "0". Conversations the CLI opened but you never typed into are
+  not counted.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.49/Perch-0.5.49.zip" length="16908908" type="application/octet-stream" sparkle:edSignature="b87buayVlY/jZdmD9Ic3ryuRHys0iuO3gJSA5UDNJV9Ja/L7IV7JPxT2bhrvYYMTwpRE7XdTvBSXMKGKHxcYDg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.50/Perch-0.5.50.zip" length="16976152" type="application/octet-stream" sparkle:edSignature="Fhvgt1jzb9NzRxcpwGpRumMSwQB4rMcIyqIGM/eNIw5U9W/Taa6N4XBC0avAIvvakwO/7Lafh9sFOYCSaeGOAg=="/>
         </item>
     </channel>
 </rss>
