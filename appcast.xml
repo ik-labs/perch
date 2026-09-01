@@ -3,20 +3,34 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.48</title>
-            <pubDate>Tue, 01 Sep 2026 08:44:05 +0530</pubDate>
-            <sparkle:version>82</sparkle:version>
-            <sparkle:shortVersionString>0.5.48</sparkle:shortVersionString>
+            <title>0.5.49</title>
+            <pubDate>Tue, 01 Sep 2026 14:50:42 +0530</pubDate>
+            <sparkle:version>83</sparkle:version>
+            <sparkle:shortVersionString>0.5.49</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Performance
-- **Perch finishes tidying itself after the CPU work in 0.5.47.** Overlapping
-  fleet scans now collapse into one; leftover lock files from old sessions are
-  cleaned up on launch (150 of them on the machine this was found on); and two
-  settings that were being re-saved unchanged every few seconds no longer are.
-  Nothing you see changes.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Perch now sees Antigravity CLI sessions — live.** Google's `agy` shows up
+  in the fleet like every other agent: running, waiting on a permission prompt
+  or a question, finished, or idle, with the folder, model and context usage.
+  Perch registers itself as the CLI's status line (stacked under the CLI's
+  own, or chained ahead of one you already had) and adds one `Stop` hook, both
+  pointing at the bundled `agy-report`; both are removed by Remove Integration
+  and the uninstall script. Finishing a turn plays the completion sound and
+  sends the "finished" notification; pressing Escape does not. Sessions
+  started before Perch installed the integration are found by scanning the
+  CLI's own records (newest conversation per folder).
+- **Antigravity's weekly quota, as usage bars.** The CLI reports how much of
+  each weekly limit is left — one for Gemini models, one for Claude and GPT —
+  on every status-line refresh. Perch shows the tighter one as the headline
+  bar with the other beneath it, with the plan tier, the reset time, and the
+  usual running-low warning — on the Mac now, and on phone, watch and widget
+  once the companion app is updated. No account login is stored: only a
+  fingerprint, so a switched login is noticed.
+- Not yet for Antigravity: Stats, and typing into the session from the phone.
+  Phone and watch need the matching companion update to show the new rows.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.48/Perch-0.5.48.zip" length="14913012" type="application/octet-stream" sparkle:edSignature="8jNrDVJBDTpUohDnXOKKmn/UUrNP3euI99WJmfK6QkJ0qps2fSIciTBknpQ9ROdRb7Qzf8Yl7t+KS4oxv+lDAQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.49/Perch-0.5.49.zip" length="16908908" type="application/octet-stream" sparkle:edSignature="b87buayVlY/jZdmD9Ic3ryuRHys0iuO3gJSA5UDNJV9Ja/L7IV7JPxT2bhrvYYMTwpRE7XdTvBSXMKGKHxcYDg=="/>
         </item>
     </channel>
 </rss>
