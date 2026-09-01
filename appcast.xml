@@ -3,37 +3,32 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.51</title>
-            <pubDate>Tue, 01 Sep 2026 19:32:46 +0530</pubDate>
-            <sparkle:version>85</sparkle:version>
-            <sparkle:shortVersionString>0.5.51</sparkle:shortVersionString>
+            <title>0.5.52</title>
+            <pubDate>Tue, 01 Sep 2026 21:35:32 +0530</pubDate>
+            <sparkle:version>86</sparkle:version>
+            <sparkle:shortVersionString>0.5.52</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Reply to and stop Antigravity CLI sessions from your phone.** An `agy`
-  session running in tmux or herdr now gets the composer and the Stop button
-  on the iPhone and watch, like every other provider. Stop is hidden while the
-  session is waiting on a permission prompt, because there the same key would
-  answer "No" for you. Both were measured before being switched on.
+- **Collect Diagnostics…** in the menu, beside Report an Issue. It writes one
+  zip to your Desktop — Perch's state (version, licence status, hook trust,
+  which integrations are installed, your settings, phone registrations as
+  fingerprints, how many sessions exist per provider) plus its logs — and
+  shows it in Finder. Nothing is uploaded; you can open it before attaching
+  it to an issue. Project folder names are replaced with tokens, and session
+  records, usage data, agent configuration, keys and tokens are never
+  included. The sheet also has the scan-diagnostics switch, which until now
+  was a `defaults write` nobody could find.
 
 ### Fixed
-- **Devin's background subagents now show up.** Newer Devin runs `explore`
-  subagents in the background, and Perch showed nothing for them — the session
-  looked stuck "running" with no activity while six of them worked. Each now
-  gets its row for as long as Devin waits on it, and the mid-turn "finished"
-  that Devin sends while waiting is ignored as it is for foreground subagents.
-- **A phone you reinstalled the companion on no longer costs the Mac a write
-  every few seconds.** The old install's push registration was being reserved
-  and released on every fleet change, forever. Perch now skips a registration
-  it already knows will be refused, and forgets one that has been refused for a
-  week.
-- **Old session records are cleaned up.** Sessions that ended without saying
-  so — a killed agent, or Devin, which never sends a session-end — left their
-  record on disk forever (over a hundred on one Mac). Records untouched for a
-  week are now removed whatever state they were left in; they were already
-  hidden from the fleet.
+- **Codex transcripts now show MCP tool calls.** Calls made through an MCP
+  server — the GitHub app, documentation search, and the like — were missing
+  from the conversation view for most of them: the model would reason, then
+  answer, with no sign it had called anything. They now appear as a tool call
+  with its result, and the ones Codex already recorded another way are not
+  shown twice.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.51/Perch-0.5.51.zip" length="17039714" type="application/octet-stream" sparkle:edSignature="sjKqBmDQZ1vggQhcFghVJZIsWVCId7jvFh9hPEHSBNWqBzttQCh1Xb/UyZtOExoXnrLsTVMRQhUY3gGdTKlBDA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.52/Perch-0.5.52.zip" length="17126724" type="application/octet-stream" sparkle:edSignature="8McGBWN1Dhq4jeDrTsOw1RWtjCZwLe1bG1pRZKQzSkPGZtFnHDaG3LhElm3AKR/e1bONY6GYsRSUMwkYyL6pCg=="/>
         </item>
     </channel>
 </rss>
