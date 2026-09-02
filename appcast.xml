@@ -3,35 +3,26 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.55</title>
-            <pubDate>Wed, 02 Sep 2026 14:09:37 +0530</pubDate>
-            <sparkle:version>89</sparkle:version>
-            <sparkle:shortVersionString>0.5.55</sparkle:shortVersionString>
+            <title>0.5.56</title>
+            <pubDate>Wed, 02 Sep 2026 19:44:26 +0530</pubDate>
+            <sparkle:version>90</sparkle:version>
+            <sparkle:shortVersionString>0.5.56</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Changed
-- **A redesigned dropdown panel.** Each session row now leads with a small
-  provider · host · branch line in a monospaced type, with the project name as
-  the row's big element — running and waiting sessions read at full strength
-  while idle ones recede. The panel's header, list and footer sit on distinct
-  tinted surfaces with hairline separators, the footer's Fleet-window and Quit
-  actions are round icon buttons, and "needs you" uses one consistent amber
-  across the row tint, chip and message. Styling only: what each row says, and
-  what the panel costs to render, are unchanged.
-
-### Added
-- **Light, Dark or System appearance.** The panel (and every Perch window) can
-  now be pinned light or dark independently of the Mac's setting — Appearance,
-  in the panel's gear menu. Default: follow the system, as before.
-- **Rows light up under the pointer.** Session rows and the activity line show
-  a faint highlight on hover, so what's clickable reads as clickable.
-- **Stats got the panel's design.** Metric cards are now tiles — a small
-  uppercase label over a big figure on a faint surface — the numbers roll when
-  you switch range or provider, and the window sits on the same background as
-  the dropdown. Usage percentages and the header counts roll too, when a fresh
-  reading arrives.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **The phone now says why a composer vanished.** Kill an agent while its
+  terminal pane stays open and the reply field on the iPhone disappears — as it
+  must — but the screen said nothing about why. Perch now checks that the
+  agent's process is really gone and tells the phone "The agent is no longer
+  running here," in the moment you were most likely mid-reply. Sending was
+  always refused in this state; only the explanation was missing.
+- **Three rare crashes-in-waiting are gone.** Moving the whole codebase to
+  Swift 6's concurrency checking surfaced three long-standing data races —
+  in the socket server's shutdown, the network listener's lifecycle, and the
+  push retry path — all fixed. Nothing you see changes; the app is simply
+  built to a stricter standard now.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.55/Perch-0.5.55.zip" length="17173192" type="application/octet-stream" sparkle:edSignature="UYNWd8C/3Q66ldAit42u25EcStE3TwoowTehEGSGDdZdqpYREf/eTBYhE1CJyjhE19YrgXgJdFd4eDzL7/dLAg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.56/Perch-0.5.56.zip" length="17173428" type="application/octet-stream" sparkle:edSignature="GgCHDs937ZTLK9M06+54yuTr7sdn84oFA6veR21nW9aeBYmKmF3uRigR5TWFBRaT9n5IVkN+gllxk8BkOfUSAg=="/>
         </item>
     </channel>
 </rss>
