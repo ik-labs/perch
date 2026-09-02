@@ -3,26 +3,29 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.56</title>
-            <pubDate>Wed, 02 Sep 2026 19:44:26 +0530</pubDate>
-            <sparkle:version>90</sparkle:version>
-            <sparkle:shortVersionString>0.5.56</sparkle:shortVersionString>
+            <title>0.5.57</title>
+            <pubDate>Wed, 02 Sep 2026 22:31:15 +0530</pubDate>
+            <sparkle:version>91</sparkle:version>
+            <sparkle:shortVersionString>0.5.57</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **The phone now says why a composer vanished.** Kill an agent while its
-  terminal pane stays open and the reply field on the iPhone disappears — as it
-  must — but the screen said nothing about why. Perch now checks that the
-  agent's process is really gone and tells the phone "The agent is no longer
-  running here," in the moment you were most likely mid-reply. Sending was
-  always refused in this state; only the explanation was missing.
-- **Three rare crashes-in-waiting are gone.** Moving the whole codebase to
-  Swift 6's concurrency checking surfaced three long-standing data races —
-  in the socket server's shutdown, the network listener's lifecycle, and the
-  push retry path — all fixed. Nothing you see changes; the app is simply
-  built to a stricter standard now.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Jump-to-terminal lands on the right tmux pane.** Clicking a session that
+  runs inside tmux used to raise the right terminal app but leave the
+  multiplexer on whatever window it was showing. Perch now tells the tmux
+  server to select the agent's window and pane first — verified against the
+  live process, so a recycled process id can never focus a stranger's pane —
+  and then raises the terminal that actually hosts the tmux client, even
+  though tmux masks it.
+
+### Fixed
+- **Codex installed through asdf is found again.** Current asdf (0.16 and
+  later) writes shims that call `asdf` by name, which a Mac app's minimal
+  environment cannot find — so an asdf-managed Codex silently didn't resolve,
+  and Perch's Codex features stayed off. Perch now also puts asdf's own
+  location on the path when probing a shim, for both asdf generations.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.56/Perch-0.5.56.zip" length="17173428" type="application/octet-stream" sparkle:edSignature="GgCHDs937ZTLK9M06+54yuTr7sdn84oFA6veR21nW9aeBYmKmF3uRigR5TWFBRaT9n5IVkN+gllxk8BkOfUSAg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.57/Perch-0.5.57.zip" length="17333201" type="application/octet-stream" sparkle:edSignature="4cronI1Q83zi1Kpe7JjrVgGip+nAnP45RSO+5i19M9uFci8+r8ZnxDzvlHsGW4ybAwMoEV6vx2hbiiRBiaytBQ=="/>
         </item>
     </channel>
 </rss>
