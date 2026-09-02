@@ -3,21 +3,35 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.54</title>
-            <pubDate>Tue, 01 Sep 2026 23:43:31 +0530</pubDate>
-            <sparkle:version>88</sparkle:version>
-            <sparkle:shortVersionString>0.5.54</sparkle:shortVersionString>
+            <title>0.5.55</title>
+            <pubDate>Wed, 02 Sep 2026 14:09:37 +0530</pubDate>
+            <sparkle:version>89</sparkle:version>
+            <sparkle:shortVersionString>0.5.55</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Changed
-- **Usage bars stay fresh while you're away.** Claude's and Codex's 5-hour and
-  weekly figures used to freeze at the last status-line render when no session
-  was running, so coming back after hours showed old numbers under a "may be
-  stale" label. Perch now refreshes them every 15 minutes while idle — only for
-  a provider you've used on this Mac in the last week, and never while the Mac
-  sleeps — using the same read-only login it already uses while you work.
+- **A redesigned dropdown panel.** Each session row now leads with a small
+  provider · host · branch line in a monospaced type, with the project name as
+  the row's big element — running and waiting sessions read at full strength
+  while idle ones recede. The panel's header, list and footer sit on distinct
+  tinted surfaces with hairline separators, the footer's Fleet-window and Quit
+  actions are round icon buttons, and "needs you" uses one consistent amber
+  across the row tint, chip and message. Styling only: what each row says, and
+  what the panel costs to render, are unchanged.
+
+### Added
+- **Light, Dark or System appearance.** The panel (and every Perch window) can
+  now be pinned light or dark independently of the Mac's setting — Appearance,
+  in the panel's gear menu. Default: follow the system, as before.
+- **Rows light up under the pointer.** Session rows and the activity line show
+  a faint highlight on hover, so what's clickable reads as clickable.
+- **Stats got the panel's design.** Metric cards are now tiles — a small
+  uppercase label over a big figure on a faint surface — the numbers roll when
+  you switch range or provider, and the window sits on the same background as
+  the dropdown. Usage percentages and the header counts roll too, when a fresh
+  reading arrives.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.54/Perch-0.5.54.zip" length="17142325" type="application/octet-stream" sparkle:edSignature="Xo6EGYg4hMbQuyyYqujmd5O1zBCG14L0ukIO/tU+vvM0oLqx8uF6wE2CtkvCkJuQRc4tOJyT4rf7czTO6/ElCA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.55/Perch-0.5.55.zip" length="17173192" type="application/octet-stream" sparkle:edSignature="UYNWd8C/3Q66ldAit42u25EcStE3TwoowTehEGSGDdZdqpYREf/eTBYhE1CJyjhE19YrgXgJdFd4eDzL7/dLAg=="/>
         </item>
     </channel>
 </rss>
