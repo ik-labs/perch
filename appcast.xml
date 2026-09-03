@@ -3,29 +3,29 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.57</title>
-            <pubDate>Wed, 02 Sep 2026 22:31:15 +0530</pubDate>
-            <sparkle:version>91</sparkle:version>
-            <sparkle:shortVersionString>0.5.57</sparkle:shortVersionString>
+            <title>0.5.58</title>
+            <pubDate>Thu, 03 Sep 2026 10:34:04 +0530</pubDate>
+            <sparkle:version>92</sparkle:version>
+            <sparkle:shortVersionString>0.5.58</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Jump-to-terminal lands on the right tmux pane.** Clicking a session that
-  runs inside tmux used to raise the right terminal app but leave the
-  multiplexer on whatever window it was showing. Perch now tells the tmux
-  server to select the agent's window and pane first — verified against the
-  live process, so a recycled process id can never focus a stranger's pane —
-  and then raises the terminal that actually hosts the tmux client, even
-  though tmux masks it.
+- **Keep Mac awake while agents are active.** A new opt-in in Settings →
+  Sessions stops the Mac from dozing off mid-task: it holds off automatic
+  system sleep while an agent is verifiably running, and through the approval
+  window when one is waiting on you — so a permission can still be answered
+  from your phone. It never fights the lid: closing it still sleeps the Mac.
+  Off by default, and it releases the moment nothing is active.
 
-### Fixed
-- **Codex installed through asdf is found again.** Current asdf (0.16 and
-  later) writes shims that call `asdf` by name, which a Mac app's minimal
-  environment cannot find — so an asdf-managed Codex silently didn't resolve,
-  and Perch's Codex features stayed off. Perch now also puts asdf's own
-  location on the path when probing a shim, for both asdf generations.
+### Changed
+- **Background alerts carry less.** The "needs you" push used to include the
+  question or command text twice — once in the visible alert and again in a
+  hidden field no phone ever read — plus an unread provider field. Both hidden
+  copies are gone; the push now carries exactly what the notification shows
+  plus the two fields the app uses (event kind and project). What each push
+  class contains is spelled out, class by class, in SECURITY.md.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.57/Perch-0.5.57.zip" length="17333201" type="application/octet-stream" sparkle:edSignature="4cronI1Q83zi1Kpe7JjrVgGip+nAnP45RSO+5i19M9uFci8+r8ZnxDzvlHsGW4ybAwMoEV6vx2hbiiRBiaytBQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.58/Perch-0.5.58.zip" length="17361409" type="application/octet-stream" sparkle:edSignature="dBzFps3uNLExSg9XvIJxxkYJEVE9sJEExlyf6uEnsFa2n9gr2YieljWtA/ioS/MzEsWBaf3aPXv4tLZfFhtGAA=="/>
         </item>
     </channel>
 </rss>
