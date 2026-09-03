@@ -3,29 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.58</title>
-            <pubDate>Thu, 03 Sep 2026 10:34:04 +0530</pubDate>
-            <sparkle:version>92</sparkle:version>
-            <sparkle:shortVersionString>0.5.58</sparkle:shortVersionString>
+            <title>0.5.59</title>
+            <pubDate>Thu, 03 Sep 2026 11:58:15 +0530</pubDate>
+            <sparkle:version>93</sparkle:version>
+            <sparkle:shortVersionString>0.5.59</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Keep Mac awake while agents are active.** A new opt-in in Settings →
-  Sessions stops the Mac from dozing off mid-task: it holds off automatic
-  system sleep while an agent is verifiably running, and through the approval
-  window when one is waiting on you — so a permission can still be answered
-  from your phone. It never fights the lid: closing it still sleeps the Mac.
-  Off by default, and it releases the moment nothing is active.
-
-### Changed
-- **Background alerts carry less.** The "needs you" push used to include the
-  question or command text twice — once in the visible alert and again in a
-  hidden field no phone ever read — plus an unread provider field. Both hidden
-  copies are gone; the push now carries exactly what the notification shows
-  plus the two fields the app uses (event kind and project). What each push
-  class contains is spelled out, class by class, in SECURITY.md.
+- **Answer permissions from the iPhone notification.** When an agent asks to
+  run a tool, the phone alert now carries Allow and Deny buttons. Allow asks
+  for Face ID / passcode first — approving a tool from a locked screen should
+  cost that much — then the app opens, connects to your Mac, and delivers the
+  decision, confirming on screen. If the Mac can't be reached or the window
+  already closed, it says so plainly instead of pretending. Questions and
+  plans keep the plain alert: those need reading, not a button. Needs the
+  companion app 1.0.6 or later.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.58/Perch-0.5.58.zip" length="17361409" type="application/octet-stream" sparkle:edSignature="dBzFps3uNLExSg9XvIJxxkYJEVE9sJEExlyf6uEnsFa2n9gr2YieljWtA/ioS/MzEsWBaf3aPXv4tLZfFhtGAA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.59/Perch-0.5.59.zip" length="17363219" type="application/octet-stream" sparkle:edSignature="pxx2U77KwvNclveBjmP73MxR+dGCS5kEYNibzmib4+UQPnH6unXbNjfJvXgu/9Ng2A54VKNf8/W3VQMCKRRhCA=="/>
         </item>
     </channel>
 </rss>
