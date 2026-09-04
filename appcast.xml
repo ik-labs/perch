@@ -3,21 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.60</title>
-            <pubDate>Thu, 03 Sep 2026 22:03:05 +0530</pubDate>
-            <sparkle:version>94</sparkle:version>
-            <sparkle:shortVersionString>0.5.60</sparkle:shortVersionString>
+            <title>0.5.61</title>
+            <pubDate>Fri, 04 Sep 2026 09:44:05 +0530</pubDate>
+            <sparkle:version>95</sparkle:version>
+            <sparkle:shortVersionString>0.5.61</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Jump-to-terminal lands on the right Zellij pane.** Clicking a session that
-  runs inside Zellij now switches Zellij to the exact tab and pane hosting the
-  agent — verified against the live process, so a finished session can never
-  focus someone else's pane — and then raises the terminal as before. Perch
-  also stops asking Terminal.app or Ghostty for Automation access it cannot
-  use while a session is inside Zellij.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **Amp usage reads the new two-pool sentence.** Amp reworded its usage
+  summary when it split subscriptions into an agent pool and an orb pool, and
+  Perch's Amp strip kept showing a stale reading (one account sat at "Other
+  99%" for two days while Amp itself said 26% used). The strip now shows the
+  agent and orb pools by name, with the billing period's real end date.
+- **A session that hit its usage limit no longer spins as "active".** When a
+  batch of background agents died on a rate limit, Claude Code never told
+  Perch they had stopped, so the row kept a spinner and counted as active for
+  up to thirty minutes after Claude was already back at its prompt. Perch now
+  reads each agent's own transcript and drops the ones the API killed.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.60/Perch-0.5.60.zip" length="17449374" type="application/octet-stream" sparkle:edSignature="15NYeqhvbzHF4C0yF/PTpK75TSFEN8eYTMfQCFeh/vhzH+SbJasKPlPYC/BRiyu1Svs4T4pCO5mSIaumtlKhBQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.61/Perch-0.5.61.zip" length="17515007" type="application/octet-stream" sparkle:edSignature="EJz6G+FaFnEPAowavGBns8K2rpSPPOKoWuab8MRNBB5TuBckO8F4pENpDsb7uV/uAwElUJxhHPsHKjTXXrW0CA=="/>
         </item>
     </channel>
 </rss>
