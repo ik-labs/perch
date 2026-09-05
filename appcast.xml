@@ -3,25 +3,60 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.61</title>
-            <pubDate>Fri, 04 Sep 2026 09:44:05 +0530</pubDate>
-            <sparkle:version>95</sparkle:version>
-            <sparkle:shortVersionString>0.5.61</sparkle:shortVersionString>
+            <title>0.5.62</title>
+            <pubDate>Sat, 05 Sep 2026 23:25:59 +0530</pubDate>
+            <sparkle:version>96</sparkle:version>
+            <sparkle:shortVersionString>0.5.62</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Amp usage reads the new two-pool sentence.** Amp reworded its usage
-  summary when it split subscriptions into an agent pool and an orb pool, and
-  Perch's Amp strip kept showing a stale reading (one account sat at "Other
-  99%" for two days while Amp itself said 26% used). The strip now shows the
-  agent and orb pools by name, with the billing period's real end date.
-- **A session that hit its usage limit no longer spins as "active".** When a
-  batch of background agents died on a rate limit, Claude Code never told
-  Perch they had stopped, so the row kept a spinner and counted as active for
-  up to thirty minutes after Claude was already back at its prompt. Perch now
-  reads each agent's own transcript and drops the ones the API killed.
+- **Jump-to-terminal works again on macOS 26.** macOS 26 stopped letting Perch
+  read another process's environment, which is where a session's terminal and
+  pane used to come from. Every Amp session and every Antigravity session lost
+  its terminal, and a click fell back to opening the folder. Perch now finds
+  the terminal from the process tree instead, and for iTerm2 finds the exact
+  pane from the session's tty. Warp's exact pane cannot be recovered this way;
+  Warp sessions raise the app.
+- **The phone can no longer type into a shell.** `claude -p`, `codex e`,
+  `codex review`, `cursor-agent -fp` and `devin -cp` are print modes with no
+  prompt: text sent to their pane waits in the terminal and the shell runs it
+  when they exit. Claude had no check at all, Codex missed the alias, and the
+  others missed clustered flags. All are refused now, and so is an agent
+  whose command line Perch cannot read.
+- **Replying from a Mac notification checks the agent is still there.** A
+  reply left in Notification Center after the agent had exited was typed into
+  whatever that terminal was showing — a shell, or a stranger's tab. Perch now
+  re-checks the agent immediately before typing, and refuses under Zellij,
+  where the reply would land in whichever pane happened to be focused.
+- **A lapsed Pro key stays lapsed offline.** When the licence server could not
+  be reached, every key Perch held was treated as valid, with no expiry, so a
+  revoked or expired Pro key came back on any network blip. Each key now
+  remembers its own last answer, and an outage honours only that.
+- **Perch never overwrites your hooks.** A `hooks` block in
+  `~/.claude/settings.json` or `~/.codex/hooks.json` with a shape Perch does
+  not recognise used to be replaced wholesale with Perch's own entries. Perch
+  now leaves the file alone and says why.
+- **Usage meters tell the truth more often.** Codex's context percentage no
+  longer double-counts cached tokens. Amp's cycle no longer shows an invented
+  0% "reset" in the hours between midnight and the real renewal. An idle
+  session replaying an old reading can no longer keep a fresher one out, and
+  a real re-baseline from a live session takes effect at once. A malformed
+  usage response can no longer crash the low-usage warning.
+- **Codex sessions stop flickering to idle mid-turn.** A scan that read no
+  turn boundary, or read the previous turn's, could mark a running session
+  idle for a tick — and hide it under "hide idle". Only a boundary written
+  after the current turn began can do that now.
+- **Cursor sessions stop firing "finished" mid-turn.** A transcript read that
+  landed on a half-written character counted as an empty transcript.
+- **Stats no longer count Codex subagents as sessions.**
+- **Phone and watch approvals are honest.** The Live Activity countdown is
+  now the provider's real window (five minutes for OpenCode; none for Amp
+  and Antigravity, which never time out). Needs companion app 1.0.6 build 55
+  or later for the rest: the watch no longer offers Allow/Deny for an agent
+  question, and a tap on an unreachable Mac no longer closes the sheet as if
+  it had been heard.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.61/Perch-0.5.61.zip" length="17515007" type="application/octet-stream" sparkle:edSignature="EJz6G+FaFnEPAowavGBns8K2rpSPPOKoWuab8MRNBB5TuBckO8F4pENpDsb7uV/uAwElUJxhHPsHKjTXXrW0CA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.62/Perch-0.5.62.zip" length="17774548" type="application/octet-stream" sparkle:edSignature="KzS3HyFvHuShkXF+QidFD5ZNb+rko3o6T5gf7KP9z8teVSIobWhJBhzxV3h9FG90XctJXM6NjWzYk+TzoWE5Bg=="/>
         </item>
     </channel>
 </rss>
