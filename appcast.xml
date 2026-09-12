@@ -3,28 +3,35 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.63</title>
-            <pubDate>Fri, 11 Sep 2026 16:54:38 +0530</pubDate>
-            <sparkle:version>97</sparkle:version>
-            <sparkle:shortVersionString>0.5.63</sparkle:shortVersionString>
+            <title>0.5.64</title>
+            <pubDate>Sat, 12 Sep 2026 12:18:51 +0530</pubDate>
+            <sparkle:version>98</sparkle:version>
+            <sparkle:shortVersionString>0.5.64</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Improved
-- **Your phone and watch are no longer sent the same usage numbers twice
-  every four seconds.** The Mac republished account usage on every scan
-  whether or not anything had changed, and every connected phone and watch
-  decoded it each time. Usage now goes out only when a number actually moves,
-  and the panel stops redrawing for a scan that found nothing new.
-- **OpenCode Go usage no longer re-reads your whole OpenCode history while an
-  agent is working.** Every scan used to load and parse every message in the
-  OpenCode database whenever it changed — which, with an agent streaming, was
-  every scan. With a 250,000-message history that was five seconds and 685 MB
-  each time, and it held up every other provider's scan behind it. Perch now
-  asks the database only for the Go messages inside the current windows, and
-  for the billing anchor once every five minutes: under half a second and
-  about 20 MB at the same size. The numbers shown are unchanged.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **A missed file event can no longer freeze a session's status until you
+  relaunch.** Hook-driven sessions reach Perch through a directory watch, and
+  that watch was the only path. Every scan now also checks whether the
+  directory changed and reloads if the watch missed it, so a stuck status is
+  caught within a few seconds instead of never.
+- **A stale "needs you" is no longer checked by reading the transcript on the
+  interface thread.** The check that clears a permission prompt Claude already
+  answered elsewhere ran while Perch was drawing, and read up to 256 KB each
+  time the transcript changed. It now runs alongside the scan, and a prompt
+  raised again in the meantime keeps its "needs you" until the scan has looked.
+
+### Improved
+- **Less work on an idle Mac.** With no phone or watch connected, Perch no
+  longer asks tmux, Herdr or OpenCode every four seconds whether each session
+  can be typed into — nothing reads the answer until a companion connects, and
+  the first one to connect triggers a fresh check. Two Claude sessions in the
+  same repo also share one directory read per scan instead of two.
+- **OpenCode sessions with long histories cost less per scan.** Perch read
+  every message in a session to find the newest one; it now asks the database
+  for just that message when the session already carries its own totals.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.63/Perch-0.5.63.zip" length="17991780" type="application/octet-stream" sparkle:edSignature="qOtaWNVInSTV8uyXweJyt8U5di7kX4fbTV4NwRAo/L7Vziqr0rvrQ4jbeRa1Z0XsrKY3xcgn8zgj6AfWD52sDA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.64/Perch-0.5.64.zip" length="18049272" type="application/octet-stream" sparkle:edSignature="dbzWzzKF6S/SHxnlkKRj3tbuvTYhVchOsTGd57IrXn/o0KEeTqY5kL23IgQmqQuNilQ4eSImTTwSVB8KMXyjCg=="/>
         </item>
     </channel>
 </rss>
