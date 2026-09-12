@@ -3,35 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.64</title>
-            <pubDate>Sat, 12 Sep 2026 12:18:51 +0530</pubDate>
-            <sparkle:version>98</sparkle:version>
-            <sparkle:shortVersionString>0.5.64</sparkle:shortVersionString>
+            <title>0.5.65</title>
+            <pubDate>Sat, 12 Sep 2026 15:24:57 +0530</pubDate>
+            <sparkle:version>99</sparkle:version>
+            <sparkle:shortVersionString>0.5.65</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **A missed file event can no longer freeze a session's status until you
-  relaunch.** Hook-driven sessions reach Perch through a directory watch, and
-  that watch was the only path. Every scan now also checks whether the
-  directory changed and reloads if the watch missed it, so a stuck status is
-  caught within a few seconds instead of never.
-- **A stale "needs you" is no longer checked by reading the transcript on the
-  interface thread.** The check that clears a permission prompt Claude already
-  answered elsewhere ran while Perch was drawing, and read up to 256 KB each
-  time the transcript changed. It now runs alongside the scan, and a prompt
-  raised again in the meantime keeps its "needs you" until the scan has looked.
-
-### Improved
-- **Less work on an idle Mac.** With no phone or watch connected, Perch no
-  longer asks tmux, Herdr or OpenCode every four seconds whether each session
-  can be typed into — nothing reads the answer until a companion connects, and
-  the first one to connect triggers a fresh check. Two Claude sessions in the
-  same repo also share one directory read per scan instead of two.
-- **OpenCode sessions with long histories cost less per scan.** Perch read
-  every message in a session to find the newest one; it now asks the database
-  for just that message when the session already carries its own totals.
+            <description sparkle:format="markdown"><![CDATA[### Improved
+- **Claude Code's status line renders faster.** Perch's status-line helper
+  runs on every render, and it was spending about 20 ms per render searching
+  a quarter-megabyte config file for your account and plan. It now reads the
+  file once and finds both in under half a millisecond. What it shows is
+  unchanged.
+- **Perch's four-second scan can now be coalesced with other timers.** The
+  timer allows a second of slack so macOS can batch its wake with other work,
+  which is what an idle Mac actually pays for a periodic check.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.64/Perch-0.5.64.zip" length="18049272" type="application/octet-stream" sparkle:edSignature="dbzWzzKF6S/SHxnlkKRj3tbuvTYhVchOsTGd57IrXn/o0KEeTqY5kL23IgQmqQuNilQ4eSImTTwSVB8KMXyjCg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.65/Perch-0.5.65.zip" length="18062570" type="application/octet-stream" sparkle:edSignature="6gCy6QfqYG4ZlJqpYJzgdmVbHJKoKSoTJ6QHTiGdLPKM6kc3KsrnFU/0OMTAJUihgJHeihIl6GH0OrC0ckEVBg=="/>
         </item>
     </channel>
 </rss>
