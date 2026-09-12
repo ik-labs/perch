@@ -3,30 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.66</title>
-            <pubDate>Sat, 12 Sep 2026 16:34:30 +0530</pubDate>
-            <sparkle:version>100</sparkle:version>
-            <sparkle:shortVersionString>0.5.66</sparkle:shortVersionString>
+            <title>0.5.67</title>
+            <pubDate>Sat, 12 Sep 2026 17:03:49 +0530</pubDate>
+            <sparkle:version>101</sparkle:version>
+            <sparkle:shortVersionString>0.5.67</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **A phone you wiped or lost no longer keeps your terminal waiting.** If a
-  paired phone stopped connecting without being unpaired, Perch still held
-  every unanswered approval for the phone's 45-second window for two weeks.
-  Now a phone that has not connected in two days, or whose notifications
-  Apple reports as undeliverable, still gets its pushes but no longer holds
-  the terminal; the prompt appears there after the usual 22 seconds.
-
-### Added
-- **Claude Code's newer hook events.** Perch now listens for a tool failing
-  (the session's activity line says so instead of showing the last tool),
-  the working directory changing mid-session (the project label follows),
-  and tasks being created or completed (the checklist updates at once
-  instead of on the next event). Existing installs pick these up on the
-  next launch; nothing changes on a Claude Code version that does not send
-  them.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Perch now tells you when a session needs a restart.** An agent that was
+  already running when Perch installed or updated its hooks never loads them,
+  and until now such a session looked exactly like a healthy idle one. A
+  Claude Code, Cursor or Devin session in that state now shows "Restart to
+  enable live updates" on its row, and one that started after the install
+  but has still sent nothing shows "Hooks not firing" instead, which is the
+  case worth reporting. Settings lists, per provider, when the integration
+  was installed, when it last sent an event, and how many open sessions need
+  a restart. The diagnostics bundle carries the same lines.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.66/Perch-0.5.66.zip" length="18085907" type="application/octet-stream" sparkle:edSignature="vRrQcMEe83OVjU7B43f3vjQAHXX2A2vTfGyJ6wnA65Kx6HyrUuavX40/tKqzgAoT3vHFmEp1qfH7bz2q/expBQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.67/Perch-0.5.67.zip" length="18211181" type="application/octet-stream" sparkle:edSignature="68+RylnKqVsNOO1aTvc20ilYIfIwtaKLfMeognW7TxAvPPyveMUL+gD6dtWat107sJVZK2sVTooLO9tX6x5QAg=="/>
         </item>
     </channel>
 </rss>
