@@ -3,24 +3,27 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.67</title>
-            <pubDate>Sat, 12 Sep 2026 17:03:49 +0530</pubDate>
-            <sparkle:version>101</sparkle:version>
-            <sparkle:shortVersionString>0.5.67</sparkle:shortVersionString>
+            <title>0.5.68</title>
+            <pubDate>Sun, 13 Sep 2026 12:40:17 +0530</pubDate>
+            <sparkle:version>102</sparkle:version>
+            <sparkle:shortVersionString>0.5.68</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Perch now tells you when a session needs a restart.** An agent that was
-  already running when Perch installed or updated its hooks never loads them,
-  and until now such a session looked exactly like a healthy idle one. A
-  Claude Code, Cursor or Devin session in that state now shows "Restart to
-  enable live updates" on its row, and one that started after the install
-  but has still sent nothing shows "Hooks not firing" instead, which is the
-  case worth reporting. Settings lists, per provider, when the integration
-  was installed, when it last sent an event, and how many open sessions need
-  a restart. The diagnostics bundle carries the same lines.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **Opening Stats is fast again.** Perch keeps a cache of every transcript it
+  has already counted, but a file it read and found nothing to count in, such
+  as a subagent's transcript, was never added to it, so it was read again on
+  every open. On a Mac with a long history that was 16 seconds of scanning
+  each time; now it is a fraction of a second. A file Perch could not read is
+  retried rather than remembered as empty.
+
+### Added
+- **Read a long message in full on your phone.** A message or tool result the
+  phone shows as truncated now offers "show the rest", and a tap fetches the
+  whole thing from your Mac. Needs the next companion app update to appear;
+  older phones keep the plain truncated note.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.67/Perch-0.5.67.zip" length="18211181" type="application/octet-stream" sparkle:edSignature="68+RylnKqVsNOO1aTvc20ilYIfIwtaKLfMeognW7TxAvPPyveMUL+gD6dtWat107sJVZK2sVTooLO9tX6x5QAg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.68/Perch-0.5.68.zip" length="18421615" type="application/octet-stream" sparkle:edSignature="v6IAcO3en2C0qGzi3DOgVczlHZt03EfERz5MDOwhN5DJb3+dCtjN/owPasm/BbRkn+Gd0deORcBS2x77q3pkDw=="/>
         </item>
     </channel>
 </rss>
