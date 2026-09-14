@@ -3,27 +3,32 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.68</title>
-            <pubDate>Sun, 13 Sep 2026 12:40:17 +0530</pubDate>
-            <sparkle:version>102</sparkle:version>
-            <sparkle:shortVersionString>0.5.68</sparkle:shortVersionString>
+            <title>0.5.69</title>
+            <pubDate>Mon, 14 Sep 2026 12:05:27 +0530</pubDate>
+            <sparkle:version>103</sparkle:version>
+            <sparkle:shortVersionString>0.5.69</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Opening Stats is fast again.** Perch keeps a cache of every transcript it
-  has already counted, but a file it read and found nothing to count in, such
-  as a subagent's transcript, was never added to it, so it was read again on
-  every open. On a Mac with a long history that was 16 seconds of scanning
-  each time; now it is a fraction of a second. A file Perch could not read is
-  retried rather than remembered as empty.
+- **Amp's plan name is back on the usage strip.** Amp reworded its usage
+  summary again and the "Megawatt" label silently disappeared. Perch reads the
+  new wording, and from now on a usage fetch that returns fewer details than
+  the one before it is written to the diagnostics bundle, so a change like
+  this is visible instead of quiet.
 
 ### Added
-- **Read a long message in full on your phone.** A message or tool result the
-  phone shows as truncated now offers "show the rest", and a tap fetches the
-  whole thing from your Mac. Needs the next companion app update to appear;
-  older phones keep the plain truncated note.
+- **A session that is compacting its context says so.** Compaction can take
+  a few minutes with nothing else happening, and the row used to keep showing
+  the last tool as if it were still running. It now reads "Compacting
+  context…" until compaction finishes.
+- **A tool that auto mode blocked is shown as blocked.** When Claude Code's
+  auto mode refuses a tool, the row now says which one, instead of keeping the
+  previous tool's line up. Nothing to approve: auto mode already decided.
+- **The diagnostics bundle lists your installed agent CLI versions** next to
+  the version each usage parser was last checked against, so a stale parser
+  is a question with an answer.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.68/Perch-0.5.68.zip" length="18421615" type="application/octet-stream" sparkle:edSignature="v6IAcO3en2C0qGzi3DOgVczlHZt03EfERz5MDOwhN5DJb3+dCtjN/owPasm/BbRkn+Gd0deORcBS2x77q3pkDw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.69/Perch-0.5.69.zip" length="18515098" type="application/octet-stream" sparkle:edSignature="xUtWew5lgWb8ztgvAgQdgXE5GOdnNLMpz6rervRoRgo1S8lVHJrUGd0Ce+I9RDuQmXUueM6ex7SeQEtzFVvMDg=="/>
         </item>
     </channel>
 </rss>
