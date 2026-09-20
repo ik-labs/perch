@@ -3,28 +3,35 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.70</title>
-            <pubDate>Sat, 19 Sep 2026 00:01:02 +0530</pubDate>
-            <sparkle:version>104</sparkle:version>
-            <sparkle:shortVersionString>0.5.70</sparkle:shortVersionString>
+            <title>0.5.71</title>
+            <pubDate>Sun, 20 Sep 2026 22:23:11 +0530</pubDate>
+            <sparkle:version>105</sparkle:version>
+            <sparkle:shortVersionString>0.5.71</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Perch no longer risks a crash or a hang when its local socket server
-  shuts down.** A connection that had been accepted but not yet handled could
-  outlive the server, which either tripped a system check when the server was
-  released or left the shutdown waiting on the socket forever. Found by the
-  release checks on macOS 27, where the timing surfaced it.
-
-### Changed
-- **Phone connections now use forward secrecy.** The link between your Mac
-  and a paired phone or watch negotiates an ephemeral key on each connection,
-  so a recording of past traffic on your network cannot be decrypted later
-  even by someone who obtains the pairing secret. Nothing to re-pair: a phone
-  running an older companion keeps connecting exactly as before, and picks up
-  the stronger key exchange with its next update.
+- **Approving from your phone attaches to the request the alert was about.**
+  With more than one request waiting, a tap on the alert could land on a
+  different one. Perch now matches the request the alert named, and refuses
+  rather than guesses when it cannot tell them apart.
+- **Answering a Claude prompt at the terminal clears it everywhere.** Choosing
+  Yes in the terminal used to leave the request on your phone and the row
+  showing "waiting" until it timed out. Perch now sees that the approved
+  command is running and clears both. A decision that arrives after the turn
+  has finished no longer brings a finished session back to "waiting".
+- **Replying from a notification works inside tmux and herdr.** The reply used
+  to be typed into whichever pane was active, which could be the wrong one.
+  It is now delivered to the session's own pane, the way messages from your
+  phone are. If Perch cannot tell which pane that is, it brings the terminal
+  forward instead of typing anywhere.
+- **A phone with an old pairing code can no longer wear Perch down.** Each
+  refused connection held on to a system resource for good. After an hour or
+  two of a stale phone retrying, Perch could stop receiving live updates from
+  your agents, and permission requests would stall for close to a minute
+  each. Refused connections are now released at once, and the local socket
+  recovers on its own if the system ever does run short.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.70/Perch-0.5.70.zip" length="18586735" type="application/octet-stream" sparkle:edSignature="Njn5IFQPd1zhmFIQtrFZlZjM+hA4AAYXdt4YIc2SSUlEYbVHLHkK6yQ10lkL1b3PIqgo2znNCEQq8aKD7eB8CQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.71/Perch-0.5.71.zip" length="18694809" type="application/octet-stream" sparkle:edSignature="j2OmXbjRkw/biUQv41E6+EQCGjAx5YG3u8b1+wohCUM2DF0OYoan3pcgmiw8uH6Ox/RZum3QAmRFDHpPc5l5Dw=="/>
         </item>
     </channel>
 </rss>
