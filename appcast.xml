@@ -3,31 +3,29 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.78</title>
-            <pubDate>Mon, 28 Sep 2026 17:14:30 +0530</pubDate>
-            <sparkle:version>112</sparkle:version>
-            <sparkle:shortVersionString>0.5.78</sparkle:shortVersionString>
+            <title>0.5.79</title>
+            <pubDate>Mon, 28 Sep 2026 18:34:16 +0530</pubDate>
+            <sparkle:version>113</sparkle:version>
+            <sparkle:shortVersionString>0.5.79</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Settings kept in a dotfiles folder stay linked.** If your
-  `~/.claude/settings.json` (or Codex, Cursor or Devin config) is a symlink
-  into a dotfiles repo, Perch replaced the link with a plain file, so your
-  dotfiles copy stopped receiving changes. Perch now writes through the link
-  and leaves it in place.
-- **Your own hooks next to Perch's are kept.** A hook command you added in the
-  same group as Perch's, in Claude Code or Devin, was deleted the next time
-  Perch updated its hooks or you removed the integration. Only Perch's own
-  entries are touched now.
-- **Perch works from a folder with a space in its name.** With the app at a
-  path like "Perch 2.app", every hook and the Claude status line failed and
-  sessions showed "Hooks not firing".
-- **The status line keeps working after you move Perch.** Opening Perch first
-  from the disk image or Downloads and then moving it to Applications left
-  Claude's status line pointing at the old location, and usage, cost and
-  context went blank.
+- **Your phone reconnects after the Mac's listener hiccups.** If the
+  connection your phone uses failed to start (most often right after
+  regenerating the pairing QR code), it stayed down until you turned the
+  companion off and on or restarted Perch. It now retries on its own, on the
+  same port first.
+- **An approval is never shown as "Allowed" when nothing received it.** If
+  the agent's hook process died while waiting (an interrupted run, a closed
+  OpenCode session), Perch kept offering Allow/Deny and reported a tap as
+  delivered while the agent sat at its own prompt. The request now clears
+  as soon as the hook goes away, and the log says so.
+- **A tap that arrives too late is told what happened.** Answering from a
+  phone notification after the request was already settled on the Mac or by
+  the timeout now tells you it was already answered, instead of going
+  silent.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.78/Perch-0.5.78.zip" length="18890861" type="application/octet-stream" sparkle:edSignature="TUNn/yW7EOK2CcxpBK1ANWEwprdWla/pt7tdhN3zuEMoijzb0pWzp6VPCmZ7y7myb/nP20zqMr7A2p7rh5bXAw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.79/Perch-0.5.79.zip" length="18910328" type="application/octet-stream" sparkle:edSignature="0LoCYHU2oEafTisq1jm2V1lIpCk7+XBDgF3pFO8kKJf4RaLZWB5iiZRoH0XKrulu4g7yET8KlcE2huGcdrZvBw=="/>
         </item>
     </channel>
 </rss>
