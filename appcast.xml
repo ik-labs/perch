@@ -3,27 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.81</title>
-            <pubDate>Mon, 28 Sep 2026 21:11:23 +0530</pubDate>
-            <sparkle:version>115</sparkle:version>
-            <sparkle:shortVersionString>0.5.81</sparkle:shortVersionString>
+            <title>0.5.82</title>
+            <pubDate>Mon, 28 Sep 2026 21:43:00 +0530</pubDate>
+            <sparkle:version>116</sparkle:version>
+            <sparkle:shortVersionString>0.5.82</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **A running Codex session keeps showing what it's doing.** With Codex hooks
-  installed, the row's tool line (for example "exec: npm test") and its timer
-  could disappear within a second of a tool starting, leaving a plain
-  "Running" for the rest of a long command.
-- **Codex no longer stays at NEEDS YOU after you answer a subagent in the
-  terminal.** When a Codex subagent asked for permission and you answered in
-  Codex's own prompt, the session could stay marked as waiting on you while
-  the subagent carried on. It now clears as soon as that subagent moves on or
-  stops.
-- **No more stray Codex rows from the Codex app.** Codex Desktop runs short
-  background threads of its own, and each could appear as an extra idle Codex
-  row, sometimes labelled "/". Perch now leaves them out.
+- **An OpenCode subagent asking for permission now shows NEEDS YOU.** When a
+  subagent inside an OpenCode session stopped to ask for approval or ask a
+  question, the session kept saying "running" and no alert reached your
+  phone. It now shows NEEDS YOU and sends the alert, and stays that way until
+  every waiting subagent has been answered.
+- **Answering in OpenCode itself clears NEEDS YOU straight away.** If Perch
+  handed a permission prompt back to OpenCode and you answered it there, the
+  session stayed at NEEDS YOU until the approved command finished. It now
+  clears as soon as you answer. Restart any OpenCode session that was already
+  open to pick this up.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.81/Perch-0.5.81.zip" length="18993755" type="application/octet-stream" sparkle:edSignature="hHhMYEQBYcJC3vGoRTB321318Lo6pealoQgi6ibIXK/AtieOeHxsxmsx+Gdti97MmeDoazMgPak6Ow9krf1QAA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.82/Perch-0.5.82.zip" length="19004792" type="application/octet-stream" sparkle:edSignature="b5Gg7mV13drRmSP0SCuhvgrUDMUMooGMLeBVMCEp4VT2OZ5KEwRv1oXZC4Ey+/HXhb2EGKkTBsYNT6i0hjS7Bg=="/>
         </item>
     </channel>
 </rss>
