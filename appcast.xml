@@ -3,29 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.79</title>
-            <pubDate>Mon, 28 Sep 2026 18:34:16 +0530</pubDate>
-            <sparkle:version>113</sparkle:version>
-            <sparkle:shortVersionString>0.5.79</sparkle:shortVersionString>
+            <title>0.5.80</title>
+            <pubDate>Mon, 28 Sep 2026 19:53:58 +0530</pubDate>
+            <sparkle:version>114</sparkle:version>
+            <sparkle:shortVersionString>0.5.80</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Your phone reconnects after the Mac's listener hiccups.** If the
-  connection your phone uses failed to start (most often right after
-  regenerating the pairing QR code), it stayed down until you turned the
-  companion off and on or restarted Perch. It now retries on its own, on the
-  same port first.
-- **An approval is never shown as "Allowed" when nothing received it.** If
-  the agent's hook process died while waiting (an interrupted run, a closed
-  OpenCode session), Perch kept offering Allow/Deny and reported a tap as
-  delivered while the agent sat at its own prompt. The request now clears
-  as soon as the hook goes away, and the log says so.
-- **A tap that arrives too late is told what happened.** Answering from a
-  phone notification after the request was already settled on the Mac or by
-  the timeout now tells you it was already answered, instead of going
-  silent.
+- **Codex "finished" notifications say what it did again.** Newer versions of
+  Codex write their closing message somewhere Perch wasn't looking, so every
+  Codex notification just said "Codex finished its turn." It now shows the
+  first line of the reply, as it does for Claude Code.
+- **Hitting your Codex usage limit is reported as a limit, not a finish.** A
+  Codex turn that stopped because you ran out of usage was announced as
+  "finished". It now shows "Rate limited" and sends the rate-limit alert
+  instead. A turn that stops on another error names the problem on the row.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.79/Perch-0.5.79.zip" length="18910328" type="application/octet-stream" sparkle:edSignature="0LoCYHU2oEafTisq1jm2V1lIpCk7+XBDgF3pFO8kKJf4RaLZWB5iiZRoH0XKrulu4g7yET8KlcE2huGcdrZvBw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.80/Perch-0.5.80.zip" length="18954529" type="application/octet-stream" sparkle:edSignature="wQFULAIjZuoLM57+OGgFvzVsmVh276L0Ef/H+1c/r4B68LOjQOdALpEZblWdonIsk+8SlVZCIJIZ73GwT14mCw=="/>
         </item>
     </channel>
 </rss>
