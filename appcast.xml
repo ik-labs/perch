@@ -3,29 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.73</title>
-            <pubDate>Mon, 28 Sep 2026 10:02:56 +0530</pubDate>
-            <sparkle:version>107</sparkle:version>
-            <sparkle:shortVersionString>0.5.73</sparkle:shortVersionString>
+            <title>0.5.74</title>
+            <pubDate>Mon, 28 Sep 2026 11:24:42 +0530</pubDate>
+            <sparkle:version>108</sparkle:version>
+            <sparkle:shortVersionString>0.5.74</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **The dropdown no longer has an empty band above and below it.** The
-  window kept the height it was first given, often taller than what it
-  showed, and the content sat in the middle of it. It now fits its content
-  exactly and stays tucked under the menu bar as sessions come and go.
-- **Usage bars show the newest reading.** When both Claude's status line and
-  the account fetch had a figure, the fetched one always won, even when it was
-  several minutes older. The fresher of the two is now shown, and the "almost
-  used up" warning follows it.
-- **Stats count the work your agents' subagents do.** Tokens spent by
-  subagents — Codex's helper threads and Claude's sub-agents — were left out
-  entirely, which on some Macs was most of the Codex total. They now count
-  toward daily tokens and the model breakdown, and Codex cost includes them.
-  They still don't count as extra sessions. Totals rise the first time you
-  open Stats after updating.
+- **Perch no longer grows to hundreds of megabytes while your agents work.**
+  Once the dropdown had been opened, it kept redrawing itself in the
+  background even after it closed, and macOS kept every piece of text it drew.
+  With a few agents running, memory climbed from about 30 MB past 200 MB in
+  half an hour. The dropdown now does nothing while it is closed, so memory
+  stays flat and Perch does less work on every update. It shows current data
+  the moment you open it; the list no longer remembers how far you had
+  scrolled.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.73/Perch-0.5.73.zip" length="18735444" type="application/octet-stream" sparkle:edSignature="VULuUMU2o7cGniVQ2rviEoHvNf7ijeTUFbJiEqhQhWcuuenCygnAUy/GF1vGI7CcAJlImtf0xAjXpJ0EG+88DA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.74/Perch-0.5.74.zip" length="18739892" type="application/octet-stream" sparkle:edSignature="S5FelLabkoyre/Y9y9g6Mq4a0G09Jbg4Cd/ajbNtG2KoqsiBnRfVPV22xNse8nTIChFgAPAGcPaJaSmVKp39CQ=="/>
         </item>
     </channel>
 </rss>
