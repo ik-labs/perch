@@ -3,25 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.82</title>
-            <pubDate>Mon, 28 Sep 2026 21:43:00 +0530</pubDate>
-            <sparkle:version>116</sparkle:version>
-            <sparkle:shortVersionString>0.5.82</sparkle:shortVersionString>
+            <title>0.5.83</title>
+            <pubDate>Mon, 28 Sep 2026 22:14:05 +0530</pubDate>
+            <sparkle:version>117</sparkle:version>
+            <sparkle:shortVersionString>0.5.83</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **An OpenCode subagent asking for permission now shows NEEDS YOU.** When a
-  subagent inside an OpenCode session stopped to ask for approval or ask a
-  question, the session kept saying "running" and no alert reached your
-  phone. It now shows NEEDS YOU and sends the alert, and stays that way until
-  every waiting subagent has been answered.
-- **Answering in OpenCode itself clears NEEDS YOU straight away.** If Perch
-  handed a permission prompt back to OpenCode and you answered it there, the
-  session stayed at NEEDS YOU until the approved command finished. It now
-  clears as soon as you answer. Restart any OpenCode session that was already
-  open to pick this up.
+- **Claude no longer says "finished" while background work is still running.**
+  When Claude Code ended a turn with a background command or monitor still
+  going, Perch announced it as finished straight away, and again when the work
+  completed. The row now shows "1 background task" (or however many) and the
+  finished alert waits until Claude is actually done.
+- **An error is not a finish.** When a Claude turn stopped on an error, such as
+  a rate limit, a server error or being signed out, Perch announced it as
+  "finished", and a rate limit got both alerts. The row now names the problem,
+  and a rate limit sends only the rate-limit alert.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.82/Perch-0.5.82.zip" length="19004792" type="application/octet-stream" sparkle:edSignature="b5Gg7mV13drRmSP0SCuhvgrUDMUMooGMLeBVMCEp4VT2OZ5KEwRv1oXZC4Ey+/HXhb2EGKkTBsYNT6i0hjS7Bg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.83/Perch-0.5.83.zip" length="19001524" type="application/octet-stream" sparkle:edSignature="j0ZCDrsOi5BouRmjDpjg3LnhH4V3T1gzV5ML0/krP9LRkUHAkSe24LRAG96nXl3p7ogzkf2q/h7uimTSws5oCg=="/>
         </item>
     </channel>
 </rss>
