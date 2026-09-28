@@ -3,23 +3,27 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.80</title>
-            <pubDate>Mon, 28 Sep 2026 19:53:58 +0530</pubDate>
-            <sparkle:version>114</sparkle:version>
-            <sparkle:shortVersionString>0.5.80</sparkle:shortVersionString>
+            <title>0.5.81</title>
+            <pubDate>Mon, 28 Sep 2026 21:11:23 +0530</pubDate>
+            <sparkle:version>115</sparkle:version>
+            <sparkle:shortVersionString>0.5.81</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Codex "finished" notifications say what it did again.** Newer versions of
-  Codex write their closing message somewhere Perch wasn't looking, so every
-  Codex notification just said "Codex finished its turn." It now shows the
-  first line of the reply, as it does for Claude Code.
-- **Hitting your Codex usage limit is reported as a limit, not a finish.** A
-  Codex turn that stopped because you ran out of usage was announced as
-  "finished". It now shows "Rate limited" and sends the rate-limit alert
-  instead. A turn that stops on another error names the problem on the row.
+- **A running Codex session keeps showing what it's doing.** With Codex hooks
+  installed, the row's tool line (for example "exec: npm test") and its timer
+  could disappear within a second of a tool starting, leaving a plain
+  "Running" for the rest of a long command.
+- **Codex no longer stays at NEEDS YOU after you answer a subagent in the
+  terminal.** When a Codex subagent asked for permission and you answered in
+  Codex's own prompt, the session could stay marked as waiting on you while
+  the subagent carried on. It now clears as soon as that subagent moves on or
+  stops.
+- **No more stray Codex rows from the Codex app.** Codex Desktop runs short
+  background threads of its own, and each could appear as an extra idle Codex
+  row, sometimes labelled "/". Perch now leaves them out.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.80/Perch-0.5.80.zip" length="18954529" type="application/octet-stream" sparkle:edSignature="wQFULAIjZuoLM57+OGgFvzVsmVh276L0Ef/H+1c/r4B68LOjQOdALpEZblWdonIsk+8SlVZCIJIZ73GwT14mCw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.81/Perch-0.5.81.zip" length="18993755" type="application/octet-stream" sparkle:edSignature="hHhMYEQBYcJC3vGoRTB321318Lo6pealoQgi6ibIXK/AtieOeHxsxmsx+Gdti97MmeDoazMgPak6Ow9krf1QAA=="/>
         </item>
     </channel>
 </rss>
