@@ -3,23 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.74</title>
-            <pubDate>Mon, 28 Sep 2026 11:24:42 +0530</pubDate>
-            <sparkle:version>108</sparkle:version>
-            <sparkle:shortVersionString>0.5.74</sparkle:shortVersionString>
+            <title>0.5.75</title>
+            <pubDate>Mon, 28 Sep 2026 12:33:23 +0530</pubDate>
+            <sparkle:version>109</sparkle:version>
+            <sparkle:shortVersionString>0.5.75</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Perch no longer grows to hundreds of megabytes while your agents work.**
-  Once the dropdown had been opened, it kept redrawing itself in the
-  background even after it closed, and macOS kept every piece of text it drew.
-  With a few agents running, memory climbed from about 30 MB past 200 MB in
-  half an hour. The dropdown now does nothing while it is closed, so memory
-  stays flat and Perch does less work on every update. It shows current data
-  the moment you open it; the list no longer remembers how far you had
-  scrolled.
+- **Your phone and watch stay paired when the Keychain is locked.** If Perch
+  couldn't read its pairing key — a locked keychain, or a Keychain prompt
+  that was dismissed — it quietly made a new one, and every paired device
+  stopped connecting with no explanation. It now waits and tries again,
+  and Settings says what's wrong and how to fix it.
+- **Codex spend is no longer overstated when you switch models.** Changing
+  model partway through a Codex session re-priced everything the session had
+  already done at the new rate, and long turns could make it count the same
+  work again. Each part of a session is now priced once, at the model that
+  did it.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.74/Perch-0.5.74.zip" length="18739892" type="application/octet-stream" sparkle:edSignature="S5FelLabkoyre/Y9y9g6Mq4a0G09Jbg4Cd/ajbNtG2KoqsiBnRfVPV22xNse8nTIChFgAPAGcPaJaSmVKp39CQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.75/Perch-0.5.75.zip" length="18820003" type="application/octet-stream" sparkle:edSignature="SzSxoNYfV1nFAOS6Xj6gaPvAPJTlhEOYaPGFIUYVS8rvw02vElDjkjZHFx/yrZEcDP1cn/dVEifurX8nnAkWCQ=="/>
         </item>
     </channel>
 </rss>
