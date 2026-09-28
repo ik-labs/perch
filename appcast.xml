@@ -3,21 +3,29 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.72</title>
-            <pubDate>Mon, 21 Sep 2026 09:34:38 +0530</pubDate>
-            <sparkle:version>106</sparkle:version>
-            <sparkle:shortVersionString>0.5.72</sparkle:shortVersionString>
+            <title>0.5.73</title>
+            <pubDate>Mon, 28 Sep 2026 10:02:56 +0530</pubDate>
+            <sparkle:version>107</sparkle:version>
+            <sparkle:shortVersionString>0.5.73</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Phone alerts keep working when your Perch Pro subscription ends and you
-  also own the $29 licence.** Perch kept signing alerts with the Pro key after
-  it lapsed, so every alert was turned away, and removing the key did not help:
-  alerts to your phone stayed off for about a month. Perch now notices that a
-  key has been refused, switches to a licence you hold that still works, and
-  moves your phone's registration across. Nothing to do on your side.
+- **The dropdown no longer has an empty band above and below it.** The
+  window kept the height it was first given, often taller than what it
+  showed, and the content sat in the middle of it. It now fits its content
+  exactly and stays tucked under the menu bar as sessions come and go.
+- **Usage bars show the newest reading.** When both Claude's status line and
+  the account fetch had a figure, the fetched one always won, even when it was
+  several minutes older. The fresher of the two is now shown, and the "almost
+  used up" warning follows it.
+- **Stats count the work your agents' subagents do.** Tokens spent by
+  subagents — Codex's helper threads and Claude's sub-agents — were left out
+  entirely, which on some Macs was most of the Codex total. They now count
+  toward daily tokens and the model breakdown, and Codex cost includes them.
+  They still don't count as extra sessions. Totals rise the first time you
+  open Stats after updating.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.72/Perch-0.5.72.zip" length="18712883" type="application/octet-stream" sparkle:edSignature="TVfI1d4q+kAR/nqXOuSS2abjKZ+1C5LyLiVB6Xh23C4zsHjtNm03NjCncrw+YirLeQUqkqIjUCppox0DzjX+Dg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.73/Perch-0.5.73.zip" length="18735444" type="application/octet-stream" sparkle:edSignature="VULuUMU2o7cGniVQ2rviEoHvNf7ijeTUFbJiEqhQhWcuuenCygnAUy/GF1vGI7CcAJlImtf0xAjXpJ0EG+88DA=="/>
         </item>
     </channel>
 </rss>
