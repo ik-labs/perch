@@ -3,27 +3,19 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.76</title>
-            <pubDate>Mon, 28 Sep 2026 13:18:56 +0530</pubDate>
-            <sparkle:version>110</sparkle:version>
-            <sparkle:shortVersionString>0.5.76</sparkle:shortVersionString>
+            <title>0.5.77</title>
+            <pubDate>Mon, 28 Sep 2026 16:23:48 +0530</pubDate>
+            <sparkle:version>111</sparkle:version>
+            <sparkle:shortVersionString>0.5.77</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Codex costs use current prices.** Perch's Codex price list was out of
-  date, and a model it didn't know borrowed the price of an older one with a
-  similar name. GPT-5.6 Sol, for example, was shown at about a third of its
-  real cost, and GPT-6 Astra showed no cost at all. The list now matches
-  OpenAI's published prices, including the GPT-6 and GPT-5.6 families.
-
-### Changed
-- **A Codex cost that is incomplete says so.** When some of a session's work
-  was on a model with no published price, the figure now ends in "+" (at
-  least this much), or shows "~$?" when none of it could be priced, instead
-  of looking exact or free. GPT-5.3 Codex Spark and Codex's automatic review
-  model have no published price, so sessions using them now show this.
+- **Codex sessions with hooks installed show their full details again.** A
+  Codex session that Perch hears about through its hooks lost the cost,
+  context meter, effort level, task checklist and rate-limit warning that
+  only Codex's own session file carries. Those rows now keep all of them.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.76/Perch-0.5.76.zip" length="18867922" type="application/octet-stream" sparkle:edSignature="SyJKVYlvcqlQFkcmjd0VfrSy8gJ7H3PFwEzsAX1AOQkyH3CBOdWHVLwOmU31EfwcZUPT11trCnNqs/pbWiZ+Bg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.77/Perch-0.5.77.zip" length="18872959" type="application/octet-stream" sparkle:edSignature="Qzi6LeNhdj8MOOtcS0chcc5y6SGBL80SVnR2VpBmmw2GHoh2CCGSD8QWa84ei3q03e3PLsufLTB/gd87s2WdDA=="/>
         </item>
     </channel>
 </rss>
