@@ -3,19 +3,31 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.77</title>
-            <pubDate>Mon, 28 Sep 2026 16:23:48 +0530</pubDate>
-            <sparkle:version>111</sparkle:version>
-            <sparkle:shortVersionString>0.5.77</sparkle:shortVersionString>
+            <title>0.5.78</title>
+            <pubDate>Mon, 28 Sep 2026 17:14:30 +0530</pubDate>
+            <sparkle:version>112</sparkle:version>
+            <sparkle:shortVersionString>0.5.78</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Codex sessions with hooks installed show their full details again.** A
-  Codex session that Perch hears about through its hooks lost the cost,
-  context meter, effort level, task checklist and rate-limit warning that
-  only Codex's own session file carries. Those rows now keep all of them.
+- **Settings kept in a dotfiles folder stay linked.** If your
+  `~/.claude/settings.json` (or Codex, Cursor or Devin config) is a symlink
+  into a dotfiles repo, Perch replaced the link with a plain file, so your
+  dotfiles copy stopped receiving changes. Perch now writes through the link
+  and leaves it in place.
+- **Your own hooks next to Perch's are kept.** A hook command you added in the
+  same group as Perch's, in Claude Code or Devin, was deleted the next time
+  Perch updated its hooks or you removed the integration. Only Perch's own
+  entries are touched now.
+- **Perch works from a folder with a space in its name.** With the app at a
+  path like "Perch 2.app", every hook and the Claude status line failed and
+  sessions showed "Hooks not firing".
+- **The status line keeps working after you move Perch.** Opening Perch first
+  from the disk image or Downloads and then moving it to Applications left
+  Claude's status line pointing at the old location, and usage, cost and
+  context went blank.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.77/Perch-0.5.77.zip" length="18872959" type="application/octet-stream" sparkle:edSignature="Qzi6LeNhdj8MOOtcS0chcc5y6SGBL80SVnR2VpBmmw2GHoh2CCGSD8QWa84ei3q03e3PLsufLTB/gd87s2WdDA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.78/Perch-0.5.78.zip" length="18890861" type="application/octet-stream" sparkle:edSignature="TUNn/yW7EOK2CcxpBK1ANWEwprdWla/pt7tdhN3zuEMoijzb0pWzp6VPCmZ7y7myb/nP20zqMr7A2p7rh5bXAw=="/>
         </item>
     </channel>
 </rss>
