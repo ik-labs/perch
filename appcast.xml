@@ -3,25 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.85</title>
-            <pubDate>Tue, 29 Sep 2026 11:01:47 +0530</pubDate>
-            <sparkle:version>119</sparkle:version>
-            <sparkle:shortVersionString>0.5.85</sparkle:shortVersionString>
+            <title>0.5.86</title>
+            <pubDate>Tue, 29 Sep 2026 11:40:21 +0530</pubDate>
+            <sparkle:version>120</sparkle:version>
+            <sparkle:shortVersionString>0.5.86</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Changed
-- **The menu-bar thinking word changes every 10 seconds instead of every 3.**
-  Each change made macOS redraw the menu bar, and while an agent was working
-  that redraw was most of the work Perch did. The word still rotates, just more
-  calmly.
-
-### Improved
-- **Perch uses less CPU in the background.** Looking up which agents are
-  running used to re-read every process on the Mac every four seconds. It now
-  remembers what it has already read and only looks again when a process
-  changes, which makes each check about nine times faster.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **The lock-screen countdown no longer restarts while an agent waits for
+  you.** When other parts of a session kept working while one part waited for
+  approval, the "time to answer" on your iPhone's Live Activity kept jumping
+  back up, and could still show time left after the request had timed out. It
+  now counts from when the wait began.
+- **A lock-screen card that can't be updated no longer lingers.** A Live
+  Activity that Perch started while the iPhone app was closed could keep
+  showing "needs you" for up to an hour after you'd answered. It now fades
+  after ten minutes if Perch can't reach it.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.85/Perch-0.5.85.zip" length="19126559" type="application/octet-stream" sparkle:edSignature="shLMBzxFHb7B9S+PKuwao4dGYOeJkM3LvCwuM+G57VIZ4mubQeK0gjPQ6h7qOURXVzQQfCG8fwrK99go3rikCQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.86/Perch-0.5.86.zip" length="19144367" type="application/octet-stream" sparkle:edSignature="/fLqr7uo1KwGpwQ0/ylqUCWEzdpf49ojHXA2ylZlF6GiXEKOxMKdI9aZtO+PZj/7L7wahrHklpf59ZBRfKvPBw=="/>
         </item>
     </channel>
 </rss>
