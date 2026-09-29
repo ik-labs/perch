@@ -3,24 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.83</title>
-            <pubDate>Mon, 28 Sep 2026 22:14:05 +0530</pubDate>
-            <sparkle:version>117</sparkle:version>
-            <sparkle:shortVersionString>0.5.83</sparkle:shortVersionString>
+            <title>0.5.84</title>
+            <pubDate>Tue, 29 Sep 2026 10:14:51 +0530</pubDate>
+            <sparkle:version>118</sparkle:version>
+            <sparkle:shortVersionString>0.5.84</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Claude no longer says "finished" while background work is still running.**
-  When Claude Code ended a turn with a background command or monitor still
-  going, Perch announced it as finished straight away, and again when the work
-  completed. The row now shows "1 background task" (or however many) and the
-  finished alert waits until Claude is actually done.
-- **An error is not a finish.** When a Claude turn stopped on an error, such as
-  a rate limit, a server error or being signed out, Perch announced it as
-  "finished", and a rate limit got both alerts. The row now names the problem,
-  and a rate limit sends only the rate-limit alert.
+- **Amp stops saying "Approval required" once you've approved.** After an
+  approval, the row kept asking while Amp got on with the work. It now reads
+  "Working".
+- **Antigravity's finished alert is no longer lost.** A status update that
+  arrived just after a turn ended could mark it as running again, so the
+  finished alert never came. The turn now stays done.
+- **Cursor and Devin sessions show their conversation title again.** With
+  hooks installed, an idle row read "Idle" instead of the title of the
+  conversation.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.83/Perch-0.5.83.zip" length="19001524" type="application/octet-stream" sparkle:edSignature="j0ZCDrsOi5BouRmjDpjg3LnhH4V3T1gzV5ML0/krP9LRkUHAkSe24LRAG96nXl3p7ogzkf2q/h7uimTSws5oCg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.84/Perch-0.5.84.zip" length="19024252" type="application/octet-stream" sparkle:edSignature="3GZPFzxmxU7Qezxlx0U0TKY8mk8FGCefsS7hrE2zt2KipHkM8AAvA6Y9pf+eiMGCu6KrkLXixi96GibW6sL1Dw=="/>
         </item>
     </channel>
 </rss>
