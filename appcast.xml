@@ -3,32 +3,28 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.88</title>
-            <pubDate>Tue, 29 Sep 2026 17:34:12 +0530</pubDate>
-            <sparkle:version>122</sparkle:version>
-            <sparkle:shortVersionString>0.5.88</sparkle:shortVersionString>
+            <title>0.5.89</title>
+            <pubDate>Tue, 29 Sep 2026 18:07:54 +0530</pubDate>
+            <sparkle:version>123</sparkle:version>
+            <sparkle:shortVersionString>0.5.89</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Stats opens fast again for OpenCode users who delete sessions.** After
-  any OpenCode session was deleted, Stats re-read your whole OpenCode history
-  every time it opened (and every time your phone asked for stats), which on a
-  large history took several seconds. It now reads once and goes back to using
-  its saved results.
-- **The "Exact cost" card says whose cost it is.** Only OpenCode reports a
-  cost, but under "All" the card looked like your total spend. On the Mac it
-  now says "OpenCode only"; on your iPhone it shows under the OpenCode filter.
-- **A question from Claude is no longer occasionally missed.** When Claude
-  asked you a question at the same moment as other activity in the session,
-  the "needs you" state could be overwritten. Several sessions updating their
-  cost or usage at once could also drop one session's numbers until its next
-  update.
-- **The privacy notes describe usage checks accurately.** The README now says
-  Anthropic and ChatGPT usage is also checked every 15 minutes while you're
-  idle (if you used that agent here in the past week), lists Amp, and links to
-  how to turn each one off.
+- **Perch stays responsive while many subagents run.** With a dozen
+  background agents working, Perch re-checked each agent's files every time
+  it refreshed the list. That work now happens in the background, so each
+  refresh takes about half as long.
+- **Jumping to a terminal can no longer freeze the menu bar.** Clicking a
+  session that lives in Terminal, iTerm2 or Ghostty used to wait on that
+  terminal with the menu bar frozen, for up to two minutes if the terminal
+  was busy or macOS was showing its "Perch wants to control…" prompt. The jump
+  now happens in the background, gives up after five seconds on a terminal
+  that doesn't answer, and quick clicks are handled in order.
+- **A reply typed from a notification always lands in the right pane.**
+  Clicking another pane of the same terminal just as a reply was being typed
+  could send it to the wrong session.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.88/Perch-0.5.88.zip" length="19240961" type="application/octet-stream" sparkle:edSignature="fQBu7YC6/P1y/J8CkUWM9mRM7ew3+RMSCIQdU2R9B5pdtZtSMwIrLtrLRO+CGLFubj5UfSZwY+CGomM2Fbl5CA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.89/Perch-0.5.89.zip" length="19318061" type="application/octet-stream" sparkle:edSignature="9FvJHzRJ6pQN8V3fklwu0lY6A/X5dxEHIlYiGIfEDvny7o/K/GIhtXdYgc4rCj4pQVj5Xpv703oAvA6V4b6uDQ=="/>
         </item>
     </channel>
 </rss>
