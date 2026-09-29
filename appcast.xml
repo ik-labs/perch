@@ -3,28 +3,21 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.89</title>
-            <pubDate>Tue, 29 Sep 2026 18:07:54 +0530</pubDate>
-            <sparkle:version>123</sparkle:version>
-            <sparkle:shortVersionString>0.5.89</sparkle:shortVersionString>
+            <title>0.5.90</title>
+            <pubDate>Tue, 29 Sep 2026 19:08:11 +0530</pubDate>
+            <sparkle:version>124</sparkle:version>
+            <sparkle:shortVersionString>0.5.90</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Perch stays responsive while many subagents run.** With a dozen
-  background agents working, Perch re-checked each agent's files every time
-  it refreshed the list. That work now happens in the background, so each
-  refresh takes about half as long.
-- **Jumping to a terminal can no longer freeze the menu bar.** Clicking a
-  session that lives in Terminal, iTerm2 or Ghostty used to wait on that
-  terminal with the menu bar frozen, for up to two minutes if the terminal
-  was busy or macOS was showing its "Perch wants to control…" prompt. The jump
-  now happens in the background, gives up after five seconds on a terminal
-  that doesn't answer, and quick clicks are handled in order.
-- **A reply typed from a notification always lands in the right pane.**
-  Clicking another pane of the same terminal just as a reply was being typed
-  could send it to the wrong session.
+- **Subagents that never really existed no longer linger under a session.**
+  After a large fan-out, a few rows could stay under the session as
+  "running" long after every agent had finished, until the session ended.
+  Perch now removes a subagent row once it has no record of its own on disk
+  and has been silent for three minutes. Agents that are really working are
+  not affected, however long a single step takes.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.89/Perch-0.5.89.zip" length="19318061" type="application/octet-stream" sparkle:edSignature="9FvJHzRJ6pQN8V3fklwu0lY6A/X5dxEHIlYiGIfEDvny7o/K/GIhtXdYgc4rCj4pQVj5Xpv703oAvA6V4b6uDQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.90/Perch-0.5.90.zip" length="19365027" type="application/octet-stream" sparkle:edSignature="aMgIcq82Yobz7LeYgX/jpTR28WBRIIpn+fve033zte9vOC6FN03uQ/2Ce7qvCWEjuuKA7IQebjCVRzX0Jbf1Dg=="/>
         </item>
     </channel>
 </rss>
