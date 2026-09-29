@@ -3,26 +3,32 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.87</title>
-            <pubDate>Tue, 29 Sep 2026 16:59:50 +0530</pubDate>
-            <sparkle:version>121</sparkle:version>
-            <sparkle:shortVersionString>0.5.87</sparkle:shortVersionString>
+            <title>0.5.88</title>
+            <pubDate>Tue, 29 Sep 2026 17:34:12 +0530</pubDate>
+            <sparkle:version>122</sparkle:version>
+            <sparkle:shortVersionString>0.5.88</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Second Claude accounts.** If you run Claude Code with a separate config
-  folder (for example `CLAUDE_CONFIG_DIR=~/.claude-work` for a work account),
-  add that folder in Settings → Claude config folders. Perch installs its hooks
-  there too, shows those sessions, and keeps that account's usage separate.
-  Perch suggests folders that look like Claude's, and writes nothing to a
-  folder until you add it.
-
-### Fixed
-- **Forked OpenCode sessions show up as themselves.** Starting OpenCode with
-  `--fork` showed the original session as the live one, and the new fork had no
-  row. It now shows the fork.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **Stats opens fast again for OpenCode users who delete sessions.** After
+  any OpenCode session was deleted, Stats re-read your whole OpenCode history
+  every time it opened (and every time your phone asked for stats), which on a
+  large history took several seconds. It now reads once and goes back to using
+  its saved results.
+- **The "Exact cost" card says whose cost it is.** Only OpenCode reports a
+  cost, but under "All" the card looked like your total spend. On the Mac it
+  now says "OpenCode only"; on your iPhone it shows under the OpenCode filter.
+- **A question from Claude is no longer occasionally missed.** When Claude
+  asked you a question at the same moment as other activity in the session,
+  the "needs you" state could be overwritten. Several sessions updating their
+  cost or usage at once could also drop one session's numbers until its next
+  update.
+- **The privacy notes describe usage checks accurately.** The README now says
+  Anthropic and ChatGPT usage is also checked every 15 minutes while you're
+  idle (if you used that agent here in the past week), lists Amp, and links to
+  how to turn each one off.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.87/Perch-0.5.87.zip" length="19213731" type="application/octet-stream" sparkle:edSignature="g+Kw14gxGbJy0dxTL2db/0/EdiXyiidDhrATI1AahPj6yQdXPTHnUkWYz0PjsEmRafQ0+sBBRe60goFp3AgVBw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.88/Perch-0.5.88.zip" length="19240961" type="application/octet-stream" sparkle:edSignature="fQBu7YC6/P1y/J8CkUWM9mRM7ew3+RMSCIQdU2R9B5pdtZtSMwIrLtrLRO+CGLFubj5UfSZwY+CGomM2Fbl5CA=="/>
         </item>
     </channel>
 </rss>
