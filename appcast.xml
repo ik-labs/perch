@@ -3,21 +3,22 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.90</title>
-            <pubDate>Tue, 29 Sep 2026 19:08:11 +0530</pubDate>
-            <sparkle:version>124</sparkle:version>
-            <sparkle:shortVersionString>0.5.90</sparkle:shortVersionString>
+            <title>0.5.91</title>
+            <pubDate>Wed, 30 Sep 2026 10:25:42 +0530</pubDate>
+            <sparkle:version>125</sparkle:version>
+            <sparkle:shortVersionString>0.5.91</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Subagents that never really existed no longer linger under a session.**
-  After a large fan-out, a few rows could stay under the session as
-  "running" long after every agent had finished, until the session ended.
-  Perch now removes a subagent row once it has no record of its own on disk
-  and has been silent for three minutes. Agents that are really working are
-  not affected, however long a single step takes.
+- **Stats builds its history about six times faster.** The first time Stats
+  opens, and again whenever an update changes how it counts, Perch reads
+  every transcript on your Mac. It used to read them one at a time; it now
+  reads several at once. Measured on one Mac with 1,600 files: 47 seconds
+  down to 8. The numbers are unchanged. The progress count moves quickly
+  and then pauses near the end while the largest transcripts finish — that
+  is expected.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.90/Perch-0.5.90.zip" length="19365027" type="application/octet-stream" sparkle:edSignature="aMgIcq82Yobz7LeYgX/jpTR28WBRIIpn+fve033zte9vOC6FN03uQ/2Ce7qvCWEjuuKA7IQebjCVRzX0Jbf1Dg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.91/Perch-0.5.91.zip" length="19469099" type="application/octet-stream" sparkle:edSignature="I6f2ODbOOxfxWqDzldqWLpJONCv5cUGkLeKl+UuyvjoSFSgcOwBXZW38EocTW1zyhiy/MIYfdt54+I4iTcrDDA=="/>
         </item>
     </channel>
 </rss>
