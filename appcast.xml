@@ -3,28 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.95</title>
-            <pubDate>Wed, 30 Sep 2026 17:40:27 +0530</pubDate>
-            <sparkle:version>129</sparkle:version>
-            <sparkle:shortVersionString>0.5.95</sparkle:shortVersionString>
+            <title>0.5.96</title>
+            <pubDate>Wed, 30 Sep 2026 20:14:28 +0530</pubDate>
+            <sparkle:version>130</sparkle:version>
+            <sparkle:shortVersionString>0.5.96</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Each Claude session shows its permission mode.** The line under a
-  session's name now says "auto", "manual", "plan", "accept edits" or
-  "bypass", next to the model and context. Claude Code now starts in auto
-  mode unless you choose otherwise, and in auto mode it rarely stops to ask
-  for approval, so a session that never needs you is no longer a mystery.
-  The iPhone shows the same with its next update.
-
-### Fixed
-- **A Claude session waiting for you after a usage limit now says so.** If
-  your limit reset while the Mac was asleep, Claude Code waits for you to
-  press Enter before it carries on, and Perch showed the session as idle.
-  It now shows as needing you. A session that resumed on its own goes back
-  to running, and one that gave up waiting says why.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **A Claude session started without Perch's hooks now says so, and cannot
+  be replied to or stopped remotely.** Starting Claude Code with `--bare`,
+  `--restricted`, or `--setting-sources` without `user` skips the settings
+  file Perch's hooks live in. Perch showed such a session as an ordinary
+  row that never changed, and it could not tell when the session was
+  sitting at a permission prompt, where a reply approves the command and
+  Stop denies it. The row now reads "no hooks" with the flag that caused
+  it, and replies and Stop are refused for it. Start the session without
+  that flag to get live state and replies back.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.95/Perch-0.5.95.zip" length="19523968" type="application/octet-stream" sparkle:edSignature="GLtYfK5XXipJnsQPzRBnhGblhr5SHbLUAx4VKCNrgRbTAPERGeZmkzNhJxvaxdH+eGWCHtemPnSUFf/ebi9SDw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.96/Perch-0.5.96.zip" length="19542922" type="application/octet-stream" sparkle:edSignature="5KXl68x5lRGMhe11X7wz7yNbUX6Rf3j/l545n67EDLXfOD+1V1ypZdnzqXDkKFtF521OSNkhQsM35xntAQrSCA=="/>
         </item>
     </channel>
 </rss>
