@@ -3,22 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.92</title>
-            <pubDate>Wed, 30 Sep 2026 11:27:12 +0530</pubDate>
-            <sparkle:version>126</sparkle:version>
-            <sparkle:shortVersionString>0.5.92</sparkle:shortVersionString>
+            <title>0.5.93</title>
+            <pubDate>Wed, 30 Sep 2026 12:39:13 +0530</pubDate>
+            <sparkle:version>127</sparkle:version>
+            <sparkle:shortVersionString>0.5.93</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Lock-screen cards are no longer started on phones that have gone quiet.**
-  Perch could start a Live Activity on an iPhone it had not heard from in up
-  to two weeks, such as an old install or a test device. iOS allows only a
-  handful of these starts, so the wasted ones could leave your real phone
-  without a card. Perch now starts a card only on a phone it has seen in the
-  last two days, or one that is connected right now. Alerts still reach a
-  phone that has been away for up to two weeks.
+- **A reply can no longer approve a permission prompt by accident.** If a
+  session was waiting on a permission prompt and you sent it a reply, from
+  your iPhone or from a Mac notification, the agent's dialog ignored your
+  text and took the Enter as "Yes". The command ran whatever you had typed,
+  including "no, don't do that". Perch now refuses to send a reply while a
+  session is waiting on a permission prompt. Use Allow or Deny, or answer at
+  the terminal. Replies to a session that is asking you a question work as
+  before. No iPhone update is needed: updating the Mac is enough.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.92/Perch-0.5.92.zip" length="19477422" type="application/octet-stream" sparkle:edSignature="fvfFfdrRbYItdPUAvLEu180eIbl7rchnrEPlJdxrFAcXVnJZrIc5Q0HfSJsGb7cEPMTPedDokcPIiN8EKv8HAQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.93/Perch-0.5.93.zip" length="19486508" type="application/octet-stream" sparkle:edSignature="r/ZBt+c1orHzyHs9TGB1o8veQBfTc7aGKwJ81fqnB2rK1Bk79l0sSMYcIcCH3L9ajGoql3BrISkFFvZ7E/KWBA=="/>
         </item>
     </channel>
 </rss>
