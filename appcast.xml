@@ -3,22 +3,22 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.91</title>
-            <pubDate>Wed, 30 Sep 2026 10:25:42 +0530</pubDate>
-            <sparkle:version>125</sparkle:version>
-            <sparkle:shortVersionString>0.5.91</sparkle:shortVersionString>
+            <title>0.5.92</title>
+            <pubDate>Wed, 30 Sep 2026 11:27:12 +0530</pubDate>
+            <sparkle:version>126</sparkle:version>
+            <sparkle:shortVersionString>0.5.92</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Stats builds its history about six times faster.** The first time Stats
-  opens, and again whenever an update changes how it counts, Perch reads
-  every transcript on your Mac. It used to read them one at a time; it now
-  reads several at once. Measured on one Mac with 1,600 files: 47 seconds
-  down to 8. The numbers are unchanged. The progress count moves quickly
-  and then pauses near the end while the largest transcripts finish — that
-  is expected.
+- **Lock-screen cards are no longer started on phones that have gone quiet.**
+  Perch could start a Live Activity on an iPhone it had not heard from in up
+  to two weeks, such as an old install or a test device. iOS allows only a
+  handful of these starts, so the wasted ones could leave your real phone
+  without a card. Perch now starts a card only on a phone it has seen in the
+  last two days, or one that is connected right now. Alerts still reach a
+  phone that has been away for up to two weeks.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.91/Perch-0.5.91.zip" length="19469099" type="application/octet-stream" sparkle:edSignature="I6f2ODbOOxfxWqDzldqWLpJONCv5cUGkLeKl+UuyvjoSFSgcOwBXZW38EocTW1zyhiy/MIYfdt54+I4iTcrDDA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.92/Perch-0.5.92.zip" length="19477422" type="application/octet-stream" sparkle:edSignature="fvfFfdrRbYItdPUAvLEu180eIbl7rchnrEPlJdxrFAcXVnJZrIc5Q0HfSJsGb7cEPMTPedDokcPIiN8EKv8HAQ=="/>
         </item>
     </channel>
 </rss>
