@@ -3,24 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.96</title>
-            <pubDate>Wed, 30 Sep 2026 20:14:28 +0530</pubDate>
-            <sparkle:version>130</sparkle:version>
-            <sparkle:shortVersionString>0.5.96</sparkle:shortVersionString>
+            <title>0.5.97</title>
+            <pubDate>Wed, 30 Sep 2026 21:21:13 +0530</pubDate>
+            <sparkle:version>131</sparkle:version>
+            <sparkle:shortVersionString>0.5.97</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **A Claude session started without Perch's hooks now says so, and cannot
-  be replied to or stopped remotely.** Starting Claude Code with `--bare`,
-  `--restricted`, or `--setting-sources` without `user` skips the settings
-  file Perch's hooks live in. Perch showed such a session as an ordinary
-  row that never changed, and it could not tell when the session was
-  sitting at a permission prompt, where a reply approves the command and
-  Stop denies it. The row now reads "no hooks" with the flag that caused
-  it, and replies and Stop are refused for it. Start the session without
-  that flag to get live state and replies back.
+- **Claude background sessions are tracked as themselves, and their rows
+  say how to open them.** A session started with `claude --bg`, `/bg` or
+  from Claude's agent view has no terminal window. Perch tied every such
+  session to Claude's shared background service instead of to the session's
+  own process, and its row looked like any other. The row now reads
+  "background" and shows the command that opens it, for example
+  `claude attach 51a28312`. That matters when a background session is
+  waiting on a permission prompt: Perch offers Allow and Deny for 45
+  seconds, and after that the only way to answer is to attach.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.96/Perch-0.5.96.zip" length="19542922" type="application/octet-stream" sparkle:edSignature="5KXl68x5lRGMhe11X7wz7yNbUX6Rf3j/l545n67EDLXfOD+1V1ypZdnzqXDkKFtF521OSNkhQsM35xntAQrSCA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.97/Perch-0.5.97.zip" length="19580701" type="application/octet-stream" sparkle:edSignature="hra8seCX+nGjAusYMx/Xche/e9HiA3LYf5yfU6XC3VvoFfxpD/S8mbc/AmbGfOz8eLn2oSfWXWoA5zS8Lbb6Cg=="/>
         </item>
     </channel>
 </rss>
