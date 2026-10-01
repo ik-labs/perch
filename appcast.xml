@@ -3,27 +3,31 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.100</title>
-            <pubDate>Thu, 01 Oct 2026 11:01:49 +0530</pubDate>
-            <sparkle:version>134</sparkle:version>
-            <sparkle:shortVersionString>0.5.100</sparkle:shortVersionString>
+            <title>0.5.101</title>
+            <pubDate>Thu, 01 Oct 2026 17:10:19 +0530</pubDate>
+            <sparkle:version>135</sparkle:version>
+            <sparkle:shortVersionString>0.5.101</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Every Claude background session is recognised, not only some.** Claude
-  runs a background session in one of three ways, and Perch knew one. A
-  session that started before Claude had a spare slot ready, or one Claude
-  restarted after a crash, was not seen as Claude at all. With Perch's
-  hooks it kept its row but lost track of its process: after a restart the
-  row went on pointing at the process that had died. Without hooks it had
-  no row. Perch now recognises all three, so the row follows the session
-  across a restart and carries its `claude attach` command either way.
-- **A session opened with `claude --resume=<id>` or `claude -r<id>` is
-  matched to the right conversation.** Perch read the session only from
-  the spaced form, `--resume <id>`, and could also mistake the word
-  `--resume` inside a prompt for the option.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **"Allow and don't ask again" from the Mac's permission notification.**
+  When Claude Code asks permission and suggests a rule, the notification now
+  has a third choice next to Allow and Deny: allow this, and save the rule so
+  Claude stops asking. The notification says which rule and where it will be
+  saved, for example "Bash(sw_vers) in this project", and it is exactly the
+  rule the terminal's own "don't ask again" option would save, nowhere wider.
+  The choice appears only when Claude offers a rule. Some requests offer none,
+  such as a command that writes files, where Claude suggests a mode switch
+  instead; those keep Allow and Deny only. On a Mac managed by an organisation
+  that locks permission rules, the choice is not offered. The permission audit
+  log records every rule saved. The phone and watch get the same button in
+  the next iOS update.
+
+### Fixed
+- **Two release checks that could fail on a busy Mac.** They were tests
+  with a timing assumption, not a fault in Perch.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.100/Perch-0.5.100.zip" length="19884274" type="application/octet-stream" sparkle:edSignature="gJZCQJvUAU2xlBEly5rK3lrrIx85hwk3Tl9Od/2vAaTUORLLMcjRSd1OX4EWR0ifdY7ebLox4rP2IB9YKxX+BQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.101/Perch-0.5.101.zip" length="20002032" type="application/octet-stream" sparkle:edSignature="Er/zfv0tplXCGYI41AzoL3/c9k/+fLRSLgvKXtgyjFEshKODVagaL/FqwdctIfc9ZggpOsKX3Nnb8TvhDOs4CA=="/>
         </item>
     </channel>
 </rss>
