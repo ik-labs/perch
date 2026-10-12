@@ -3,52 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.102</title>
-            <pubDate>Mon, 12 Oct 2026 10:23:54 +0530</pubDate>
-            <sparkle:version>136</sparkle:version>
-            <sparkle:shortVersionString>0.5.102</sparkle:shortVersionString>
+            <title>0.5.103</title>
+            <pubDate>Mon, 12 Oct 2026 11:15:21 +0530</pubDate>
+            <sparkle:version>137</sparkle:version>
+            <sparkle:shortVersionString>0.5.103</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **OpenCode v2 sessions are back on the fleet.** OpenCode 2 keeps every
-  session in one background server, and Perch could not see them. Perch now
-  follows that server directly, so every v2 session shows live on the Mac
-  and the phone: working, idle, or needing you. That covers sessions from the
-  terminal, the Desktop app and the web. When a session needs you, the row
-  shows what it waits on: the command it wants to run, or the titles of the
-  questions it asks. Cost, tokens, the model and plan mode show as they do
-  for OpenCode 1. Answering a v2 prompt from Perch, and jumping to its window,
-  come later; for now, answer in OpenCode. Nothing needs installing or
-  restarting.
-- **Claude rows show the session's name, and its pull request.** A name set
-  with `/rename` or `--name`, or the title Claude writes for a session, now
-  becomes the row's title, even when it changes mid-session. If the branch
-  has an open pull request, the row says so with its review state, for
-  example "PR #1234 approved" or "PR #12 changes requested". The badge goes
-  away when the pull request is merged or closed. Both come from the status
-  line Perch sets up for Claude Code.
-
-### Fixed
-- **A Claude session running without Perch's hooks shows working while it
-  works.** Such a session, for example one started with `--bare`, read idle
-  for its whole turn. It now shows working, with the time since the turn
-  began. Stopping it with Esc does not send a "finished" alert.
-- **Perch's OpenCode plugin loads in OpenCode 2.** OpenCode 2 reported it as
-  a plugin that failed to load. It now loads cleanly in both versions.
-- **No frozen OpenCode session after upgrading to OpenCode 2.** OpenCode 2
-  stops writing the sessions OpenCode 1 kept, and Perch went on showing the
-  last of those as if it were current.
-
-### Changed
-- **Perch does less work while you're not looking at it.** The fleet window
-  and Settings stop drawing while they are closed, hidden, minimised or on
-  another desktop. Rows redraw only when something they show changes, and
-  their spinners and timers animate without waking Perch every second.
-- **The working spinner on a row is a turning arc** instead of the system's
-  spoked spinner. Past an hour, a row's timer reads `1:02:05` instead of
-  `62:05`. With Reduce Motion on, rows hold still.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **OpenCode works when its folders are moved in your shell's startup
+  file.** If your `.zshrc` or `.zprofile` sets `XDG_CONFIG_HOME`,
+  `XDG_DATA_HOME`, `XDG_STATE_HOME`, `OPENCODE_CONFIG_DIR`,
+  `OPENCODE_DATA_DIR` or `OPENCODE_DB`, OpenCode used those folders but Perch
+  didn't know. So Perch's plugin could be installed where OpenCode never
+  looks, its sessions database could go unfound, and OpenCode 2 sessions
+  could be missing entirely. Perch now asks your login shell for those six
+  settings once at launch, and only those. Anything your startup file prints
+  is ignored. A setting given for one terminal session only, such as
+  `XDG_DATA_HOME=… opencode`, still isn't seen.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.102/Perch-0.5.102.zip" length="21285728" type="application/octet-stream" sparkle:edSignature="DTkHZkiKXwZdPv9w0jvhjYPXpFdUkETOyHA1CWuQ8CY3QO0fFWwnUMpxTmZsU6NUnqgngngg9ba/177YqUJmCQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.103/Perch-0.5.103.zip" length="21355662" type="application/octet-stream" sparkle:edSignature="MZ4cVQajIJI2uOqb9IlJZI6vK2c6HQRkHF4hcGI+hG/xlM9WHKLdZeoD84frZkCtW0DKqb567v+C67lhOVtuBA=="/>
         </item>
     </channel>
 </rss>
