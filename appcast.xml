@@ -3,25 +3,59 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.103</title>
-            <pubDate>Mon, 12 Oct 2026 11:15:21 +0530</pubDate>
-            <sparkle:version>137</sparkle:version>
-            <sparkle:shortVersionString>0.5.103</sparkle:shortVersionString>
+            <title>0.5.104</title>
+            <pubDate>Mon, 12 Oct 2026 14:42:25 +0530</pubDate>
+            <sparkle:version>138</sparkle:version>
+            <sparkle:shortVersionString>0.5.104</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **OpenCode works when its folders are moved in your shell's startup
-  file.** If your `.zshrc` or `.zprofile` sets `XDG_CONFIG_HOME`,
-  `XDG_DATA_HOME`, `XDG_STATE_HOME`, `OPENCODE_CONFIG_DIR`,
-  `OPENCODE_DATA_DIR` or `OPENCODE_DB`, OpenCode used those folders but Perch
-  didn't know. So Perch's plugin could be installed where OpenCode never
-  looks, its sessions database could go unfound, and OpenCode 2 sessions
-  could be missing entirely. Perch now asks your login shell for those six
-  settings once at launch, and only those. Anything your startup file prints
-  is ignored. A setting given for one terminal session only, such as
-  `XDG_DATA_HOME=… opencode`, still isn't seen.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Answer OpenCode 2 sessions from Perch.** Until now Perch could show that
+  an OpenCode 2 session needed you, but not let you answer. Now you can:
+  - Allow, Deny, or "Allow and don't ask again" a permission, from the Mac
+    notification, the phone or the watch. "Don't ask again" saves OpenCode's
+    own rule for the project, the same one OpenCode would save, and the
+    button says which.
+  - Answer a question from the phone when it offers choices, or from the
+    Mac's notification when it asks for one line of text. A question Perch
+    can't answer exactly stays in OpenCode.
+  - Reply to a session that's idle or working, and Stop one that's working.
+
+  Every answer goes only to the OpenCode server on this Mac, and only if it
+  is still the server the question came from.
+- **Claude: a model change shows straight away,** including one Claude makes
+  by itself.
+- **Claude: an MCP server asking for input shows as needing you straight
+  away,** instead of after a few quiet seconds. Perch doesn't offer a reply
+  for these, because a typed reply could submit the server's form.
+- **Claude: a session in a folder you haven't trusted yet says so.** Claude
+  runs no hooks there until you accept its trust prompt, so the row used to
+  look broken. It now reads "Waiting for you to trust this folder", and
+  becomes a normal row as soon as you accept.
+
+### Fixed
+- **OpenCode Stats and the Go usage estimate count OpenCode 2.** After
+  upgrading, they stopped at the upgrade date, and a fresh OpenCode 2 Mac
+  showed nothing. Your history from before the upgrade is counted once, not
+  twice. On a Mac running both OpenCode 1 and 2, sessions no longer appear
+  and disappear depending on which one ran last.
+- **OpenCode 2: an answered prompt no longer comes back.** One answered while
+  Perch's connection had dropped for a moment could show as needing you
+  again later.
+- **Claude `-p` runs: approvals say what happens if nobody answers.** In a
+  run with no terminal prompt to fall back to, Claude denies the tool when
+  no answer comes. The Mac notification now says so, and the row stops
+  showing "needs you" afterwards. The phone and watch get the same wording
+  in the next iOS update.
+- **Claude: Perch won't type into the wrong conversation.** When a session
+  runs without Perch's hooks, Perch guesses which conversation it is. If
+  Claude's own record of that session disagrees, Perch now offers no reply
+  instead of one that could land in another session.
+- **Claude background sessions say how to open them.** A running background
+  session was told to "run in tmux or herdr", which can't help. It now says
+  to open it with `claude attach`.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.103/Perch-0.5.103.zip" length="21355662" type="application/octet-stream" sparkle:edSignature="MZ4cVQajIJI2uOqb9IlJZI6vK2c6HQRkHF4hcGI+hG/xlM9WHKLdZeoD84frZkCtW0DKqb567v+C67lhOVtuBA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.104/Perch-0.5.104.zip" length="21831833" type="application/octet-stream" sparkle:edSignature="43nYUjJ0Tm1JFRekCUtu3ey3nvg3HlSpuOuWeppJGcgzmYYUmxsBt7aNl5b2/Uge7C1feRZRfQ7DdlEmj5ygAA=="/>
         </item>
     </channel>
 </rss>
