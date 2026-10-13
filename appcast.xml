@@ -3,22 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.106</title>
-            <pubDate>Tue, 13 Oct 2026 18:10:02 +0530</pubDate>
-            <sparkle:version>140</sparkle:version>
-            <sparkle:shortVersionString>0.5.106</sparkle:shortVersionString>
+            <title>0.5.107</title>
+            <pubDate>Tue, 13 Oct 2026 18:59:09 +0530</pubDate>
+            <sparkle:version>141</sparkle:version>
+            <sparkle:shortVersionString>0.5.107</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Claude: a session without Perch's hooks keeps its own row.** If another
-  Claude run finished in the same folder, such as `claude -p`, the live
-  session's row could switch to that finished run. A session waiting on you
-  then stopped showing as needing you. Two such sessions in one folder could
-  also show as one. Perch now goes by Claude's own record of which session
-  each process runs, when the session's transcript confirms it. This also
-  covers a `--resume` session after `/clear`.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- **Claude: MCP tools are named readably.** A permission request for an MCP
+  tool used to read like `mcp__github__create_pull_request`, on the row, the
+  Mac notification, your phone and your watch. It now reads
+  `github - create_pull_request (MCP)`, close to what Claude shows in the
+  terminal. The "don't ask again" button says the same. Phones on the current
+  app see it too.
+
+### Fixed
+- **Claude: `claude purge` no longer shows up as a session.** Claude Code
+  2.1.288 added the command, and Perch mistook it for a running session.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.106/Perch-0.5.106.zip" length="21899849" type="application/octet-stream" sparkle:edSignature="BJxn3FNFNfP5VSGDUsxjYUVBUhGhgzBVWGqckgeASjaib/1E+47B+uipLL1ce8xcJEjvlVoTQ+qxWBwWIlMrBg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.107/Perch-0.5.107.zip" length="21908504" type="application/octet-stream" sparkle:edSignature="j1ozq+AsOD+xaqRgU634AUvy5cccUl4UwZCZRMCj+1qd5dohu/sm+Wp7PyO7N5YVEAeU8zaKyzTn1/PMEEWDBw=="/>
         </item>
     </channel>
 </rss>
