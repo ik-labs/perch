@@ -3,30 +3,27 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.108</title>
-            <pubDate>Tue, 13 Oct 2026 23:10:31 +0530</pubDate>
-            <sparkle:version>142</sparkle:version>
-            <sparkle:shortVersionString>0.5.108</sparkle:shortVersionString>
+            <title>0.5.109</title>
+            <pubDate>Tue, 13 Oct 2026 23:58:07 +0530</pubDate>
+            <sparkle:version>143</sparkle:version>
+            <sparkle:shortVersionString>0.5.109</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Factory's Droid CLI.** Perch now shows your `droid` sessions on the Mac:
-  - which ones are working, with the tool and how long the turn has run,
-    which need you for a permission, and which have finished;
-  - the model, effort and context used, and jump-to-terminal for each.
-
-  Perch adds its hooks and a small status line to Droid's settings, next to
-  any hooks you already have. If you had your own status line, it still shows,
-  and it's put back if you remove Perch. `droid exec` runs are not shown.
-  Droid rows on the iPhone and Apple Watch come with the next app update.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- **Droid: a question shows on the row.** When Droid asks you something, the
+  row and the "needs you" alert now show the question ("Question: Red or
+  blue?") instead of "Factory CLI is asking the user 1 question(s)".
+- **Droid: the "finished" notification says what Droid replied,** when the
+  turn ended with a reply. A turn that ended on a command or tool still gets
+  the plain "Droid finished its turn."
 
 ### Fixed
-- **Amp: sessions started with `--executor`, `--attach`, `--title`,
-  `--runner-dir` or `--project` can be replied to again.** Perch read the
-  option's value as a command and treated the session as one it couldn't
-  type into.
+- **Uninstalling with `scripts/uninstall.sh` puts your own Antigravity status
+  line back exactly as it was,** including one you had turned off. If it can't
+  be restored, the saved copy is kept and the script tells you where. Its
+  backups of your settings are now private to you.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.108/Perch-0.5.108.zip" length="24449347" type="application/octet-stream" sparkle:edSignature="/UyL9r9FIZ1tqrWz9rPJrmSLagp7MciPHhxU7mkcpB7F3BwEyUPOXcfCO9Z/9VEtjkDRPisYS33V8Urj13H+BA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.109/Perch-0.5.109.zip" length="24472311" type="application/octet-stream" sparkle:edSignature="SXSkkz+gF5+heP7nf/dQh2HZVmYA8UE+8IFnK/LsSBcIkJpFaCDPues59tBN/s0gw7iGcXXghbSO7U4jdCTuDg=="/>
         </item>
     </channel>
 </rss>
