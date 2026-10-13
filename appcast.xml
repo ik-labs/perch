@@ -3,25 +3,30 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.107</title>
-            <pubDate>Tue, 13 Oct 2026 18:59:09 +0530</pubDate>
-            <sparkle:version>141</sparkle:version>
-            <sparkle:shortVersionString>0.5.107</sparkle:shortVersionString>
+            <title>0.5.108</title>
+            <pubDate>Tue, 13 Oct 2026 23:10:31 +0530</pubDate>
+            <sparkle:version>142</sparkle:version>
+            <sparkle:shortVersionString>0.5.108</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Changed
-- **Claude: MCP tools are named readably.** A permission request for an MCP
-  tool used to read like `mcp__github__create_pull_request`, on the row, the
-  Mac notification, your phone and your watch. It now reads
-  `github - create_pull_request (MCP)`, close to what Claude shows in the
-  terminal. The "don't ask again" button says the same. Phones on the current
-  app see it too.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Factory's Droid CLI.** Perch now shows your `droid` sessions on the Mac:
+  - which ones are working, with the tool and how long the turn has run,
+    which need you for a permission, and which have finished;
+  - the model, effort and context used, and jump-to-terminal for each.
+
+  Perch adds its hooks and a small status line to Droid's settings, next to
+  any hooks you already have. If you had your own status line, it still shows,
+  and it's put back if you remove Perch. `droid exec` runs are not shown.
+  Droid rows on the iPhone and Apple Watch come with the next app update.
 
 ### Fixed
-- **Claude: `claude purge` no longer shows up as a session.** Claude Code
-  2.1.288 added the command, and Perch mistook it for a running session.
+- **Amp: sessions started with `--executor`, `--attach`, `--title`,
+  `--runner-dir` or `--project` can be replied to again.** Perch read the
+  option's value as a command and treated the session as one it couldn't
+  type into.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.107/Perch-0.5.107.zip" length="21908504" type="application/octet-stream" sparkle:edSignature="j1ozq+AsOD+xaqRgU634AUvy5cccUl4UwZCZRMCj+1qd5dohu/sm+Wp7PyO7N5YVEAeU8zaKyzTn1/PMEEWDBw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.108/Perch-0.5.108.zip" length="24449347" type="application/octet-stream" sparkle:edSignature="/UyL9r9FIZ1tqrWz9rPJrmSLagp7MciPHhxU7mkcpB7F3BwEyUPOXcfCO9Z/9VEtjkDRPisYS33V8Urj13H+BA=="/>
         </item>
     </channel>
 </rss>
