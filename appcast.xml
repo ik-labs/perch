@@ -3,27 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.109</title>
-            <pubDate>Tue, 13 Oct 2026 23:58:07 +0530</pubDate>
-            <sparkle:version>143</sparkle:version>
-            <sparkle:shortVersionString>0.5.109</sparkle:shortVersionString>
+            <title>0.5.110</title>
+            <pubDate>Wed, 14 Oct 2026 21:59:21 +0530</pubDate>
+            <sparkle:version>144</sparkle:version>
+            <sparkle:shortVersionString>0.5.110</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Changed
-- **Droid: a question shows on the row.** When Droid asks you something, the
-  row and the "needs you" alert now show the question ("Question: Red or
-  blue?") instead of "Factory CLI is asking the user 1 question(s)".
-- **Droid: the "finished" notification says what Droid replied,** when the
-  turn ended with a reply. A turn that ended on a command or tool still gets
-  the plain "Droid finished its turn."
-
-### Fixed
-- **Uninstalling with `scripts/uninstall.sh` puts your own Antigravity status
-  line back exactly as it was,** including one you had turned off. If it can't
-  be restored, the saved copy is kept and the script tells you where. Its
-  backups of your settings are now private to you.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **Droid: a session waiting for you to trust its folder now shows up.**
+  Droid asks "Trust this folder?" the first time you open it somewhere new,
+  and until you answered, the session was missing from Perch. It now reads
+  "Waiting for you to trust this folder", and becomes a normal row once you
+  accept. A folder inside one you already trust doesn't ask, and Perch knows
+  that too.
+- **The message on your phone for a session waiting on folder trust now names
+  the right agent.** It said "Claude" for every session.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.109/Perch-0.5.109.zip" length="24472311" type="application/octet-stream" sparkle:edSignature="SXSkkz+gF5+heP7nf/dQh2HZVmYA8UE+8IFnK/LsSBcIkJpFaCDPues59tBN/s0gw7iGcXXghbSO7U4jdCTuDg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.110/Perch-0.5.110.zip" length="24536269" type="application/octet-stream" sparkle:edSignature="uLiejccgM1sVgjTpR36qKvFymAnQq9iCen5RfO3L0hlaFepXSSCA/O9YY9mBJmk7tcWbNTr1wAkjAyuugDNpBw=="/>
         </item>
     </channel>
 </rss>
