@@ -3,31 +3,29 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.112</title>
-            <pubDate>Thu, 15 Oct 2026 09:48:55 +0530</pubDate>
-            <sparkle:version>146</sparkle:version>
-            <sparkle:shortVersionString>0.5.112</sparkle:shortVersionString>
+            <title>0.5.113</title>
+            <pubDate>Thu, 15 Oct 2026 21:00:14 +0530</pubDate>
+            <sparkle:version>147</sparkle:version>
+            <sparkle:shortVersionString>0.5.113</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Droid: Allow or Deny a permission from your phone, watch or Mac
-  notification.** For a Droid session running in tmux, a command or file
-  edit that needs your OK now comes with Allow and Deny buttons, like
-  Claude's. Before pressing anything, Perch checks the terminal: the dialog
-  must still be up, with the same command or file you were shown. If it
-  isn't, nothing is pressed and the prompt stays for you at the terminal.
-  Two tools at once, and "always allow", are left to the terminal.
-- **Droid edits made with patches now show the file name** on the row.
+- **Cursor: sessions started with `agent persist` now show up.** Cursor keeps
+  these running in the background after you close the terminal, and Perch
+  missed them entirely. They now get a row, whether a terminal is attached or
+  not, and you can reply to one from your phone even while it's detached.
+- **Cursor: a session waiting for you to trust its folder now shows up.**
+  Cursor asks "Do you trust the contents of this directory?" the first time
+  you open it somewhere new. Until you answered, the session was missing from
+  Perch. It now reads "Waiting for you to trust this folder".
 
 ### Fixed
-- **A session waiting on a permission always gets a Mac alert now.** With
-  approval notifications on, Perch skipped the "needs you" alert and
-  expected an Allow/Deny one instead. For Amp, Antigravity, Cursor, Devin and
-  Droid outside tmux no Allow/Deny one ever came, so there was no alert at
-  all. They now get "needs you", and the agents that do get Allow/Deny
-  don't get both.
+- **Cursor: Stats, the last reply and the conversation now work for every
+  project folder.** For a folder whose path has an underscore, a dot, a space
+  or a double dash, Perch looked for Cursor's transcript in the wrong place
+  and found nothing. Stats recounts your Cursor history once after updating.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.112/Perch-0.5.112.zip" length="24898010" type="application/octet-stream" sparkle:edSignature="JJKY5hYcbMF8AdwNTJYyCCq5xbxmbdfVf0nDy5+D1W87kBRrhfsrOpCWm6J7C1VxL7Bxz6oWaMRzkjunMBnFBQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.113/Perch-0.5.113.zip" length="24938119" type="application/octet-stream" sparkle:edSignature="vR3j9pMsKm1cAJ8NH1gW1nsj7lPJTYI9Yedz2tdRBJ5/B9ldIMvWJg+OGs5DPkdIUvD6DQSghBO6oImcYXCTDA=="/>
         </item>
     </channel>
 </rss>
