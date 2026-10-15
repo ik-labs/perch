@@ -3,23 +3,21 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.115</title>
-            <pubDate>Thu, 15 Oct 2026 22:43:58 +0530</pubDate>
-            <sparkle:version>149</sparkle:version>
-            <sparkle:shortVersionString>0.5.115</sparkle:shortVersionString>
+            <title>0.5.116</title>
+            <pubDate>Thu, 15 Oct 2026 23:33:21 +0530</pubDate>
+            <sparkle:version>150</sparkle:version>
+            <sparkle:shortVersionString>0.5.116</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Codex: sessions no longer disappear after 30 minutes idle.** Since Codex
-  0.157, sessions run in Codex's background service by default, and Perch
-  dropped an idle one from the list after half an hour even with its terminal
-  still open. It now stays as long as the session is open.
-- **Codex: the phone says why it can't reply to a session in Codex's
-  background service,** instead of suggesting tmux. Start Codex with
-  `--no-daemon` to get replies and Stop back while Perch learns the new
-  setup.
+- **Amp: Perch's plugin now actually reports to Perch.** Its messages were
+  being dropped, so Amp sessions only appeared from Perch reading Amp's thread
+  history — and a session waiting for your approval never showed as needing
+  you. The same fix applies to OpenCode 1.x.
+- **Claude Code: Stats read faster with Claude Code 2.1.300,** which writes
+  large new records into its transcripts that Perch now skips.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.115/Perch-0.5.115.zip" length="24970197" type="application/octet-stream" sparkle:edSignature="uHh4gC6XI/f14CpBgJ7oQm7oyIWGThyvmmbLvVdEr9TGTsjqlnBbwXdRvddD8JKn8X/ke/1sbWLsIDVFtdn8Ag=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.116/Perch-0.5.116.zip" length="24977578" type="application/octet-stream" sparkle:edSignature="GCtt2O7BdCbLUt5d+W6i0kXuBVjbT0fqhV1hBjZqLD5Xmc0JjD5piV/AJUWkm4sp6dD4PphAAHe+CXpS7yjTDg=="/>
         </item>
     </channel>
 </rss>
