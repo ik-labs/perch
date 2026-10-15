@@ -3,24 +3,23 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.114</title>
-            <pubDate>Thu, 15 Oct 2026 21:45:13 +0530</pubDate>
-            <sparkle:version>148</sparkle:version>
-            <sparkle:shortVersionString>0.5.114</sparkle:shortVersionString>
+            <title>0.5.115</title>
+            <pubDate>Thu, 15 Oct 2026 22:43:58 +0530</pubDate>
+            <sparkle:version>149</sparkle:version>
+            <sparkle:shortVersionString>0.5.115</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Antigravity: a session waiting for you to trust its folder now shows up.**
-  The Antigravity CLI asks "Do you trust the contents of this project?" the
-  first time you open it somewhere new, and until you answered, the session
-  was missing from Perch. It now reads "Waiting for you to trust this folder".
-
-### Fixed
-- **Devin: a session you quit now leaves the list right away,** instead of
-  lingering until Perch noticed the process was gone. Resuming a session you
-  just quit keeps it on the list.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **Codex: sessions no longer disappear after 30 minutes idle.** Since Codex
+  0.157, sessions run in Codex's background service by default, and Perch
+  dropped an idle one from the list after half an hour even with its terminal
+  still open. It now stays as long as the session is open.
+- **Codex: the phone says why it can't reply to a session in Codex's
+  background service,** instead of suggesting tmux. Start Codex with
+  `--no-daemon` to get replies and Stop back while Perch learns the new
+  setup.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.114/Perch-0.5.114.zip" length="24956621" type="application/octet-stream" sparkle:edSignature="HU9n6zo7kO9miGM35PX+i5x053Tumup3JfVLHN1z28ppQG9trIAqC9Tq29Dj5GfaMVvsjFk0hjp1aK0siMnqAA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.115/Perch-0.5.115.zip" length="24970197" type="application/octet-stream" sparkle:edSignature="uHh4gC6XI/f14CpBgJ7oQm7oyIWGThyvmmbLvVdEr9TGTsjqlnBbwXdRvddD8JKn8X/ke/1sbWLsIDVFtdn8Ag=="/>
         </item>
     </channel>
 </rss>
