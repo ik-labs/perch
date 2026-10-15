@@ -3,33 +3,31 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.111</title>
-            <pubDate>Thu, 15 Oct 2026 08:03:13 +0530</pubDate>
-            <sparkle:version>145</sparkle:version>
-            <sparkle:shortVersionString>0.5.111</sparkle:shortVersionString>
+            <title>0.5.112</title>
+            <pubDate>Thu, 15 Oct 2026 09:48:55 +0530</pubDate>
+            <sparkle:version>146</sparkle:version>
+            <sparkle:shortVersionString>0.5.112</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Droid: reply and Stop from your phone, watch and Mac.** For a Droid
-  session running in tmux, you can now type a message to it and stop a turn
-  that's working. Perch checks which session the Droid terminal is in right
-  now before sending anything, so a message never lands in a conversation
-  you've switched away from with `/new`, `/clear` or `/sessions`. Stop is only
-  offered while Droid is working. Neither is offered while Droid is waiting
-  on a permission or a question, so a reply can't approve something by
-  accident. If Perch's Droid hooks are off, both stay off and the row says why.
-- **Droid in Stats.** Tokens, models, active time and prompts per day for
-  your Droid sessions, with a Droid filter alongside the other agents.
+- **Droid: Allow or Deny a permission from your phone, watch or Mac
+  notification.** For a Droid session running in tmux, a command or file
+  edit that needs your OK now comes with Allow and Deny buttons, like
+  Claude's. Before pressing anything, Perch checks the terminal: the dialog
+  must still be up, with the same command or file you were shown. If it
+  isn't, nothing is pressed and the prompt stays for you at the terminal.
+  Two tools at once, and "always allow", are left to the terminal.
+- **Droid edits made with patches now show the file name** on the row.
 
 ### Fixed
-- **Droid subagents no longer show up as sessions of their own.** Each one
-  appeared as an extra row that read "finished", with a chime. A subagent now
-  counts as part of the session that started it, and when it needs a
-  permission, that session shows as waiting for you.
-- **A Droid question shows as waiting the moment it appears,** about a second
-  sooner than before.
+- **A session waiting on a permission always gets a Mac alert now.** With
+  approval notifications on, Perch skipped the "needs you" alert and
+  expected an Allow/Deny one instead. For Amp, Antigravity, Cursor, Devin and
+  Droid outside tmux no Allow/Deny one ever came, so there was no alert at
+  all. They now get "needs you", and the agents that do get Allow/Deny
+  don't get both.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.111/Perch-0.5.111.zip" length="24757215" type="application/octet-stream" sparkle:edSignature="3cAX7MYde2C64Y4vMVukJC3qOT0mljGuYdtnlkRtSjYuHrxw/HOFNZgBBAWj2UDfHiFjcKwSAmvOruNG+/DtCA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.112/Perch-0.5.112.zip" length="24898010" type="application/octet-stream" sparkle:edSignature="JJKY5hYcbMF8AdwNTJYyCCq5xbxmbdfVf0nDy5+D1W87kBRrhfsrOpCWm6J7C1VxL7Bxz6oWaMRzkjunMBnFBQ=="/>
         </item>
     </channel>
 </rss>
