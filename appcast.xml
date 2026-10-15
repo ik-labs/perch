@@ -3,29 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.113</title>
-            <pubDate>Thu, 15 Oct 2026 21:00:14 +0530</pubDate>
-            <sparkle:version>147</sparkle:version>
-            <sparkle:shortVersionString>0.5.113</sparkle:shortVersionString>
+            <title>0.5.114</title>
+            <pubDate>Thu, 15 Oct 2026 21:45:13 +0530</pubDate>
+            <sparkle:version>148</sparkle:version>
+            <sparkle:shortVersionString>0.5.114</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Cursor: sessions started with `agent persist` now show up.** Cursor keeps
-  these running in the background after you close the terminal, and Perch
-  missed them entirely. They now get a row, whether a terminal is attached or
-  not, and you can reply to one from your phone even while it's detached.
-- **Cursor: a session waiting for you to trust its folder now shows up.**
-  Cursor asks "Do you trust the contents of this directory?" the first time
-  you open it somewhere new. Until you answered, the session was missing from
-  Perch. It now reads "Waiting for you to trust this folder".
+- **Antigravity: a session waiting for you to trust its folder now shows up.**
+  The Antigravity CLI asks "Do you trust the contents of this project?" the
+  first time you open it somewhere new, and until you answered, the session
+  was missing from Perch. It now reads "Waiting for you to trust this folder".
 
 ### Fixed
-- **Cursor: Stats, the last reply and the conversation now work for every
-  project folder.** For a folder whose path has an underscore, a dot, a space
-  or a double dash, Perch looked for Cursor's transcript in the wrong place
-  and found nothing. Stats recounts your Cursor history once after updating.
+- **Devin: a session you quit now leaves the list right away,** instead of
+  lingering until Perch noticed the process was gone. Resuming a session you
+  just quit keeps it on the list.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.113/Perch-0.5.113.zip" length="24938119" type="application/octet-stream" sparkle:edSignature="vR3j9pMsKm1cAJ8NH1gW1nsj7lPJTYI9Yedz2tdRBJ5/B9ldIMvWJg+OGs5DPkdIUvD6DQSghBO6oImcYXCTDA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.114/Perch-0.5.114.zip" length="24956621" type="application/octet-stream" sparkle:edSignature="HU9n6zo7kO9miGM35PX+i5x053Tumup3JfVLHN1z28ppQG9trIAqC9Tq29Dj5GfaMVvsjFk0hjp1aK0siMnqAA=="/>
         </item>
     </channel>
 </rss>
