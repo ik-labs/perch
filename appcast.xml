@@ -3,27 +3,20 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.120</title>
-            <pubDate>Tue, 20 Oct 2026 03:53:05 +0530</pubDate>
-            <sparkle:version>154</sparkle:version>
-            <sparkle:shortVersionString>0.5.120</sparkle:shortVersionString>
+            <title>0.5.121</title>
+            <pubDate>Tue, 20 Oct 2026 04:25:15 +0530</pubDate>
+            <sparkle:version>155</sparkle:version>
+            <sparkle:shortVersionString>0.5.121</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Codex: replies and Stop need proof that Perch's hooks run in that
-  session.** Once a Codex session has run a turn, Perch now waits for a hook
-  event from that session before it will type into it. A session started with
-  a `--profile` that turns hooks off, or started before Perch's hooks were
-  installed, shows "hooks unconfirmed" instead of offering a reply that could
-  land on an approval prompt Perch can't see. Codex sessions running in Codex's
-  background service can take replies through herdr again.
-- **Regenerating the pairing code, or turning the companion off, now cancels
-  messages and Stops the phone had already sent.** Before, anything still
-  waiting to be typed went into the terminal anyway.
-- **Codex: `codex -- exec` is recognised as an interactive session.** A word
-  after `--` is the first message, not a command.
+- **Regenerating the pairing code or turning iPhone alerts off now also stops
+  a notification Perch was about to retry.** When the push service was briefly
+  busy or the network dropped, Perch tried again a few seconds later — and
+  that retry still went to a phone you had just unpaired or switched off. Now
+  every retry checks first, and `push.log` says why one was cancelled.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.120/Perch-0.5.120.zip" length="28286470" type="application/octet-stream" sparkle:edSignature="sF/yeQMOfXwbv/o3tcYHi8AqsdHWJFqKT61ikIvN4VhEcBPHEmYlzpaXe9k2uuu9yQ4uw497oovOv5CQOPnODg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.121/Perch-0.5.121.zip" length="28311636" type="application/octet-stream" sparkle:edSignature="tj1B9hbCs455HId/5lm8oR8GMpXrFYKiYIYJE2AFSwAQMi+No23fmzlx/0dEvyvGC9L359FiVfsgIan6ljPOCQ=="/>
         </item>
     </channel>
 </rss>
