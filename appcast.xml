@@ -3,24 +3,34 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.117</title>
-            <pubDate>Fri, 16 Oct 2026 10:38:21 +0530</pubDate>
-            <sparkle:version>151</sparkle:version>
-            <sparkle:shortVersionString>0.5.117</sparkle:shortVersionString>
+            <title>0.5.118</title>
+            <pubDate>Mon, 19 Oct 2026 17:04:17 +0530</pubDate>
+            <sparkle:version>152</sparkle:version>
+            <sparkle:shortVersionString>0.5.118</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Muse Code, Meta's coding agent, now shows up in Perch.** Every open `muse`
-  terminal gets a row — working, finished, interrupted or closed — with the
-  first thing you asked as its title, and a "finished" notification carrying
-  Muse's closing reply. A new folder waiting on Muse's "Do you trust this
-  workspace?" question shows as "Waiting for you to trust this folder". Perch
-  adds its hooks to `~/.config/muse/settings.json` beside your own, and Remove
-  Integration takes them out again. Replying, Stop and approvals for Muse come
-  in a later update; the iPhone and Watch show Muse sessions once the
-  companion app is updated.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **Perch no longer removes hooks of yours that only mention it.** A hook or
+  status line counted as Perch's whenever its command contained the name of
+  one of Perch's helpers — so something like
+  `check-policy --log /tmp/perch-report.log` was deleted when Perch updated its
+  hooks, on Remove Integration, and by the uninstaller. Perch now claims only
+  commands in the exact shape it writes, and leaves everything else alone.
+- **Codex: Stop is offered only when Perch can see Codex's approval
+  prompts.** Pressing Escape at a Codex approval prompt denies it, so Stop
+  needs proof that Perch's approval hook is installed, switched on and
+  trusted in Codex. Perch now asks Codex itself, re-checks whenever Codex's
+  hook or config files change, and keeps Stop off until Codex confirms —
+  usually about a second.
+- **Codex: replies get the same check.** A reply typed into a Codex approval
+  prompt approves the command, so replies to Codex sessions now also wait for
+  Codex to confirm Perch's approval hook. A Codex session started with
+  `--disable hooks` or `-c features.hooks=false` shows "no hooks" and offers
+  no replies or Stop. Codex sessions in Codex's background service no longer
+  take replies through herdr either; start Codex with `--no-daemon` to get
+  them.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.117/Perch-0.5.117.zip" length="27608345" type="application/octet-stream" sparkle:edSignature="+VNER+T6SKg+3f2NEZCRxGDqirUpV6V9UJTQ2s7VAIUmZXOY8fZH/LiPFnN4pS9AkmVF++hGvgApVKTnJUUyCQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.118/Perch-0.5.118.zip" length="27807816" type="application/octet-stream" sparkle:edSignature="qspru1U1M/Ob3VH741Lt7Vj/hOULY6f3u+dldYlGf8yZ8J9VF/cujX7n/PXBPYeTf1DToOfUXDn1uN5KExywDw=="/>
         </item>
     </channel>
 </rss>
