@@ -3,27 +3,27 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.119</title>
-            <pubDate>Mon, 19 Oct 2026 20:11:50 +0530</pubDate>
-            <sparkle:version>153</sparkle:version>
-            <sparkle:shortVersionString>0.5.119</sparkle:shortVersionString>
+            <title>0.5.120</title>
+            <pubDate>Tue, 20 Oct 2026 03:53:05 +0530</pubDate>
+            <sparkle:version>154</sparkle:version>
+            <sparkle:shortVersionString>0.5.120</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Claude Code: a reply can no longer approve a permission prompt Perch had
-  stopped showing.** When Claude ran tools in parallel, or a background
-  subagent asked for permission, Perch could read the session as running or
-  idle while the approval dialog was still open — and a reply sent from the
-  phone or a notification then pressed Enter on the dialog's **Yes**. The
-  session now reads "needs you" until that exact dialog is answered, and
-  replies and Stop stay off until then. A background subagent's question for
-  permission now shows as "needs you" for as long as it is open.
-- **Codex: a project that turns hooks off is recognised.** If a project's own
-  `.codex/config.toml` sets `[features] hooks = false`, Perch can't see Codex's
-  approval prompts there, so the row now says "hooks off in .codex/config.toml"
-  and offers no replies or Stop.
+- **Codex: replies and Stop need proof that Perch's hooks run in that
+  session.** Once a Codex session has run a turn, Perch now waits for a hook
+  event from that session before it will type into it. A session started with
+  a `--profile` that turns hooks off, or started before Perch's hooks were
+  installed, shows "hooks unconfirmed" instead of offering a reply that could
+  land on an approval prompt Perch can't see. Codex sessions running in Codex's
+  background service can take replies through herdr again.
+- **Regenerating the pairing code, or turning the companion off, now cancels
+  messages and Stops the phone had already sent.** Before, anything still
+  waiting to be typed went into the terminal anyway.
+- **Codex: `codex -- exec` is recognised as an interactive session.** A word
+  after `--` is the first message, not a command.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.119/Perch-0.5.119.zip" length="28173264" type="application/octet-stream" sparkle:edSignature="aD0RDWcLPg2Ozl3M1Q8prNROwR7/LP5eBiA5fSqobRaaItRgtGoiqIZkk4zWU3ck+8z2hpfXXBwMdAAmHkCJCA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.120/Perch-0.5.120.zip" length="28286470" type="application/octet-stream" sparkle:edSignature="sF/yeQMOfXwbv/o3tcYHi8AqsdHWJFqKT61ikIvN4VhEcBPHEmYlzpaXe9k2uuu9yQ4uw497oovOv5CQOPnODg=="/>
         </item>
     </channel>
 </rss>
