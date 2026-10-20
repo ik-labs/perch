@@ -3,20 +3,32 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.121</title>
-            <pubDate>Tue, 20 Oct 2026 04:25:15 +0530</pubDate>
-            <sparkle:version>155</sparkle:version>
-            <sparkle:shortVersionString>0.5.121</sparkle:shortVersionString>
+            <title>0.5.122</title>
+            <pubDate>Tue, 20 Oct 2026 18:00:17 +0530</pubDate>
+            <sparkle:version>156</sparkle:version>
+            <sparkle:shortVersionString>0.5.122</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Regenerating the pairing code or turning iPhone alerts off now also stops
-  a notification Perch was about to retry.** When the push service was briefly
-  busy or the network dropped, Perch tried again a few seconds later — and
-  that retry still went to a phone you had just unpaired or switched off. Now
-  every retry checks first, and `push.log` says why one was cancelled.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Storage, a new Settings pane for getting disk space back from git
+  worktrees.** It lists every worktree in the repositories your agents work
+  in, including ones you made by hand. For each one it shows its size, when it
+  was last used, which agent made it, and what you'd lose: uncommitted files,
+  commits that are on no branch, and commits that were never pushed.
+- **Move a worktree to the Trash from the Storage pane.** Perch checks first
+  and won't move one that's locked, that a session or an open editor is
+  using, or that holds work it can't account for. Commits that are on no
+  branch are saved to a `perch/saved/` branch before the move. You can put it
+  back from the Trash until you empty it.
+- **Clear git's leftover records** for worktrees whose folder is already
+  gone. Each record goes to the Trash, and Perch won't clear one that still
+  holds commits on no branch.
+
+### Fixed
+- **Claude Code: a session you named shows that name** even when it runs
+  without Perch's hooks.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.121/Perch-0.5.121.zip" length="28311636" type="application/octet-stream" sparkle:edSignature="tj1B9hbCs455HId/5lm8oR8GMpXrFYKiYIYJE2AFSwAQMi+No23fmzlx/0dEvyvGC9L359FiVfsgIan6ljPOCQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.122/Perch-0.5.122.zip" length="29085450" type="application/octet-stream" sparkle:edSignature="P7cg3HxFfc0FoXiLrOh6/JzPaX6/OwWre3Nn4zVTFaRklTUL/xfRx2+ryTRxSwEGigtGmjgZyHWN1h7FiFjmBA=="/>
         </item>
     </channel>
 </rss>
