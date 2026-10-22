@@ -3,28 +3,27 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.123</title>
-            <pubDate>Tue, 20 Oct 2026 20:37:40 +0530</pubDate>
-            <sparkle:version>157</sparkle:version>
-            <sparkle:shortVersionString>0.5.123</sparkle:shortVersionString>
+            <title>0.5.124</title>
+            <pubDate>Thu, 22 Oct 2026 19:28:33 +0530</pubDate>
+            <sparkle:version>158</sparkle:version>
+            <sparkle:shortVersionString>0.5.124</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Storage → Build output: see which build and dependency folders take your
-  disk space.** Perch lists them in the projects your agents work in:
-  `node_modules`, Swift's `.build`, Rust's `target`, Xcode's `build`, web
-  builds, and Xcode's DerivedData. Each shows its size and when the project
-  was last used. Perch only lists a folder git ignores and whose project file
-  sits beside it, so release output and hand-made folders stay off the list.
-  It warns when a folder holds an Xcode archive or an installer, which can't
-  simply be rebuilt. Perch doesn't delete anything: Show in Finder opens the
-  folder so you can remove it yourself.
+- **OpenCode Go: real usage bars.** Perch now shows OpenCode's own numbers for
+  your Go plan: the 5-hour, weekly and monthly windows and when each resets.
+  Before, the bars were an estimate from this Mac's sessions, and could show a
+  quarter of your real usage on models with lower limits. If you've signed in
+  to OpenCode Go in OpenCode, it just works. Otherwise paste your Go API key in
+  Settings → General → Usage. The key stays in your Keychain and is sent only
+  to opencode.ai. Without a key, the bars stay an estimate, and Settings says
+  why.
 
-### Fixed
-- **Storage sizes no longer count hard-linked files twice.** Rust `target`
-  folders read about half again too large.
+### Improved
+- **The fleet window opens faster with many sessions.** It now builds only the
+  rows on screen.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.123/Perch-0.5.123.zip" length="29346213" type="application/octet-stream" sparkle:edSignature="YMUx6uLDdLcx4g+4xK8Qf+MDSqoAzN395yl2+CTJtzrBjvvLmCafTo4G1yKATCa+GtivrlcmX19OQdzAZVPFBA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.124/Perch-0.5.124.zip" length="29479695" type="application/octet-stream" sparkle:edSignature="WWZmn7cihZRwDvrAbmpy+uMCEkVjVQoQSQVEEC/Jj5rxu8lKAKjnPwL0+ViDckB/QmbBhN5Ql1/9flbFS47sBg=="/>
         </item>
     </channel>
 </rss>
