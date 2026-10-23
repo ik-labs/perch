@@ -3,27 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.124</title>
-            <pubDate>Thu, 22 Oct 2026 19:28:33 +0530</pubDate>
-            <sparkle:version>158</sparkle:version>
-            <sparkle:shortVersionString>0.5.124</sparkle:shortVersionString>
+            <title>0.5.125</title>
+            <pubDate>Fri, 23 Oct 2026 11:11:18 +0530</pubDate>
+            <sparkle:version>159</sparkle:version>
+            <sparkle:shortVersionString>0.5.125</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **OpenCode Go: real usage bars.** Perch now shows OpenCode's own numbers for
-  your Go plan: the 5-hour, weekly and monthly windows and when each resets.
-  Before, the bars were an estimate from this Mac's sessions, and could show a
-  quarter of your real usage on models with lower limits. If you've signed in
-  to OpenCode Go in OpenCode, it just works. Otherwise paste your Go API key in
-  Settings → General → Usage. The key stays in your Keychain and is sent only
-  to opencode.ai. Without a key, the bars stay an estimate, and Settings says
-  why.
-
-### Improved
-- **The fleet window opens faster with many sessions.** It now builds only the
-  rows on screen.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **Messages sent to Devin from your iPhone now arrive.** Devin often missed
+  the Enter that Perch pressed right after pasting the message. The text sat
+  in Devin's input box, unsent, while your phone said it was sent. Perch now
+  waits half a second before pressing Enter.
+- **Antigravity sessions stay on the list after `agy` updates itself.** When
+  Antigravity updated while a session was running, Perch stopped recognising
+  that session. It dropped off the list, with no replies or Stop from your
+  phone, until you restarted it. Perch now keeps following it, including after
+  the old version's file is cleaned up.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.124/Perch-0.5.124.zip" length="29479695" type="application/octet-stream" sparkle:edSignature="WWZmn7cihZRwDvrAbmpy+uMCEkVjVQoQSQVEEC/Jj5rxu8lKAKjnPwL0+ViDckB/QmbBhN5Ql1/9flbFS47sBg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.125/Perch-0.5.125.zip" length="29525105" type="application/octet-stream" sparkle:edSignature="9chaOQPcSrYGCOk/02uLSEZ8UJ8Tn0e0gSZlBTfySQJBbQ4xIAclyvpYN1bVCcD70gB0Wp00bJ7kRhetnMSRDQ=="/>
         </item>
     </channel>
 </rss>
