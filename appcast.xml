@@ -3,38 +3,26 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.126</title>
-            <pubDate>Fri, 23 Oct 2026 16:48:53 +0530</pubDate>
-            <sparkle:version>160</sparkle:version>
-            <sparkle:shortVersionString>0.5.126</sparkle:shortVersionString>
+            <title>0.5.127</title>
+            <pubDate>Fri, 23 Oct 2026 19:06:17 +0530</pubDate>
+            <sparkle:version>161</sparkle:version>
+            <sparkle:shortVersionString>0.5.127</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Approve or deny Devin's requests from your iPhone, Apple Watch or Mac.**
-  When Devin asks permission to run a command, Perch shows the request the
-  way it does for Claude Code and Codex, and your answer goes back to Devin.
-  If you don't answer in time, Devin shows its own dialog as before. While
-  approvals are on, Devin waits up to 45 seconds for your answer before it
-  shows that dialog.
-- **Reply to and stop Codex sessions from your iPhone, in Codex's default
-  mode.** Since Codex 0.157 a session runs in Codex's background service, and
-  until now those rows said replies and Stop weren't available. Perch now
-  reaches the session through that service. Stop also works while Codex is
-  writing its answer, which pressing Escape didn't.
-
-### Improved
-- **Storage finds more of your projects.** Worktrees and build folders now
-  show for projects you worked on with Cursor, Devin, Droid, Muse or
-  Antigravity, not only Claude Code and Codex.
-
-### Fixed
-- **Cursor: stopping a turn no longer says it finished.** A turn you cancel
-  with Ctrl+C now reads "Interrupted", with no finished alert.
-- **Cursor: live status works if you've moved Cursor's config folder.** With
-  `CURSOR_CONFIG_DIR` set, Perch's hooks were installed where Cursor never
-  read them. Perch also finds Cursor's chats under `XDG_CONFIG_HOME`.
+            <description sparkle:format="markdown"><![CDATA[### Improved
+- **Approvals show the whole command.** Your Mac notification, iPhone and
+  Apple Watch used to show only the first line of a command, cut at 60
+  characters, so a command with several lines looked like just its first.
+  Now the full command is sent for Claude Code, Codex and Devin, up to 4 KB.
+  Hidden characters that could disguise a command are shown as codes. The
+  iPhone and Apple Watch show the full command after their next update.
+- **No one-tap Allow on a command your notification can't show in full.**
+  When a command is longer than a notification can show, the Mac
+  notification offers Deny and "Review in terminal" instead of Allow, and
+  the iPhone lock screen opens the full request in the app instead of
+  offering Allow.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.126/Perch-0.5.126.zip" length="29674265" type="application/octet-stream" sparkle:edSignature="cf5ZYi68dmffV7sROHxZE0LJvx4O70rA5YZqzmNhzagdjT3sewiT6ZCd/Y9rgDgSq51QXlhEHyz6V3MeHIa3DA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.127/Perch-0.5.127.zip" length="29715407" type="application/octet-stream" sparkle:edSignature="hHXnIpq7Pdx36/8svEQM5VfOg4n1Hiy7GdNzgm7EgnrWEPxGRzU+yezI+LLP7YKYQ0ei/4hi8SDFpNkp172DDg=="/>
         </item>
     </channel>
 </rss>
