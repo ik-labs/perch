@@ -3,24 +3,38 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.125</title>
-            <pubDate>Fri, 23 Oct 2026 11:11:18 +0530</pubDate>
-            <sparkle:version>159</sparkle:version>
-            <sparkle:shortVersionString>0.5.125</sparkle:shortVersionString>
+            <title>0.5.126</title>
+            <pubDate>Fri, 23 Oct 2026 16:48:53 +0530</pubDate>
+            <sparkle:version>160</sparkle:version>
+            <sparkle:shortVersionString>0.5.126</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Messages sent to Devin from your iPhone now arrive.** Devin often missed
-  the Enter that Perch pressed right after pasting the message. The text sat
-  in Devin's input box, unsent, while your phone said it was sent. Perch now
-  waits half a second before pressing Enter.
-- **Antigravity sessions stay on the list after `agy` updates itself.** When
-  Antigravity updated while a session was running, Perch stopped recognising
-  that session. It dropped off the list, with no replies or Stop from your
-  phone, until you restarted it. Perch now keeps following it, including after
-  the old version's file is cleaned up.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Approve or deny Devin's requests from your iPhone, Apple Watch or Mac.**
+  When Devin asks permission to run a command, Perch shows the request the
+  way it does for Claude Code and Codex, and your answer goes back to Devin.
+  If you don't answer in time, Devin shows its own dialog as before. While
+  approvals are on, Devin waits up to 45 seconds for your answer before it
+  shows that dialog.
+- **Reply to and stop Codex sessions from your iPhone, in Codex's default
+  mode.** Since Codex 0.157 a session runs in Codex's background service, and
+  until now those rows said replies and Stop weren't available. Perch now
+  reaches the session through that service. Stop also works while Codex is
+  writing its answer, which pressing Escape didn't.
+
+### Improved
+- **Storage finds more of your projects.** Worktrees and build folders now
+  show for projects you worked on with Cursor, Devin, Droid, Muse or
+  Antigravity, not only Claude Code and Codex.
+
+### Fixed
+- **Cursor: stopping a turn no longer says it finished.** A turn you cancel
+  with Ctrl+C now reads "Interrupted", with no finished alert.
+- **Cursor: live status works if you've moved Cursor's config folder.** With
+  `CURSOR_CONFIG_DIR` set, Perch's hooks were installed where Cursor never
+  read them. Perch also finds Cursor's chats under `XDG_CONFIG_HOME`.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.125/Perch-0.5.125.zip" length="29525105" type="application/octet-stream" sparkle:edSignature="9chaOQPcSrYGCOk/02uLSEZ8UJ8Tn0e0gSZlBTfySQJBbQ4xIAclyvpYN1bVCcD70gB0Wp00bJ7kRhetnMSRDQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.126/Perch-0.5.126.zip" length="29674265" type="application/octet-stream" sparkle:edSignature="cf5ZYi68dmffV7sROHxZE0LJvx4O70rA5YZqzmNhzagdjT3sewiT6ZCd/Y9rgDgSq51QXlhEHyz6V3MeHIa3DA=="/>
         </item>
     </channel>
 </rss>
