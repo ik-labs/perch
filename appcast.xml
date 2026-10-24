@@ -3,34 +3,27 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.129</title>
-            <pubDate>Sat, 24 Oct 2026 18:26:22 +0530</pubDate>
-            <sparkle:version>163</sparkle:version>
-            <sparkle:shortVersionString>0.5.129</sparkle:shortVersionString>
+            <title>0.5.130</title>
+            <pubDate>Sat, 24 Oct 2026 20:48:08 +0530</pubDate>
+            <sparkle:version>164</sparkle:version>
+            <sparkle:shortVersionString>0.5.130</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **A paired device can't put a fake approval on your Mac.** A device
-  holding Perch's pairing secret could make an approval appear on your Mac,
-  naming any project and command, and have it passed on to your other
-  devices. Approvals now come only from your agents. Answering such a request
-  never approved a real tool.
-- **Droid: no Allow from Perch for a long command.** For a command over 60
-  characters or more than one line, Perch saw only its start, so Allow could
-  have approved a different command that began the same way. Perch no longer
-  offers it; answer it in the terminal.
-- **No Reply or Stop for agents that can't take one.** Perch misread some
-  command-line options, so a few runs with no prompt looked like sessions
-  you could reply to: Cursor's `worker` started with `--resume` or `-w`,
-  OpenCode's `serve` started with `--auto`, Amp started with `--execute=…`,
-  and Claude Code or Devin started with an option Perch didn't recognise.
-  Perch now reads each agent's options the way that agent does, and holds
-  back Reply when it meets one it doesn't know.
-- **Amp: replies wait while you switch threads.** Mid-switch, Perch holds a
-  reply instead of guessing which thread is open, and both threads stay on
-  the list.
+- **Droid approvals reach your iPhone again.** With some models (GPT-6.1
+  Sol among them), Droid 0.249 runs its tools from a script, and Perch
+  couldn't tell which command it was asking about, so every approval had to
+  be answered in the terminal. Perch now reads the command from Droid's
+  script, and Allow still only goes once the dialog on screen shows that
+  same command. A script it can't read is still left for the terminal.
+- **No Reply at Claude's multiple-choice questions.** A reply sent there was
+  dropped, and Claude took whichever option was highlighted, so "Purple"
+  could answer "Red". Perch no longer offers Reply on your iPhone or in the
+  Mac notification for these questions. Answer them in Perch's question
+  sheet, or in the terminal. Replying when a usage limit has reset ("press
+  Enter to continue") still works.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.129/Perch-0.5.129.zip" length="30044795" type="application/octet-stream" sparkle:edSignature="qPZd+wscM6GKufK+8HqptwFHF0DzrEsbBQQNTzOwjphckPPUuW1HfuPFYJGUQgGgrP48GZrEou3fV3EezgkpDg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.130/Perch-0.5.130.zip" length="30124727" type="application/octet-stream" sparkle:edSignature="Vn5hk8QBRgmVbfMC5SAUXtT6G2CrarJwf7FMGTTUMHSRVJbilx2t99TialC6halIiLd4GoBhflHhcsLqBMa+CQ=="/>
         </item>
     </channel>
 </rss>
