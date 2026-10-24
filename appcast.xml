@@ -3,26 +3,33 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.127</title>
-            <pubDate>Fri, 23 Oct 2026 19:06:17 +0530</pubDate>
-            <sparkle:version>161</sparkle:version>
-            <sparkle:shortVersionString>0.5.127</sparkle:shortVersionString>
+            <title>0.5.128</title>
+            <pubDate>Sat, 24 Oct 2026 14:36:12 +0530</pubDate>
+            <sparkle:version>162</sparkle:version>
+            <sparkle:shortVersionString>0.5.128</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Improved
-- **Approvals show the whole command.** Your Mac notification, iPhone and
-  Apple Watch used to show only the first line of a command, cut at 60
-  characters, so a command with several lines looked like just its first.
-  Now the full command is sent for Claude Code, Codex and Devin, up to 4 KB.
-  Hidden characters that could disguise a command are shown as codes. The
-  iPhone and Apple Watch show the full command after their next update.
-- **No one-tap Allow on a command your notification can't show in full.**
-  When a command is longer than a notification can show, the Mac
-  notification offers Deny and "Review in terminal" instead of Allow, and
-  the iPhone lock screen opens the full request in the app instead of
-  offering Allow.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Perch works with Rex.** For agents running in Rex, Superlogical's
+  terminal:
+  - **Jump to the agent.** Clicking a session brings Rex to the front and
+    focuses the agent's pane. To have Rex switch to that session as well,
+    turn on Remote Control in Rex's Settings, under Rex Server.
+  - **Reply from your iPhone.** Your message goes into the agent's own
+    pane, even when another pane or session is in front.
+  - **Stop from your iPhone,** for Claude Code, Codex, Antigravity and Droid.
+  - **No reply or Stop while a prompt is up.** While the agent shows an
+    approval or a question, answer that first, with Allow or Deny or at the
+    Mac. Perch won't send a message or Stop then, because either one would
+    answer the prompt for you.
+  - **No Reply field on Mac notifications** for sessions in Rex yet.
+
+### Fixed
+- **A resumed session opens in the right terminal.** A session started in
+  one terminal and resumed in another could bring the first terminal to the
+  front when you clicked it.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.127/Perch-0.5.127.zip" length="29715407" type="application/octet-stream" sparkle:edSignature="hHXnIpq7Pdx36/8svEQM5VfOg4n1Hiy7GdNzgm7EgnrWEPxGRzU+yezI+LLP7YKYQ0ei/4hi8SDFpNkp172DDg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.128/Perch-0.5.128.zip" length="29963638" type="application/octet-stream" sparkle:edSignature="eXGMkDVVdP4TKkE5asLvjX7Kh7LXtcUjjc6YZeyUEc5CvmRY1kzcVeQxZEb1nHgB01MGC2bk6K+/S44/2cbBDA=="/>
         </item>
     </channel>
 </rss>
