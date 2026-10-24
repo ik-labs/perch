@@ -3,33 +3,34 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.128</title>
-            <pubDate>Sat, 24 Oct 2026 14:36:12 +0530</pubDate>
-            <sparkle:version>162</sparkle:version>
-            <sparkle:shortVersionString>0.5.128</sparkle:shortVersionString>
+            <title>0.5.129</title>
+            <pubDate>Sat, 24 Oct 2026 18:26:22 +0530</pubDate>
+            <sparkle:version>163</sparkle:version>
+            <sparkle:shortVersionString>0.5.129</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Perch works with Rex.** For agents running in Rex, Superlogical's
-  terminal:
-  - **Jump to the agent.** Clicking a session brings Rex to the front and
-    focuses the agent's pane. To have Rex switch to that session as well,
-    turn on Remote Control in Rex's Settings, under Rex Server.
-  - **Reply from your iPhone.** Your message goes into the agent's own
-    pane, even when another pane or session is in front.
-  - **Stop from your iPhone,** for Claude Code, Codex, Antigravity and Droid.
-  - **No reply or Stop while a prompt is up.** While the agent shows an
-    approval or a question, answer that first, with Allow or Deny or at the
-    Mac. Perch won't send a message or Stop then, because either one would
-    answer the prompt for you.
-  - **No Reply field on Mac notifications** for sessions in Rex yet.
-
-### Fixed
-- **A resumed session opens in the right terminal.** A session started in
-  one terminal and resumed in another could bring the first terminal to the
-  front when you clicked it.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **A paired device can't put a fake approval on your Mac.** A device
+  holding Perch's pairing secret could make an approval appear on your Mac,
+  naming any project and command, and have it passed on to your other
+  devices. Approvals now come only from your agents. Answering such a request
+  never approved a real tool.
+- **Droid: no Allow from Perch for a long command.** For a command over 60
+  characters or more than one line, Perch saw only its start, so Allow could
+  have approved a different command that began the same way. Perch no longer
+  offers it; answer it in the terminal.
+- **No Reply or Stop for agents that can't take one.** Perch misread some
+  command-line options, so a few runs with no prompt looked like sessions
+  you could reply to: Cursor's `worker` started with `--resume` or `-w`,
+  OpenCode's `serve` started with `--auto`, Amp started with `--execute=…`,
+  and Claude Code or Devin started with an option Perch didn't recognise.
+  Perch now reads each agent's options the way that agent does, and holds
+  back Reply when it meets one it doesn't know.
+- **Amp: replies wait while you switch threads.** Mid-switch, Perch holds a
+  reply instead of guessing which thread is open, and both threads stay on
+  the list.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.128/Perch-0.5.128.zip" length="29963638" type="application/octet-stream" sparkle:edSignature="eXGMkDVVdP4TKkE5asLvjX7Kh7LXtcUjjc6YZeyUEc5CvmRY1kzcVeQxZEb1nHgB01MGC2bk6K+/S44/2cbBDA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.129/Perch-0.5.129.zip" length="30044795" type="application/octet-stream" sparkle:edSignature="qPZd+wscM6GKufK+8HqptwFHF0DzrEsbBQQNTzOwjphckPPUuW1HfuPFYJGUQgGgrP48GZrEou3fV3EezgkpDg=="/>
         </item>
     </channel>
 </rss>
