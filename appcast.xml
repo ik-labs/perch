@@ -3,27 +3,33 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.130</title>
-            <pubDate>Sat, 24 Oct 2026 20:48:08 +0530</pubDate>
-            <sparkle:version>164</sparkle:version>
-            <sparkle:shortVersionString>0.5.130</sparkle:shortVersionString>
+            <title>0.5.131</title>
+            <pubDate>Sun, 25 Oct 2026 13:50:30 +0530</pubDate>
+            <sparkle:version>165</sparkle:version>
+            <sparkle:shortVersionString>0.5.131</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Droid approvals reach your iPhone again.** With some models (GPT-6.1
-  Sol among them), Droid 0.249 runs its tools from a script, and Perch
-  couldn't tell which command it was asking about, so every approval had to
-  be answered in the terminal. Perch now reads the command from Droid's
-  script, and Allow still only goes once the dialog on screen shows that
-  same command. A script it can't read is still left for the terminal.
-- **No Reply at Claude's multiple-choice questions.** A reply sent there was
-  dropped, and Claude took whichever option was highlighted, so "Purple"
-  could answer "Red". Perch no longer offers Reply on your iPhone or in the
-  Mac notification for these questions. Answer them in Perch's question
-  sheet, or in the terminal. Replying when a usage limit has reset ("press
-  Enter to continue") still works.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **See when an agent's service is having an outage.** Perch now reads the
+  official status page of Claude Code, Codex, Amp, Devin (Windsurf's) and
+  Droid. When the part your agent uses is down, a red banner in the dropdown
+  says so and links to the incident. Lesser trouble (a slowdown, maintenance,
+  an incident that's being watched) shows as a small icon next to the agent's
+  usage, and every problem is listed in Settings → General → Integrations.
+  Only pages for agents you use here are read, never while your Mac sleeps.
+  Turn it off with `defaults write com.inkryptislabs.perch
+  perch.providerStatus -bool false`.
+- **See when an agent CLI has an update.** Settings → General →
+  Integrations shows the version of Claude Code, Codex, Amp, Droid and
+  OpenCode, and when a newer one is out on the channel you installed it
+  from, how to update there (for example `brew upgrade opencode`). A small
+  dot on the gear in the dropdown tells you there's something to look at.
+  Perch never installs anything. Tools that update themselves are only
+  flagged once a release has been out for a day. Checked once a day; turn it
+  off with `defaults write com.inkryptislabs.perch perch.agentUpdateCheck
+  -bool false`.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.130/Perch-0.5.130.zip" length="30124727" type="application/octet-stream" sparkle:edSignature="Vn5hk8QBRgmVbfMC5SAUXtT6G2CrarJwf7FMGTTUMHSRVJbilx2t99TialC6halIiLd4GoBhflHhcsLqBMa+CQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.131/Perch-0.5.131.zip" length="30748015" type="application/octet-stream" sparkle:edSignature="ZxJVhshYZajFuV/9DmnNtznFkxRC8mDyxfZ/zm4h4u+HSVdY5CZQJ0VNwyqI6+nqnFCvbmNyVcDL2rDhwS8sDQ=="/>
         </item>
     </channel>
 </rss>
