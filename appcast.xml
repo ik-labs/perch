@@ -3,18 +3,20 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.134</title>
-            <pubDate>Mon, 26 Oct 2026 21:19:45 +0530</pubDate>
-            <sparkle:version>168</sparkle:version>
-            <sparkle:shortVersionString>0.5.134</sparkle:shortVersionString>
+            <title>0.5.135</title>
+            <pubDate>Mon, 26 Oct 2026 22:05:04 +0530</pubDate>
+            <sparkle:version>169</sparkle:version>
+            <sparkle:shortVersionString>0.5.135</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Rex:** Perch now tells you when Rex's Remote Control setting is needed to
-  jump to the right session.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- Rate-limited sessions are shown in yellow and say "Rate limited".
+
+### Added
+- The dropdown notes when an agent's turns keep failing on server errors.
 - Groundwork for the next iPhone update.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.134/Perch-0.5.134.zip" length="31060439" type="application/octet-stream" sparkle:edSignature="n3+0kVJyVT969+VOl8bkIe+kKXFFXC8/9+UnV/qMrcwRBoZ5gNIO99fOijnx2BUCW9vw0V0OFzDQIVk7RE8zBg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.135/Perch-0.5.135.zip" length="31185855" type="application/octet-stream" sparkle:edSignature="2fT1102oX9elv6ItfgzyImy8ISJk5zifjo/LkEU/fD5E0Tbs2PemVM4+HEfoZPVU/qA6USHrm2ALG4ffdwFrBA=="/>
         </item>
     </channel>
 </rss>
