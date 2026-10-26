@@ -3,21 +3,27 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.132</title>
-            <pubDate>Sun, 25 Oct 2026 14:21:22 +0530</pubDate>
-            <sparkle:version>166</sparkle:version>
-            <sparkle:shortVersionString>0.5.132</sparkle:shortVersionString>
+            <title>0.5.133</title>
+            <pubDate>Mon, 26 Oct 2026 11:04:30 +0530</pubDate>
+            <sparkle:version>167</sparkle:version>
+            <sparkle:shortVersionString>0.5.133</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **No more idle OpenCode sessions you never started.** Some apps open
-  OpenCode sessions in the background just to check that it works (OpenBot
-  does this each time it launches), and each one showed up in Perch as an
-  idle session. Perch now lists a newer-style OpenCode session from its first
-  prompt rather than the moment it's created. A freshly opened OpenCode window
-  appears once you send it something.
+- **Your phone's Live Activity catches up sooner after you answer on the
+  Mac.** When an agent stopped needing you, the Live Activity on your
+  iPhone could keep saying it did, because a quick run of updates was
+  dropped instead of sent once things settled. Perch now sends the last
+  update when the quiet period ends, and sends it at full priority when a
+  wait has just ended.
+
+### Added
+- **Groundwork for the next iPhone and Watch update.** Perch now tells your
+  phone how many background tasks a Claude Code session has running, and
+  when a "needs you" alert has been answered on the Mac so the phone can
+  clear it. You'll see both once the matching iPhone app update is out.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.132/Perch-0.5.132.zip" length="30829746" type="application/octet-stream" sparkle:edSignature="vl1d0gt0aB7Q6pUMOWff8r/3Twtzg+vJ86gR8CKuE7aUx4d3gJESgmWJNNOMx7oQX+SyQl4kguOXGme6rH/EBw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.133/Perch-0.5.133.zip" length="31036382" type="application/octet-stream" sparkle:edSignature="3V7GCfvyrhUMGNPQJDwJ6JylaSVHCsZ84sMeZfMlPodfkIpHkvk+jnv40OczQzXCuCd1d/J4soBM5LZ4O6YeCg=="/>
         </item>
     </channel>
 </rss>
