@@ -3,30 +3,21 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.136</title>
-            <pubDate>Tue, 27 Oct 2026 14:57:23 +0530</pubDate>
-            <sparkle:version>170</sparkle:version>
-            <sparkle:shortVersionString>0.5.136</sparkle:shortVersionString>
+            <title>0.5.137</title>
+            <pubDate>Wed, 28 Oct 2026 14:16:13 +0530</pubDate>
+            <sparkle:version>171</sparkle:version>
+            <sparkle:shortVersionString>0.5.137</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Muse: approve, reply and stop from Perch.** With Muse set to "Ask me",
-  its approval requests now come to your phone, watch and Mac, and you can
-  answer them there. You can also reply to a Muse session or stop it from
-  your phone or a Mac notification. Perch won't type into Muse while it's
-  showing you a question or an approval, or while it has put a stopped
-  prompt back in its input box.
-- **Muse in Stats.** Turns, tokens, model and active time for Muse
-  sessions now appear in Stats.
-- Muse sessions show Muse's own icon on the Mac.
+- **Droid and Devin conversations on your phone.** Tap a Droid or Devin
+  session on your iPhone to read its history (your prompts, the agent's
+  replies and the tools it ran) and see new messages as they arrive. A
+  Devin conversation picks up where Devin compacted it, so earlier work
+  stays in view.
 - Groundwork for the next iPhone update.
-
-### Changed
-- **Muse approvals with no phone nearby go back to the terminal after 10
-  seconds** instead of 45, because Muse's screen stays blank while Perch
-  holds the request.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.136/Perch-0.5.136.zip" length="31531940" type="application/octet-stream" sparkle:edSignature="MWrIs+tRvn5N8Ql1eA5x6LyzTp0SRxVJlHUqgApnyxAjeoZ5Z55+nCyqCqsOtxWh8+o/T9A8opkoHTzWXUCLDw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.137/Perch-0.5.137.zip" length="32036036" type="application/octet-stream" sparkle:edSignature="+fJnL3H30FP3oIvrJ+KwZNrXCKVwCaE1cuXBnwRNePxF4tJN6YYt6dgO/udUoR7LLQQ5ePu46EaQREE0abJ2CA=="/>
         </item>
     </channel>
 </rss>
