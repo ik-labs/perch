@@ -3,21 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.138</title>
-            <pubDate>Sat, 31 Oct 2026 21:14:52 +0530</pubDate>
-            <sparkle:version>172</sparkle:version>
-            <sparkle:shortVersionString>0.5.138</sparkle:shortVersionString>
+            <title>0.5.139</title>
+            <pubDate>Sun, 01 Nov 2026 10:40:36 +0530</pubDate>
+            <sparkle:version>173</sparkle:version>
+            <sparkle:shortVersionString>0.5.139</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Cursor and Antigravity conversations on your phone.** Tap one of
-  their sessions on your iPhone to read its history.
+- **Stop and reply to Amp from your phone and watch.** Perch now talks to
+  Amp directly, so Stop works and replies arrive even mid-turn. Restart
+  Amp once after updating.
+- **Amp conversations on your phone.** Tap an Amp session to read it and
+  watch new messages arrive.
+- **Amp cloud threads on the list.** Threads Amp runs in the cloud show
+  up beside your local ones.
 
-### Fixed
-- Long Amp turns no longer drop off the list after ten minutes, and the
-  row shows what Amp is doing instead of just "Working".
+### Changed
+- An Amp "finished" notification now shows the start of Amp's reply.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.138/Perch-0.5.138.zip" length="32340467" type="application/octet-stream" sparkle:edSignature="zEVefnzXWADmGQzCOJV5I44MlVImwfZ2yN08T9Fz6DtVpBN9XSy7n0Uh+Ps6U9BxKPQyJ/842e8H4PJbhTrDBQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.139/Perch-0.5.139.zip" length="33093747" type="application/octet-stream" sparkle:edSignature="10VbPZ5Bg6jWBo1JreBXbgy1AtjZLCjavVtQRtwnRC17YbkY3Uzh/p7PTJr+A8YHBr2i86Jp3hNyeicI4QdfAg=="/>
         </item>
     </channel>
 </rss>
