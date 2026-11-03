@@ -3,25 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.139</title>
-            <pubDate>Sun, 01 Nov 2026 10:40:36 +0530</pubDate>
-            <sparkle:version>173</sparkle:version>
-            <sparkle:shortVersionString>0.5.139</sparkle:shortVersionString>
+            <title>0.5.140</title>
+            <pubDate>Tue, 03 Nov 2026 16:07:15 +0530</pubDate>
+            <sparkle:version>174</sparkle:version>
+            <sparkle:shortVersionString>0.5.140</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Stop and reply to Amp from your phone and watch.** Perch now talks to
-  Amp directly, so Stop works and replies arrive even mid-turn. Restart
-  Amp once after updating.
-- **Amp conversations on your phone.** Tap an Amp session to read it and
-  watch new messages arrive.
-- **Amp cloud threads on the list.** Threads Amp runs in the cloud show
-  up beside your local ones.
+- **An agent's latest reply on your iPhone, with a Perch licence.** Tap a
+  session in Perch on iPhone to see the agent's most recent reply. Perch Pro
+  adds the full conversation, live updates and replying from your phone.
+  Needs the latest Perch for iPhone.
 
 ### Changed
-- An Amp "finished" notification now shows the start of Amp's reply.
+- Settings now explains what Perch Pro adds, and links to Perch on the App
+  Store.
+- Diagnostics include a short log of "jump to terminal" clicks, to help find
+  out why a click didn't land on the right tab.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.139/Perch-0.5.139.zip" length="33093747" type="application/octet-stream" sparkle:edSignature="10VbPZ5Bg6jWBo1JreBXbgy1AtjZLCjavVtQRtwnRC17YbkY3Uzh/p7PTJr+A8YHBr2i86Jp3hNyeicI4QdfAg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.140/Perch-0.5.140.zip" length="33150054" type="application/octet-stream" sparkle:edSignature="TN0LY5gdRNjBCABO2S30nhhx46AIHLvsTLDIaL3dJFktojFwfeIavRmVQ2AovFtt0sWu2shJbpRO20FfFZZ5Bw=="/>
         </item>
     </channel>
 </rss>
