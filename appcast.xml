@@ -3,25 +3,36 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.140</title>
-            <pubDate>Tue, 03 Nov 2026 16:07:15 +0530</pubDate>
-            <sparkle:version>174</sparkle:version>
-            <sparkle:shortVersionString>0.5.140</sparkle:shortVersionString>
+            <title>0.5.141</title>
+            <pubDate>Wed, 04 Nov 2026 22:06:39 +0530</pubDate>
+            <sparkle:version>175</sparkle:version>
+            <sparkle:shortVersionString>0.5.141</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **An agent's latest reply on your iPhone, with a Perch licence.** Tap a
-  session in Perch on iPhone to see the agent's most recent reply. Perch Pro
-  adds the full conversation, live updates and replying from your phone.
-  Needs the latest Perch for iPhone.
+- **Droid sessions that run in the cloud.** Paste a Factory API key in
+  Settings → General and Perch also shows Droid sessions running in
+  Factory's cloud or on another machine: what tool they're using, when they
+  finish, and a "needs you" alert when the agent asks you a question. Your
+  key stays in your Keychain and is sent only to Factory.
+
+### Fixed
+- **A Droid turn that fails no longer says "finished".** When the model or
+  provider fails, the session shows why it stopped (for example "provider
+  unreachable" or a rate limit) instead of a finish.
+- **Droid with its sandbox on updates again.** Sessions that run their agent
+  in a separate worker no longer freeze on the list, and their permission
+  prompts reach Perch.
+- **A Droid prompt queued in the terminal shows as running**, and Perch
+  tells you when it finishes.
+- A Droid session waiting on a background subagent no longer announces it
+  finished early, and a denied permission reads as idle rather than waiting.
 
 ### Changed
-- Settings now explains what Perch Pro adds, and links to Perch on the App
-  Store.
-- Diagnostics include a short log of "jump to terminal" clicks, to help find
-  out why a click didn't land on the right tab.
+- Perch does less work in the background while your sessions are quiet, so
+  it uses less of your Mac's CPU.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.140/Perch-0.5.140.zip" length="33150054" type="application/octet-stream" sparkle:edSignature="TN0LY5gdRNjBCABO2S30nhhx46AIHLvsTLDIaL3dJFktojFwfeIavRmVQ2AovFtt0sWu2shJbpRO20FfFZZ5Bw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.141/Perch-0.5.141.zip" length="33649040" type="application/octet-stream" sparkle:edSignature="WeyszOAQM6wDnwO/YyztUhc1kaLXQr2YCELgEldT2qzcSsTkVGPe7lo8OmyOhjmDUfhT3mV+8ygdOyonb8HuAQ=="/>
         </item>
     </channel>
 </rss>
