@@ -3,22 +3,24 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.143</title>
-            <pubDate>Fri, 20 Nov 2026 18:10:21 +0530</pubDate>
-            <sparkle:version>177</sparkle:version>
-            <sparkle:shortVersionString>0.5.143</sparkle:shortVersionString>
+            <title>0.5.144</title>
+            <pubDate>Fri, 20 Nov 2026 19:24:22 +0530</pubDate>
+            <sparkle:version>178</sparkle:version>
+            <sparkle:shortVersionString>0.5.144</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **The menu bar no longer jumps as the thinking word changes.** While a
-  session runs, Perch's label keeps the same width as its word rotates, so
-  the icons beside it stay put.
-
-### Changed
-- The Settings window does less work while it's open, and stops working
-  entirely once it's closed.
+- **The menu bar stays on one project while several sessions run.** Perch
+  now keeps naming the same running session for at least 30 seconds instead
+  of switching to whichever one last did something, so the label and the
+  icons beside it stop jumping. A session that needs you still shows at once.
+- **Answers to OpenCode questions are delivered reliably.** Perch checks that
+  your answer reached the agent, and a question whose agent has already gone
+  away no longer shows up waiting for you.
+- Fixed a rare crash in Perch's status line helper when an agent sent an
+  out-of-range number.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.143/Perch-0.5.143.zip" length="33715893" type="application/octet-stream" sparkle:edSignature="ndaSlX9j2FjtyuVwIy3cIqEhrV4OP/nJlnB49iH1zngKXgyopXkmVD2SFUU6+7zFvCMCuTui9ZbqiTstLeuFAw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.144/Perch-0.5.144.zip" length="33757595" type="application/octet-stream" sparkle:edSignature="D23gJG1hCpL84J5jlt+cl07cnVJRAtcuYUo4toVkZ7hJBi6F1MFKH1mpgENhxKVvT0+kgDWuxeBwrJiIVZLeAw=="/>
         </item>
     </channel>
 </rss>
