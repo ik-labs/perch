@@ -3,32 +3,22 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.142</title>
-            <pubDate>Fri, 20 Nov 2026 16:56:33 +0530</pubDate>
-            <sparkle:version>176</sparkle:version>
-            <sparkle:shortVersionString>0.5.142</sparkle:shortVersionString>
+            <title>0.5.143</title>
+            <pubDate>Fri, 20 Nov 2026 18:10:21 +0530</pubDate>
+            <sparkle:version>177</sparkle:version>
+            <sparkle:shortVersionString>0.5.143</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Perch no longer freezes when a command it runs hangs.** Your own Claude
-  status line (when Perch wraps it), `tailscale status` and Keychain reads
-  for usage now give up after a few seconds instead of waiting forever.
-- **A Keychain that won't open no longer reads as "signed out".** Perch keeps
-  your usage bars and any "sign-in expired" warning instead of clearing them.
-- **Uninstalling Perch's hooks leaves other tools' settings alone.** Removing
-  Perch from Codex, Cursor, Devin, Droid or Muse now takes out only Perch's
-  own entries, backs the file up first, and checks the result, putting the
-  file back if anything went wrong.
+- **The menu bar no longer jumps as the thinking word changes.** While a
+  session runs, Perch's label keeps the same width as its word rotates, so
+  the icons beside it stay put.
 
-### Security
-- **Perch's own data files are private to your account.** The status-line,
-  cost and spend files Perch keeps could be created readable by other
-  accounts on the Mac. They're now written private, and existing ones are
-  tightened when Perch starts.
-- Perch double-checks its own data folder before tidying it at launch, so it
-  never deletes or changes files somewhere else.
+### Changed
+- The Settings window does less work while it's open, and stops working
+  entirely once it's closed.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.142/Perch-0.5.142.zip" length="33707303" type="application/octet-stream" sparkle:edSignature="CxY0rg80nKnvVfoX6j/SyH6OgaQnX8s/arzC26cY9mTjWFpLHGdA9E9aPe3cyI/EUn0ukzRFhQNls9Mxmb8LDQ=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.143/Perch-0.5.143.zip" length="33715893" type="application/octet-stream" sparkle:edSignature="ndaSlX9j2FjtyuVwIy3cIqEhrV4OP/nJlnB49iH1zngKXgyopXkmVD2SFUU6+7zFvCMCuTui9ZbqiTstLeuFAw=="/>
         </item>
     </channel>
 </rss>
