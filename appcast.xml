@@ -3,24 +3,26 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.144</title>
-            <pubDate>Fri, 20 Nov 2026 19:24:22 +0530</pubDate>
-            <sparkle:version>178</sparkle:version>
-            <sparkle:shortVersionString>0.5.144</sparkle:shortVersionString>
+            <title>0.5.145</title>
+            <pubDate>Fri, 20 Nov 2026 22:38:03 +0530</pubDate>
+            <sparkle:version>179</sparkle:version>
+            <sparkle:shortVersionString>0.5.145</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **The menu bar stays on one project while several sessions run.** Perch
-  now keeps naming the same running session for at least 30 seconds instead
-  of switching to whichever one last did something, so the label and the
-  icons beside it stop jumping. A session that needs you still shows at once.
-- **Answers to OpenCode questions are delivered reliably.** Perch checks that
-  your answer reached the agent, and a question whose agent has already gone
-  away no longer shows up waiting for you.
-- Fixed a rare crash in Perch's status line helper when an agent sent an
-  out-of-range number.
+            <description sparkle:format="markdown"><![CDATA[### Changed
+- **Perch uses less of your Mac while sessions run.** It no longer re-reads
+  Claude, Codex, OpenCode, Antigravity and Muse session files every few
+  seconds when nothing in them has changed.
+
+### Fixed
+- **The "needs you" label stays on one session** when two sessions are waiting
+  on you at once, instead of flipping between them.
+- **Perch can no longer freeze while replying to an agent** that has stopped
+  listening; it gives up after half a second.
+- Perch's permission log is now readable only by your account, like its
+  other logs.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.144/Perch-0.5.144.zip" length="33757595" type="application/octet-stream" sparkle:edSignature="D23gJG1hCpL84J5jlt+cl07cnVJRAtcuYUo4toVkZ7hJBi6F1MFKH1mpgENhxKVvT0+kgDWuxeBwrJiIVZLeAw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.145/Perch-0.5.145.zip" length="33978939" type="application/octet-stream" sparkle:edSignature="KUbSXkNBgo3i16j/2aX77/hpzPM5bk3Kjdpu9srkV702NzVc1u/r6+GOaAI8WxkSKFUSg7upq5dhzarjVPjNDQ=="/>
         </item>
     </channel>
 </rss>
