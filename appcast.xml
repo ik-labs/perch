@@ -3,22 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.148</title>
-            <pubDate>Sun, 22 Nov 2026 23:23:27 +0530</pubDate>
-            <sparkle:version>182</sparkle:version>
-            <sparkle:shortVersionString>0.5.148</sparkle:shortVersionString>
+            <title>0.5.149</title>
+            <pubDate>Mon, 23 Nov 2026 16:12:36 +0530</pubDate>
+            <sparkle:version>183</sparkle:version>
+            <sparkle:shortVersionString>0.5.149</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Two Claude accounts no longer overwrite each other's usage.** If you run a
-  second Claude Code account from another config folder (added under
-  Settings → General → Claude config folders), Perch now shows a usage strip
-  for each account, labelled by its folder, with that account's own limits
-  and today's spend. Sessions from the second account get a small label too.
-  With one account, nothing changes.
-- Claude Team plans are now labelled "Team".
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Skip "finished" alerts for short turns.** Settings → Notifications →
+  Finished alerts: Always, or only for turns of at least 10 s, 30 s or 1 min.
+  It covers the Mac banner, the chime and the phone and watch alert. Always is
+  the default.
+- **Mute one session.** Right-click a session and choose Mute Finished Alerts.
+  Permission requests and questions still come through.
+
+### Improved
+- Following a long Devin session from your iPhone uses much less work on your
+  Mac.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.148/Perch-0.5.148.zip" length="34682059" type="application/octet-stream" sparkle:edSignature="7C52cmLZcIdy+Lu1WK0Ba81Dp59desZk22lxbQj6l+OL9lPx//H8H4G7tMOF8m7rWx/P5drR6Hmd3UJ/W6QDAw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.149/Perch-0.5.149.zip" length="34846856" type="application/octet-stream" sparkle:edSignature="GslJMpUtZ1n5DEo+bHiuHupyj2EIho5a/+hD+xFSQyq9XqN7EdFQuNwC0JCdigardl0SIHFbAUN5EyFDo7ysCA=="/>
         </item>
     </channel>
 </rss>
