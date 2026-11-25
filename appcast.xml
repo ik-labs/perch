@@ -3,19 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.150</title>
-            <pubDate>Mon, 23 Nov 2026 20:48:34 +0530</pubDate>
-            <sparkle:version>184</sparkle:version>
-            <sparkle:shortVersionString>0.5.150</sparkle:shortVersionString>
+            <title>0.5.151</title>
+            <pubDate>Wed, 25 Nov 2026 22:22:47 +0530</pubDate>
+            <sparkle:version>185</sparkle:version>
+            <sparkle:shortVersionString>0.5.151</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Improved
-- **The menu bar panel is smoother while it's open.** With several agents
-  running, it redrew dozens of times a second; it now redraws about once a
-  second, and only when something you can see changes.
-- Running timers can read up to a second longer than before.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Search the Fleet window.** Press ⌘F to filter sessions by project, branch
+  or activity; Return jumps to the first match's terminal. An All / Active
+  switch shows only the sessions that need you or are running.
+- **More in the right-click menu** on a session, in the panel and the Fleet
+  window: Jump to Terminal, Copy Project Path, Copy Git Branch, Copy Session
+  ID, Reveal Folder in Finder, and Stop Current Turn where Perch can stop it.
+
+### Improved
+- The open menu bar panel does less work each second while agents run.
+- The first time you open the panel after launch, it appears sooner.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.150/Perch-0.5.150.zip" length="34865408" type="application/octet-stream" sparkle:edSignature="c7K206bmG1uv0xKoAcSML28DzGpGbtXa/TVH2oIQJbGdpQvjMYWJBhk2oFwR0I6RRKSGx92s2bC7qn1yDaBNDA=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.151/Perch-0.5.151.zip" length="34907082" type="application/octet-stream" sparkle:edSignature="tio4b29+cY/iYwKKSDlBBXJyPkTSXjnH3PFtp1UPgm46YKwOhM0I+5Q7Fw0+GrksJfymtvqQZJE7GrzFmEcvAA=="/>
         </item>
     </channel>
 </rss>
