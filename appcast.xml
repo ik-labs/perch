@@ -3,16 +3,19 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.152</title>
-            <pubDate>Thu, 26 Nov 2026 11:59:11 +0530</pubDate>
-            <sparkle:version>186</sparkle:version>
-            <sparkle:shortVersionString>0.5.152</sparkle:shortVersionString>
+            <title>0.5.153</title>
+            <pubDate>Thu, 26 Nov 2026 16:29:14 +0530</pubDate>
+            <sparkle:version>187</sparkle:version>
+            <sparkle:shortVersionString>0.5.153</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Improved
-- Bug fixes and performance improvements.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Antigravity desktop app.** Threads from the Antigravity app now appear in
+  the panel and the Fleet window, alongside the Antigravity CLI. A thread shows
+  as running only while it is working and the app is open.
+- **Hide usage in the panel.** Settings → Menu bar → Show usage in the panel.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.152/Perch-0.5.152.zip" length="35161678" type="application/octet-stream" sparkle:edSignature="zUmyqloyfJKZisaGB47zYFYi93o5Tdvvo8IwW156e90GIXSLgqE5c9r78Mo0uejLqbTLegqeCtZdWwEyWZagBw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.153/Perch-0.5.153.zip" length="35284601" type="application/octet-stream" sparkle:edSignature="kjJdCY4YDOhmFrd3XUBwcPV76VrtdzqiuygPC77b8qzDMz1+jUmrphlP4aHSQBDoGv8ifQQpRorkbgaG6RvgBg=="/>
         </item>
     </channel>
 </rss>
