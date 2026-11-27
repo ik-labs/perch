@@ -3,19 +3,25 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.153</title>
-            <pubDate>Thu, 26 Nov 2026 16:29:14 +0530</pubDate>
-            <sparkle:version>187</sparkle:version>
-            <sparkle:shortVersionString>0.5.153</sparkle:shortVersionString>
+            <title>0.5.154</title>
+            <pubDate>Fri, 27 Nov 2026 12:59:44 +0530</pubDate>
+            <sparkle:version>188</sparkle:version>
+            <sparkle:shortVersionString>0.5.154</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Antigravity desktop app.** Threads from the Antigravity app now appear in
-  the panel and the Fleet window, alongside the Antigravity CLI. A thread shows
-  as running only while it is working and the app is open.
-- **Hide usage in the panel.** Settings → Menu bar → Show usage in the panel.
+- **New remote-ready session.** Gear menu → New Remote-Ready Session… starts an
+  agent in a project folder inside tmux, so you can reach it from your iPhone
+  later.
+- **Stats: hover a day, see a trend, share a card.** Hovering a heatmap day
+  shows its turns per agent, a chart shows the trend over the chosen range, and
+  Copy image / Share makes a card of your stats.
+- **Answer OpenCode's typed questions from your iPhone.** When OpenCode asks for
+  a written answer, you can type it on the iPhone (needs the next iPhone app
+  update). The setting is now called "Answer agents' questions from your
+  iPhone" and stays as you had it.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.153/Perch-0.5.153.zip" length="35284601" type="application/octet-stream" sparkle:edSignature="kjJdCY4YDOhmFrd3XUBwcPV76VrtdzqiuygPC77b8qzDMz1+jUmrphlP4aHSQBDoGv8ifQQpRorkbgaG6RvgBg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.154/Perch-0.5.154.zip" length="35760913" type="application/octet-stream" sparkle:edSignature="aZCzwAcBCAFek7nHr9M7N+33JHQyrxQzGLYHVT+nZTMXyRNNwNWivssUW/1yie5n5eY5JnQas1yicx6hC7T8Aw=="/>
         </item>
     </channel>
 </rss>
