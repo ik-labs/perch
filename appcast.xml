@@ -3,21 +3,18 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.158</title>
-            <pubDate>Fri, 27 Nov 2026 19:45:49 +0530</pubDate>
-            <sparkle:version>192</sparkle:version>
-            <sparkle:shortVersionString>0.5.158</sparkle:shortVersionString>
+            <title>0.5.159</title>
+            <pubDate>Fri, 27 Nov 2026 22:24:45 +0530</pubDate>
+            <sparkle:version>193</sparkle:version>
+            <sparkle:shortVersionString>0.5.159</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Fixed
-- **No stale "needs you" when Perch starts.** If you answered or cancelled an
-  agent's prompt while Perch was closed, Perch no longer alerts you for it when
-  it opens again. A prompt that is still open still alerts once.
-- **Old Antigravity conversations stay gone.** Another app reading Antigravity's
-  files (a backup tool, or another agent dashboard) no longer brings old
-  conversations back into the list.
+- **Amp approvals show as "needs you".** When Amp stops to ask "Approval
+  Required", its row now reads waiting, with an alert and a push, instead of
+  staying "running". Answer the prompt in Amp: Perch can't answer it for you.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.158/Perch-0.5.158.zip" length="36357785" type="application/octet-stream" sparkle:edSignature="weaYh9aGpE6d9EfwIASciCa05Y31afIbNbIWHTTeONnYWgTC04GTbJIjXl03EeAA+bGme3ah+25fh7rF65xNCw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.159/Perch-0.5.159.zip" length="36395546" type="application/octet-stream" sparkle:edSignature="nj7OLmtAjS9InTB6HK/+GSSR7FdT7Bacf/fvTzwha7BW4/Z8HSOHA1Ekg8XLapkC9iitUYdoc0CPRC+b+YVDAg=="/>
         </item>
     </channel>
 </rss>
