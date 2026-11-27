@@ -3,22 +3,22 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.155</title>
-            <pubDate>Fri, 27 Nov 2026 15:57:37 +0530</pubDate>
-            <sparkle:version>189</sparkle:version>
-            <sparkle:shortVersionString>0.5.155</sparkle:shortVersionString>
+            <title>0.5.156</title>
+            <pubDate>Fri, 27 Nov 2026 17:13:39 +0530</pubDate>
+            <sparkle:version>190</sparkle:version>
+            <sparkle:shortVersionString>0.5.156</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Added
-- **Stats by project.** A new Projects tab in Stats ranks your project folders
-  by tokens and sessions. The first time you open Stats after updating, Perch
-  reads your past sessions once to find their folders. This can take up to a
-  minute in the background, and your existing numbers stay on screen meanwhile.
-
-### Improved
-- **The panel opens without a stall the first time after launch.**
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **Devin: a permission prompt you answer in Devin itself no longer stays as
+  "needs you".** Pressing Escape or Deny in Devin's own prompt now clears the
+  row in Perch and on your iPhone.
+- **OpenCode 2: finished sessions no longer linger.** Perch now lists only
+  OpenCode sessions that are running or waiting for you, drops archived ones,
+  and clears an idle one after ten minutes instead of an hour.
+- The OpenCode mark is now black and white, like OpenCode's own logo.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.155/Perch-0.5.155.zip" length="36076907" type="application/octet-stream" sparkle:edSignature="7bvSG/0U4uT25AnuN0H5SW8c6SNYDUc41+2YVQeuM1ucGTTQcEMGDV70WWfOCJnaR+uBRnjPhdEooX58cI2iCg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.156/Perch-0.5.156.zip" length="36219612" type="application/octet-stream" sparkle:edSignature="aCRI/Cqpq6HBnIqe+xbrWe8M4THGUZumNhQ2I8cEqEH++EfxRHs/DD2hBMoJkd7VgnEjopRFrayORDw/uW/9Bg=="/>
         </item>
     </channel>
 </rss>
