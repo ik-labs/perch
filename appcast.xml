@@ -3,23 +3,21 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.157</title>
-            <pubDate>Fri, 27 Nov 2026 18:33:04 +0530</pubDate>
-            <sparkle:version>191</sparkle:version>
-            <sparkle:shortVersionString>0.5.157</sparkle:shortVersionString>
+            <title>0.5.158</title>
+            <pubDate>Fri, 27 Nov 2026 19:45:49 +0530</pubDate>
+            <sparkle:version>192</sparkle:version>
+            <sparkle:shortVersionString>0.5.158</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Improved
-- **Agent filters stay as chips.** With many agents running, the filter chips
-  above the session list now scroll sideways instead of turning into a menu, so
-  you can always see which filter is on.
-
-### Fixed
-- **No stale Devin alert after Perch restarts.** If you answered or cancelled
-  a Devin permission prompt while Perch was closed, Perch no longer says it
-  needs you when it opens again.
+            <description sparkle:format="markdown"><![CDATA[### Fixed
+- **No stale "needs you" when Perch starts.** If you answered or cancelled an
+  agent's prompt while Perch was closed, Perch no longer alerts you for it when
+  it opens again. A prompt that is still open still alerts once.
+- **Old Antigravity conversations stay gone.** Another app reading Antigravity's
+  files (a backup tool, or another agent dashboard) no longer brings old
+  conversations back into the list.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.157/Perch-0.5.157.zip" length="36295731" type="application/octet-stream" sparkle:edSignature="CM+He+tyqvv2tYVOe9E0hKNNlQmEohDJFqSfaY+lhAKZptWtoiFGH7Y+oY6KYrxReNve58e8sQ7bwBPPiqL6Aw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.158/Perch-0.5.158.zip" length="36357785" type="application/octet-stream" sparkle:edSignature="weaYh9aGpE6d9EfwIASciCa05Y31afIbNbIWHTTeONnYWgTC04GTbJIjXl03EeAA+bGme3ah+25fh7rF65xNCw=="/>
         </item>
     </channel>
 </rss>
