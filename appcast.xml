@@ -3,31 +3,30 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.160</title>
-            <pubDate>Sat, 28 Nov 2026 12:40:45 +0530</pubDate>
-            <sparkle:version>194</sparkle:version>
-            <sparkle:shortVersionString>0.5.160</sparkle:shortVersionString>
+            <title>0.5.161</title>
+            <pubDate>Sat, 28 Nov 2026 16:23:54 +0530</pubDate>
+            <sparkle:version>195</sparkle:version>
+            <sparkle:shortVersionString>0.5.161</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
             <description sparkle:format="markdown"><![CDATA[### Added
-- **Cursor outages.** Perch now reads Cursor's status page and shows when its
-  CLI or IDE has an incident, like it does for the other agents.
-- **Model and context on Amp rows.** An Amp session shows the model it is
-  using, and its context size for Claude models.
+- **The Herdr desktop app.** Clicking a session that runs in the Herdr app now
+  jumps to its exact pane and brings Herdr to the front, instead of opening
+  Ghostty. You can also reply to Claude sessions there and stop them from your
+  iPhone.
 
 ### Fixed
-- **Your iPhone says why a question isn't there.** If Claude asked a question
-  you can't answer from the phone, the session page now explains why instead
-  of just saying "answer at the Mac".
-- **Questions wait for you when you're away.** When nobody is using the Mac,
-  Perch holds a Claude question for your iPhone for a few minutes, even if the
-  app isn't open. OpenCode questions are held for your iPhone too.
-- **Finished Amp sessions stop showing as running.** An Amp thread whose
-  process died no longer stays "running" for hours.
-- **The licence key field clears after you activate a key.** A key that is
-  refused now says why.
+- **herdr 0.9 works again.** Perch couldn't talk to herdr 0.9, so jumping to a
+  pane, replying and Stop didn't work for herdr sessions. They do now. A reply
+  herdr doesn't confirm in time shows as "sent, not confirmed", so you don't
+  send it twice.
+- **A reply never lands on top of what you're typing.** If you have a
+  half-typed message in a herdr pane, Perch won't add your iPhone reply to it.
+  It tells you to send or clear it first. For now, herdr replies work for Claude
+  Code only; other agents in herdr still jump and stop.
+- **herdr is found when your shell sets `XDG_CONFIG_HOME`.**
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.160/Perch-0.5.160.zip" length="36554141" type="application/octet-stream" sparkle:edSignature="YA0aX7Ur1ln9Y4S2+Dnue7DRGEGTYh2YgNnglLiol0AIfoCVHaIpyMRLawHqAWzHGiJwF14zuuyL0dlSktjJCw=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.161/Perch-0.5.161.zip" length="37226318" type="application/octet-stream" sparkle:edSignature="ZROGTG8D/yPGNFE6UAertIhmOjl7Y55SVWQ2MBrVChVaIS21KgDTeIlHxPDTWGy5ZBYCuYZ1zZMyrhBwnkJdDw=="/>
         </item>
     </channel>
 </rss>
