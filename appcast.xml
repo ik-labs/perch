@@ -3,18 +3,31 @@
     <channel>
         <title>Perch</title>
         <item>
-            <title>0.5.159</title>
-            <pubDate>Fri, 27 Nov 2026 22:24:45 +0530</pubDate>
-            <sparkle:version>193</sparkle:version>
-            <sparkle:shortVersionString>0.5.159</sparkle:shortVersionString>
+            <title>0.5.160</title>
+            <pubDate>Sat, 28 Nov 2026 12:40:45 +0530</pubDate>
+            <sparkle:version>194</sparkle:version>
+            <sparkle:shortVersionString>0.5.160</sparkle:shortVersionString>
             <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
             <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description sparkle:format="markdown"><![CDATA[### Fixed
-- **Amp approvals show as "needs you".** When Amp stops to ask "Approval
-  Required", its row now reads waiting, with an alert and a push, instead of
-  staying "running". Answer the prompt in Amp: Perch can't answer it for you.
+            <description sparkle:format="markdown"><![CDATA[### Added
+- **Cursor outages.** Perch now reads Cursor's status page and shows when its
+  CLI or IDE has an incident, like it does for the other agents.
+- **Model and context on Amp rows.** An Amp session shows the model it is
+  using, and its context size for Claude models.
+
+### Fixed
+- **Your iPhone says why a question isn't there.** If Claude asked a question
+  you can't answer from the phone, the session page now explains why instead
+  of just saying "answer at the Mac".
+- **Questions wait for you when you're away.** When nobody is using the Mac,
+  Perch holds a Claude question for your iPhone for a few minutes, even if the
+  app isn't open. OpenCode questions are held for your iPhone too.
+- **Finished Amp sessions stop showing as running.** An Amp thread whose
+  process died no longer stays "running" for hours.
+- **The licence key field clears after you activate a key.** A key that is
+  refused now says why.
 ]]></description>
-            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.159/Perch-0.5.159.zip" length="36395546" type="application/octet-stream" sparkle:edSignature="nj7OLmtAjS9InTB6HK/+GSSR7FdT7Bacf/fvTzwha7BW4/Z8HSOHA1Ekg8XLapkC9iitUYdoc0CPRC+b+YVDAg=="/>
+            <enclosure url="https://github.com/ik-labs/perch/releases/download/v0.5.160/Perch-0.5.160.zip" length="36554141" type="application/octet-stream" sparkle:edSignature="YA0aX7Ur1ln9Y4S2+Dnue7DRGEGTYh2YgNnglLiol0AIfoCVHaIpyMRLawHqAWzHGiJwF14zuuyL0dlSktjJCw=="/>
         </item>
     </channel>
 </rss>
